@@ -1,0 +1,3122 @@
+******************************************************************************
+        TMS320C2000 COFF Linker PC v5.0.2                      
+******************************************************************************
+>> Linked Wed Dec 16 13:27:39 2015
+
+OUTPUT FILE NAME:   <./Debug/md380_C.out>
+ENTRY POINT SYMBOL: "code_start"  address: 003f7ff6
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAMPRG                00008000   00000080  0000001d  00000063  RWIX
+  OTP                   003d7800   00000400  00000000  00000400  RWIX
+  FLASHA                003e8000   0000ff80  0000ed23  0000125d  RWIX
+  CSM_RSVD              003f7f80   00000076  00000076  00000000  RWIX
+  BEGIN                 003f7ff6   00000002  00000002  00000000  RWIX
+  CSM_PWL               003f7ff8   00000008  00000008  00000000  RWIX
+  IQTABLES              003fe000   00000b50  00000000  00000b50  RWIX
+  IQTABLES2             003feb50   0000008c  00000000  0000008c  RWIX
+  IQTABLES3             003febdc   000000aa  00000000  000000aa  RWIX
+  ROM                   003ff27c   00000d44  00000000  00000d44  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+  VECTORS               003fffc2   0000003e  00000000  0000003e  RWIX
+
+PAGE 1:
+  RAMM0                 00000100   00000300  00000000  00000300  RWIX
+  RAMM1                 00000400   00000400  00000400  00000000  RWIX
+  DEV_EMU               00000880   00000105  00000004  00000101  RWIX
+  SYS_PWR_CTL           00000985   00000003  00000003  00000000  RWIX
+  FLASH_REGS            00000a80   00000060  00000008  00000058  RWIX
+  CSM                   00000ae0   00000010  00000010  00000000  RWIX
+  ADC_RESULT            00000b00   00000020  00000020  00000000  RWIX
+  CPU_TIMER0            00000c00   00000008  00000008  00000000  RWIX
+  CPU_TIMER1            00000c08   00000008  00000008  00000000  RWIX
+  CPU_TIMER2            00000c10   00000008  00000008  00000000  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000100  00000100  00000000  RWIX
+  CLA1                  00001400   00000080  00000040  00000040  RWIX
+  ECANA                 00006000   00000040  00000034  0000000c  RWIX
+  ECANA_LAM             00006040   00000040  00000040  00000000  RWIX
+  ECANA_MOTS            00006080   00000040  00000040  00000000  RWIX
+  ECANA_MOTO            000060c0   00000040  00000040  00000000  RWIX
+  ECANA_MBOX            00006100   00000100  00000100  00000000  RWIX
+  COMP1                 00006400   00000020  00000011  0000000f  RWIX
+  COMP2                 00006420   00000020  00000011  0000000f  RWIX
+  COMP3                 00006440   00000020  00000011  0000000f  RWIX
+  EPWM1                 00006800   00000040  0000003a  00000006  RWIX
+  EPWM2                 00006840   00000040  0000003a  00000006  RWIX
+  EPWM3                 00006880   00000040  0000003a  00000006  RWIX
+  EPWM4                 000068c0   00000040  0000003a  00000006  RWIX
+  EPWM5                 00006900   00000040  0000003a  00000006  RWIX
+  EPWM6                 00006940   00000040  0000003a  00000006  RWIX
+  EPWM7                 00006980   00000040  0000003a  00000006  RWIX
+  ECAP1                 00006a00   00000020  00000020  00000000  RWIX
+  EQEP1                 00006b00   00000040  00000040  00000000  RWIX
+  LINA                  00006c00   00000080  0000004a  00000036  RWIX
+  GPIOCTRL              00006f80   00000040  00000040  00000000  RWIX
+  GPIODAT               00006fc0   00000020  00000020  00000000  RWIX
+  GPIOINT               00006fe0   00000020  0000000c  00000014  RWIX
+  SYSTEM                00007010   00000020  00000020  00000000  RWIX
+  SPIA                  00007040   00000010  00000010  00000000  RWIX
+  SCIA                  00007050   00000010  00000010  00000000  RWIX
+  NMIINTRUPT            00007060   00000010  00000010  00000000  RWIX
+  XINTRUPT              00007070   00000010  00000010  00000000  RWIX
+  ADC                   00007100   00000080  00000050  00000030  RWIX
+  SPIB                  00007740   00000010  00000010  00000000  RWIX
+  I2CA                  00007900   00000040  00000022  0000001e  RWIX
+  RAML0                 00008080   00001f80  00001b47  00000439  RWIX
+  PARTID                003d7e80   00000001  00000001  00000000  RWIX
+  CSM_PWL               003f7ff8   00000008  00000008  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.data      0    00000000    00000000     UNINITIALIZED
+
+otp_prg    0    003d7800    00000000     UNINITIALIZED
+
+.binit     0    003e8000    00000000     UNINITIALIZED
+
+.pinit     0    003e8000    00000000     UNINITIALIZED
+
+.switch    0    003e8000    00000000     UNINITIALIZED
+
+IQmath     0    003e8000    00000000     UNINITIALIZED
+
+.text      0    003e8000    0000c868     
+                  003e8000    00000044     rts2800_ml.lib : boot.obj (.text)
+                  003e8044    00000018                    : exit.obj (.text)
+                  003e805c    00000009                    : _lock.obj (.text)
+                  003e8065    00000015                    : args_main.obj (.text)
+                  003e807a    00000060     DSP2803x_CpuTimers.obj (.text)
+                  003e80da    0000025b     f_canlink.obj (.text)
+                  003e8335    0000055d     f_comm.obj (.text)
+                  003e8892    00000244     f_comm_DP.obj (.text)
+                  003e8ad6    00000044     f_common.obj (.text)
+                  003e8b1a    00000065     f_debug.obj (.text)
+                  003e8b7f    00000215     f_dspcan.obj (.text)
+                  003e8d94    00000479     f_eeprom.obj (.text)
+                  003e920d    00000474     f_error.obj (.text)
+                  003e9681    0000026c     f_fcDeal.obj (.text)
+                  003e98ed    0000089e     f_frqSrc.obj (.text)
+                  003ea18b    00000538     f_frqSrc_pid.obj (.text)
+                  003ea6c3    00000448     f_interface.obj (.text)
+                  003eab0b    000002e3     f_invPara.obj (.text)
+                  003eadee    00000f6d     f_io.obj (.text)
+                  003ebd5b    000003c3     f_main.obj (.text)
+                  003ec11e    00000ecd     f_menu.obj (.text)
+                  003ecfeb    000000e3     f_modbus.obj (.text)
+                  003ed0ce    00000078     f_motorFc.obj (.text)
+                  003ed146    00000374     f_osc.obj (.text)
+                  003ed4ba    0000008f     f_p2p.obj (.text)
+                  003ed549    00000177     f_plc.obj (.text)
+                  003ed6c0    00000247     f_profibus.obj (.text)
+                  003ed907    00000b62     f_runSrc.obj (.text)
+                  003ee469    000005a0     f_runSrc_accDecFrq.obj (.text)
+                  003eea09    00000106     f_torqueCtrl.obj (.text)
+                  003eeb0f    000003c3     f_ui.obj (.text)
+                  003eeed2    000000e1     f_vf.obj (.text)
+                  003eefb3    000000e9     main.obj (.text)
+                  003ef09c    00000368     MotorCarrier.obj (.text)
+                  003ef404    000000ca     MotorCurrentTransform.obj (.text)
+                  003ef4ce    00000396     MotorDataExchange.obj (.text)
+                  003ef864    000000cf     MotorDebug.obj (.text)
+                  003ef933    00000505     MotorEncoder.obj (.text)
+                  003efe38    000007b9     MotorImParEst.obj (.text)
+                  003f05f1    0000010f     MotorInfoCollect.obj (.text)
+                  003f0700    00000578     MotorInvProtect.obj (.text)
+                  003f0c78    00000578     MotorMain.obj (.text)
+                  003f11f0    0000056d     MotorParChange.obj (.text)
+                  003f175d    00000142     MotorParEst.obj (.text)
+                  003f189f    00000449     MotorPmsmMain.obj (.text)
+                  003f1ce8    00000907     MotorPmsmParEst.obj (.text)
+                  003f25ef    000002ba     MotorPublicCal.obj (.text)
+                  003f28a9    00000258     MotorPWM.obj (.text)
+                  003f2b01    000002d4     MotorSpeedCheck.obj (.text)
+                  003f2dd5    0000036e     MotorSVC.obj (.text)
+                  003f3143    000007fa     MotorVCMain.obj (.text)
+                  003f393d    000008f4     MotorVF.obj (.text)
+                  003f4231    0000003e     ZeroPosCtl.obj (.text)
+                  003f426f    00000091     ASMSubPrg.obj (.text)
+                  003f4300    000001d6     SubPrg.obj (.text)
+                  003f44d6    00000026     DSP2803x_CodeStartBranch.obj (.text)
+                  003f44fc    00000159     mainInit_2803x.obj (.text)
+                  003f4655    0000005a     rts2800_ml.lib : fs_mpy.obj (.text)
+                  003f46af    00000029                    : fs_tol.obj (.text)
+                  003f46d8    00000022                    : i_div.obj (.text)
+                  003f46fa    0000002a                    : l_div.obj (.text)
+                  003f4724    0000001e                    : ll_cmp.obj (.text)
+                  003f4742    00000107                    : ll_div.obj (.text)
+                  003f4849    00000014                    : ll_mpy.obj (.text)
+                  003f485d    0000000b                    : u_div.obj (.text)
+
+.econst    0    003f4868    000022cb     
+                  003f4868    00000078     f_menu.obj (.econst:_menu)
+                  003f48e0    00000054     f_io.obj (.econst:_doFuncCal)
+                  003f4934    00000050     f_io.obj (.econst)
+                  003f4984    00000018     MotorInvProtect.obj (.econst:_gInvOverLoadDecTable)
+                  003f499c    00000018     MotorInvProtect.obj (.econst:_gMotorOverLoadDecTable)
+                  003f49b4    00000014     MotorCarrier.obj (.econst:_gSynStepAngleTable)
+                  003f49c8    00000014     f_comm.obj (.econst:_protocolFunc)
+                  003f49dc    0000000a     f_io.obj (.econst:_$P$T4$9)
+                  003f49e6    000011c1     f_funcCode.obj (.econst:_funcCodeAttribute)
+                  003f5ba7    000003e2     f_eeprom.obj (.econst:_eeprom2Fc)
+                  003f5f89    00000204     MotorConstant.obj (.econst:_gExponentVf)
+                  003f618d    0000010e     f_invPara.obj (.econst:_invTypeParaTableT380)
+                  003f629b    00000100     f_common.obj (.econst:_crc16Table)
+                  003f639b    000000f3     f_invPara.obj (.econst:_invTypeParaTableT480)
+                  003f648e    000000ab     f_invPara.obj (.econst:_invTypeParaTableT1140)
+                  003f6539    00000090     f_invPara.obj (.econst:_invTypeParaTableT220)
+                  003f65c9    00000090     f_invPara.obj (.econst:_invTypeParaTableT690)
+                  003f6659    00000064     f_menu.obj (.econst:_dispAttributeU0)
+                  003f66bd    00000053     f_funcCode.obj (.econst:_funcCodeGradeAll)
+                  003f6710    00000053     f_funcCode.obj (.econst:_funcCodeGradeSum)
+                  003f6763    0000003f     f_invPara.obj (.econst:_invTypeParaTableS220)
+                  003f67a2    00000034     f_comm.obj (.econst:_dspBaudRegData)
+                  003f67d6    00000034     f_funcCode.obj (.econst:_fcNoAttri2Eeprom)
+                  003f680a    00000033     f_io.obj (.econst:_voltageTempPT100)
+                  003f683d    00000033     f_io.obj (.econst:_voltageTempPT1000)
+                  003f6870    00000026     f_ui.obj (.econst:_DISPLAY_CODE)
+                  003f6896    00000021     f_menu.obj (.econst:_commDispIndex)
+                  003f68b7    00000021     MotorConstant.obj (.econst:_gInvCurrentTable690T)
+                  003f68d8    0000001b     MotorConstant.obj (.econst:_gInvCurrentTable380T)
+                  003f68f3    00000018     f_ui.obj (.econst:_dispCodeMenuMode)
+                  003f690b    00000017     MotorInvProtect.obj (.econst:_gTempTableBSMXX)
+                  003f6922    00000017     MotorInvProtect.obj (.econst:_gTempTableP44X)
+                  003f6939    00000017     MotorInvProtect.obj (.econst:_gTempTableP8XX)
+                  003f6950    00000017     MotorInvProtect.obj (.econst:_gTempTableSEMIKON)
+                  003f6967    00000017     MotorInvProtect.obj (.econst:_gTempTableWAIZHI)
+                  003f697e    00000016     f_invPara.obj (.econst:_motor1ParaIndex)
+                  003f6994    00000015     f_dspcan.obj (.econst:_eCanBaud)
+                  003f69a9    00000013     f_error.obj (.econst:_errorCodeFromMotorList)
+                  003f69bc    00000013     MotorConstant.obj (.econst:_gInvCurrentTable1140T)
+                  003f69cf    00000012     f_menu.obj (.econst:_diFuncIndex)
+                  003f69e1    00000012     f_invPara.obj (.econst:_invTypeLimitTable)
+                  003f69f3    00000010     MotorConstant.obj (.econst:_gInvCurrentTable220T)
+                  003f6a03    00000010     f_menu.obj (.econst:_stopDispIndex)
+                  003f6a13    0000000e     MotorConstant.obj (.econst:_gDeadBandTable)
+                  003f6a21    0000000e     MotorConstant.obj (.econst:_gDeadCompTable)
+                  003f6a2f    0000000d     f_fcDeal.obj (.econst:_limitOtherCodeIndex)
+                  003f6a3c    0000000b     f_ui.obj (.econst:_LED_CODE)
+                  003f6a47    0000000a     f_io.obj (.econst:_$P$T0$5)
+                  003f6a51    0000000a     MotorCarrier.obj (.econst:_gSynFreqTable)
+                  003f6a5b    0000000a     MotorCarrier.obj (.econst:_gSynNcTable)
+                  003f6a65    00000009     MotorInvProtect.obj (.econst:_gInvOverLoadTable)
+                  003f6a6e    00000009     MotorInvProtect.obj (.econst:_gInvOverLoadTableForP)
+                  003f6a77    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo1140T)
+                  003f6a80    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo220S)
+                  003f6a89    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo220T)
+                  003f6a92    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo380T)
+                  003f6a9b    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo480T)
+                  003f6aa4    00000009     MotorConstant.obj (.econst:_gInvVoltageInfo690T)
+                  003f6aad    00000008     f_comm.obj (.econst:_COMM_ERR_INDEX)
+                  003f6ab5    00000008     MotorConstant.obj (.econst:_gInvCurrentTable220S)
+                  003f6abd    00000007     MotorInvProtect.obj (.econst:_gMotorOverLoadTable)
+                  003f6ac4    00000006     f_invPara.obj (.econst:_$P$T0$1)
+                  003f6aca    00000006     f_invPara.obj (.econst:_INV_TYPE_BIG_ACC_DEC_START_TABLE)
+                  003f6ad0    00000006     f_invPara.obj (.econst:_INV_TYPE_POINT_LIMIT_TABLE)
+                  003f6ad6    00000006     MotorEncoder.obj (.econst:_gUVWAngleTable)
+                  003f6adc    00000006     f_invPara.obj (.econst:_ovVoltageInitValue)
+                  003f6ae2    00000005     MotorParEst.obj (.econst:_AsynParEstRotor)
+                  003f6ae7    00000005     MotorParEst.obj (.econst:_AsynParEstStatic)
+                  003f6aec    00000005     f_comm_DP.obj (.econst:_dataByteNums)
+                  003f6af1    00000005     MotorParEst.obj (.econst:_debugTuneProcess)
+                  003f6af6    00000005     f_menu.obj (.econst:_decNumber)
+                  003f6afb    00000005     f_ui.obj (.econst:_minRate)
+                  003f6b00    00000005     MotorParEst.obj (.econst:_noTuneProgress)
+                  003f6b05    00000005     MotorParEst.obj (.econst:_pmTuneProgLoad)
+                  003f6b0a    00000005     MotorParEst.obj (.econst:_pmTuneProgNoLoad)
+                  003f6b0f    00000005     f_ui.obj (.econst:_repeatNumMax)
+                  003f6b14    00000004     f_ui.obj (.econst)
+                  003f6b18    00000004     f_profibus.obj (.econst:_DPDataNum)
+                  003f6b1c    00000004     f_comm.obj (.econst:_commParitys)
+                  003f6b20    00000004     f_menu.obj (.econst:_hexNumber)
+                  003f6b24    00000004     f_invPara.obj (.econst:_motorSnIndexIncToMotor1)
+                  003f6b28    00000003     f_osc.obj (.econst:_BautRateCfg)
+                  003f6b2b    00000003     f_menu.obj (.econst:_deltaK)
+                  003f6b2e    00000003     f_motorFc.obj (.econst:_motorSnIndexNIncToMotor2)
+                  003f6b31    00000002     f_menu.obj (.econst:_frqSrcFuncIndex)
+
+.cinit     0    003f6b33    000001c9     
+                  003f6b33    0000000a     rts2800_ml.lib : exit.obj (.cinit)
+                  003f6b3d    0000000a                    : _lock.obj (.cinit)
+                  003f6b47    0000001f     f_canlink.obj (.cinit)
+                  003f6b66    00000004     f_comm.obj (.cinit)
+                  003f6b6a    0000000e     f_comm_DP.obj (.cinit)
+                  003f6b78    00000018     f_debug.obj (.cinit)
+                  003f6b90    00000008     f_dspcan.obj (.cinit)
+                  003f6b98    00000008     f_error.obj (.cinit)
+                  003f6ba0    00000004     f_frqSrc.obj (.cinit)
+                  003f6ba4    00000020     f_frqSrc_pid.obj (.cinit)
+                  003f6bc4    00000011     f_interface.obj (.cinit)
+                  003f6bd5    0000000f     f_invPara.obj (.cinit)
+                  003f6be4    00000032     f_io.obj (.cinit)
+                  003f6c16    0000000c     f_main.obj (.cinit)
+                  003f6c22    00000005     f_menu.obj (.cinit)
+                  003f6c27    00000031     f_osc.obj (.cinit)
+                  003f6c58    0000001c     f_plc.obj (.cinit)
+                  003f6c74    00000008     f_profibus.obj (.cinit)
+                  003f6c7c    00000004     f_runSrc.obj (.cinit)
+                  003f6c80    00000005     f_runSrc_accDecFrq.obj (.cinit)
+                  003f6c85    00000005     f_torqueCtrl.obj (.cinit)
+                  003f6c8a    00000019     f_ui.obj (.cinit)
+                  003f6ca3    00000005     f_vf.obj (.cinit)
+                  003f6ca8    00000004     MotorDataExchange.obj (.cinit)
+                  003f6cac    00000004     MotorDebug.obj (.cinit)
+                  003f6cb0    0000004b     MotorPWM.obj (.cinit)
+                  003f6cfb    00000001     --HOLE-- [fill = 0]
+
+ramfuncs   0    003f6cfc    0000001d     RUN ADDR = 00008000
+                  003f6cfc    00000004     DSP2803x_usDelay.obj (ramfuncs)
+                  003f6d00    00000019     mainInit_2803x.obj (ramfuncs)
+
+.ovly      0    003f6d1c    0000000a     
+                  003f6d1c    0000000a     <linker> (.ovly:_prginRAM)
+
+csm_rsvd   0    003f7f80    00000076     
+                  003f7f80    00000076     DSP2803x_CSMPasswords.obj (csm_rsvd)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     DSP2803x_CodeStartBranch.obj (codestart)
+
+csmpasswds 
+*          0    003f7ff8    00000008     
+                  003f7ff8    00000008     DSP2803x_CSMPasswords.obj (csmpasswds)
+
+IQmathTables 
+*          0    003fe000    00000000     NOLOAD SECTION
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot.obj (.reset)
+
+vectors    0    003fffc2    00000000     DSECT
+
+.bss       1    00000000    00000000     UNINITIALIZED
+
+.stack     1    00000400    00000400     UNINITIALIZED
+
+DevEmuRegsFile 
+*          1    00000880    00000004     UNINITIALIZED
+                  00000880    00000004     DSP2803x_GlobalVariableDefs.obj (DevEmuRegsFile)
+
+SysPwrCtrlRegsFile 
+*          1    00000985    00000003     UNINITIALIZED
+                  00000985    00000003     DSP2803x_GlobalVariableDefs.obj (SysPwrCtrlRegsFile)
+
+FlashRegsFile 
+*          1    00000a80    00000008     UNINITIALIZED
+                  00000a80    00000008     DSP2803x_GlobalVariableDefs.obj (FlashRegsFile)
+
+CsmRegsFile 
+*          1    00000ae0    00000010     UNINITIALIZED
+                  00000ae0    00000010     DSP2803x_GlobalVariableDefs.obj (CsmRegsFile)
+
+AdcResultFile 
+*          1    00000b00    00000020     UNINITIALIZED
+                  00000b00    00000020     DSP2803x_GlobalVariableDefs.obj (AdcResultFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     DSP2803x_GlobalVariableDefs.obj (CpuTimer0RegsFile)
+
+CpuTimer1RegsFile 
+*          1    00000c08    00000008     UNINITIALIZED
+                  00000c08    00000008     DSP2803x_GlobalVariableDefs.obj (CpuTimer1RegsFile)
+
+CpuTimer2RegsFile 
+*          1    00000c10    00000008     UNINITIALIZED
+                  00000c10    00000008     DSP2803x_GlobalVariableDefs.obj (CpuTimer2RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     DSP2803x_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+EmuKeyVar 
+*          1    00000d00    00000001     UNINITIALIZED
+                  00000d00    00000001     DSP2803x_GlobalVariableDefs.obj (EmuKeyVar)
+
+PieVectTableFile 
+*          1    00000d00    00000100     UNINITIALIZED
+                  00000d00    00000100     DSP2803x_GlobalVariableDefs.obj (PieVectTableFile)
+
+EmuBModeVar 
+*          1    00000d01    00000001     UNINITIALIZED
+                  00000d01    00000001     DSP2803x_GlobalVariableDefs.obj (EmuBModeVar)
+
+FlashCallbackVar 
+*          1    00000d02    00000002     UNINITIALIZED
+                  00000d02    00000002     DSP2803x_GlobalVariableDefs.obj (FlashCallbackVar)
+
+FlashScalingVar 
+*          1    00000d04    00000002     UNINITIALIZED
+                  00000d04    00000002     DSP2803x_GlobalVariableDefs.obj (FlashScalingVar)
+
+Cla1RegsFile 
+*          1    00001400    00000040     UNINITIALIZED
+                  00001400    00000040     DSP2803x_GlobalVariableDefs.obj (Cla1RegsFile)
+
+ECanaRegsFile 
+*          1    00006000    00000034     UNINITIALIZED
+                  00006000    00000034     DSP2803x_GlobalVariableDefs.obj (ECanaRegsFile)
+
+ECanaLAMRegsFile 
+*          1    00006040    00000040     UNINITIALIZED
+                  00006040    00000040     DSP2803x_GlobalVariableDefs.obj (ECanaLAMRegsFile)
+
+ECanaMOTSRegsFile 
+*          1    00006080    00000040     UNINITIALIZED
+                  00006080    00000040     DSP2803x_GlobalVariableDefs.obj (ECanaMOTSRegsFile)
+
+ECanaMOTORegsFile 
+*          1    000060c0    00000040     UNINITIALIZED
+                  000060c0    00000040     DSP2803x_GlobalVariableDefs.obj (ECanaMOTORegsFile)
+
+ECanaMboxesFile 
+*          1    00006100    00000100     UNINITIALIZED
+                  00006100    00000100     DSP2803x_GlobalVariableDefs.obj (ECanaMboxesFile)
+
+Comp1RegsFile 
+*          1    00006400    00000011     UNINITIALIZED
+                  00006400    00000011     DSP2803x_GlobalVariableDefs.obj (Comp1RegsFile)
+
+Comp2RegsFile 
+*          1    00006420    00000011     UNINITIALIZED
+                  00006420    00000011     DSP2803x_GlobalVariableDefs.obj (Comp2RegsFile)
+
+Comp3RegsFile 
+*          1    00006440    00000011     UNINITIALIZED
+                  00006440    00000011     DSP2803x_GlobalVariableDefs.obj (Comp3RegsFile)
+
+EPwm1RegsFile 
+*          1    00006800    0000003a     UNINITIALIZED
+                  00006800    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm1RegsFile)
+
+EPwm2RegsFile 
+*          1    00006840    0000003a     UNINITIALIZED
+                  00006840    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm2RegsFile)
+
+EPwm3RegsFile 
+*          1    00006880    0000003a     UNINITIALIZED
+                  00006880    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm3RegsFile)
+
+EPwm4RegsFile 
+*          1    000068c0    0000003a     UNINITIALIZED
+                  000068c0    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm4RegsFile)
+
+EPwm5RegsFile 
+*          1    00006900    0000003a     UNINITIALIZED
+                  00006900    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm5RegsFile)
+
+EPwm6RegsFile 
+*          1    00006940    0000003a     UNINITIALIZED
+                  00006940    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm6RegsFile)
+
+EPwm7RegsFile 
+*          1    00006980    0000003a     UNINITIALIZED
+                  00006980    0000003a     DSP2803x_GlobalVariableDefs.obj (EPwm7RegsFile)
+
+ECap1RegsFile 
+*          1    00006a00    00000020     UNINITIALIZED
+                  00006a00    00000020     DSP2803x_GlobalVariableDefs.obj (ECap1RegsFile)
+
+EQep1RegsFile 
+*          1    00006b00    00000040     UNINITIALIZED
+                  00006b00    00000040     DSP2803x_GlobalVariableDefs.obj (EQep1RegsFile)
+
+LinaRegsFile 
+*          1    00006c00    0000004a     UNINITIALIZED
+                  00006c00    0000004a     DSP2803x_GlobalVariableDefs.obj (LinaRegsFile)
+
+GpioCtrlRegsFile 
+*          1    00006f80    00000040     UNINITIALIZED
+                  00006f80    00000040     DSP2803x_GlobalVariableDefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          1    00006fc0    00000020     UNINITIALIZED
+                  00006fc0    00000020     DSP2803x_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+GpioIntRegsFile 
+*          1    00006fe0    0000000c     UNINITIALIZED
+                  00006fe0    0000000c     DSP2803x_GlobalVariableDefs.obj (GpioIntRegsFile)
+
+SysCtrlRegsFile 
+*          1    00007010    00000020     UNINITIALIZED
+                  00007010    00000020     DSP2803x_GlobalVariableDefs.obj (SysCtrlRegsFile)
+
+SpiaRegsFile 
+*          1    00007040    00000010     UNINITIALIZED
+                  00007040    00000010     DSP2803x_GlobalVariableDefs.obj (SpiaRegsFile)
+
+SciaRegsFile 
+*          1    00007050    00000010     UNINITIALIZED
+                  00007050    00000010     DSP2803x_GlobalVariableDefs.obj (SciaRegsFile)
+
+NmiIntruptRegsFile 
+*          1    00007060    00000010     UNINITIALIZED
+                  00007060    00000010     DSP2803x_GlobalVariableDefs.obj (NmiIntruptRegsFile)
+
+XIntruptRegsFile 
+*          1    00007070    00000010     UNINITIALIZED
+                  00007070    00000010     DSP2803x_GlobalVariableDefs.obj (XIntruptRegsFile)
+
+AdcRegsFile 
+*          1    00007100    00000050     UNINITIALIZED
+                  00007100    00000050     DSP2803x_GlobalVariableDefs.obj (AdcRegsFile)
+
+SpibRegsFile 
+*          1    00007740    00000010     UNINITIALIZED
+                  00007740    00000010     DSP2803x_GlobalVariableDefs.obj (SpibRegsFile)
+
+I2caRegsFile 
+*          1    00007900    00000022     UNINITIALIZED
+                  00007900    00000022     DSP2803x_GlobalVariableDefs.obj (I2caRegsFile)
+
+.esysmem   1    00008080    00000000     UNINITIALIZED
+
+.ebss      1    00008080    0000175f     UNINITIALIZED
+                  00008080    00000106     f_osc.obj (.ebss)
+                  00008186    0000003a     MotorInvProtect.obj (.ebss)
+                  000081c0    000000fa     MotorVF.obj (.ebss)
+                  000082ba    00000006     f_dspcan.obj (.ebss)
+                  000082c0    000000e8     f_io.obj (.ebss)
+                  000083a8    00000018     DSP2803x_CpuTimers.obj (.ebss)
+                  000083c0    000000e8     MotorVar.obj (.ebss)
+                  000084a8    00000012     f_invPara.obj (.ebss)
+                  000084ba    00000004     rts2800_ml.lib : _lock.obj (.ebss)
+                  000084be    00000001     f_motorFc.obj (.ebss)
+                  000084bf    00000001     mainInit_2803x.obj (.ebss)
+                  000084c0    000000e0     f_comm_DP.obj (.ebss)
+                  000085a0    0000001e     MotorCarrier.obj (.ebss)
+                  000085c0    000000c2     f_main.obj (.ebss)
+                  00008682    0000003c     f_ui.obj (.ebss)
+                  000086c0    000000ba     MotorVCMain.obj (.ebss)
+                  0000877a    00000004     rts2800_ml.lib : exit.obj (.ebss)
+                  00008780    000000a3     f_comm.obj (.ebss)
+                  00008824    0000001c     f_error.obj (.ebss)
+                  00008840    0000009c     MotorEncoder.obj (.ebss)
+                  000088dc    00000022     MotorSVC.obj (.ebss)
+                  00008900    0000008a     MotorPmsmMain.obj (.ebss)
+                  0000898a    00000034     f_debug.obj (.ebss)
+                  000089c0    0000007e     MotorParEst.obj (.ebss)
+                  00008a40    0000007c     f_frqSrc_pid.obj (.ebss)
+                  00008ac0    00000068     MotorInfoCollect.obj (.ebss)
+                  00008b28    00000012     f_torqueCtrl.obj (.ebss)
+                  00008b40    00000066     f_frqSrc.obj (.ebss)
+                  00008ba6    00000012     MotorDebug.obj (.ebss)
+                  00008bb8    00000008     f_profibus.obj (.ebss)
+                  00008bc0    00000066     f_menu.obj (.ebss)
+                  00008c26    00000010     ZeroPosCtl.obj (.ebss)
+                  00008c36    00000007     f_p2p.obj (.ebss)
+                  00008c40    0000005c     MotorPWM.obj (.ebss)
+                  00008c9c    0000001c     MotorPublicCal.obj (.ebss)
+                  00008cc0    0000005b     MotorPmsmParEst.obj (.ebss)
+                  00008d1c    0000000e     f_vf.obj (.ebss)
+                  00008d40    00000057     MotorSpeedCheck.obj (.ebss)
+                  00008dc0    00000050     f_runSrc.obj (.ebss)
+                  00008e10    0000002c     f_canlink.obj (.ebss)
+                  00008e40    0000004c     f_interface.obj (.ebss)
+                  00008ec0    0000004c     f_runSrc_accDecFrq.obj (.ebss)
+                  00008f40    000004dc     f_funcCode.obj (.ebss)
+                  00009440    00000108     f_eeprom.obj (.ebss)
+                  00009580    000000f3     MotorDataExchange.obj (.ebss)
+                  00009680    000000d6     f_fcDeal.obj (.ebss)
+                  00009780    0000005f     f_plc.obj (.ebss)
+
+debug_buffer 
+*          1    00009800    000003e8     UNINITIALIZED
+                  00009800    000003e8     MotorDebug.obj (debug_buffer)
+
+PartIdRegsFile 
+*          1    003d7e80    00000001     UNINITIALIZED
+                  003d7e80    00000001     DSP2803x_GlobalVariableDefs.obj (PartIdRegsFile)
+
+CsmPwlFile 
+*          1    003f7ff8    00000008     UNINITIALIZED
+                  003f7ff8    00000008     DSP2803x_GlobalVariableDefs.obj (CsmPwlFile)
+
+
+LINKER GENERATED COPY TABLES
+
+_prginRAM @ 003f6d1c records: 1, size/record: 16, table size: 20
+	ramfuncs: copy 29 words from load addr=0:003f6cfc to run addr=0:00008000
+
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000000   .bss
+00000000   .data
+003e8000   .text
+003e8044   C$$EXIT
+003f4655   FS$$MPY
+003f46af   FS$$TOL
+003f46d8   I$$DIV
+003f46e9   I$$MOD
+003f46fa   L$$DIV
+003f4709   L$$MOD
+003f4724   LL$$CMP
+003f4742   LL$$DIV
+003f477e   LL$$MOD
+003f4849   LL$$MPY
+003f485d   U$$DIV
+003f4862   U$$MOD
+003f4717   UL$$DIV
+003f471e   UL$$MOD
+003f4736   ULL$$CMP
+003f47b8   ULL$$DIV
+003f47e7   ULL$$MOD
+00008e55   _ABZPos
+003f1127   _ADCOverInterrupt
+003ef05e   _ADC_Over_isr
+003ee920   _AccDecFrqCalc
+003ee3c7   _AccDecTimeCalc
+003eeacb   _AccDecTorqueCalc
+00007100   _AdcRegs
+00000b00   _AdcResult
+003ebc2b   _AiCalc
+003ef418   _AlphBetaToDQ
+003ebb6c   _AoCalcChannel
+003ef09c   _AsynPWMAngleCal
+003f6ae2   _AsynParEstRotor
+003f6ae7   _AsynParEstStatic
+003e95ea   _AutoResetErrorDeal
+003e95a9   _AutoResetErrorFcDeal
+003e958a   _AutoResetErrorTrueDeal
+003f2830   _BrakeResControl
+003f0c4f   _BufferResProtect
+003f44b3   _BurrFilter
+003f280a   _CBCLimitCurPrepare
+003f0b84   _CBCLimitCurProtect
+000085c8   _CODE_RUN_DISPLAY_UPDATE_TIME
+003f6aad   _COMM_ERR_INDEX
+003ef2dd   _CalCarrierWaveFreq
+003ef287   _CalDeadBandComp
+003f38aa   _CalIMSet
+003f3e1f   _CalOutVotInVFStatus
+003ef204   _CalOutputPhase
+003f0e5b   _CalRatioFromVot
+003f37b7   _CalTorqueLimitPar
+003f41ce   _CalTorqueUp
+003f3742   _CalUdcLimitIT
+003f370a   _CalWsAndSynFreq
+003f36d5   _CalWsAndSynFreq_380
+003f369c   _CalcABVolt
+003e81c5   _CanControlRead
+003e81b5   _CanControlWriter
+003e824f   _CanHostTx
+00008e16   _CanLinkChara
+003e81d3   _CanLinkConDeal
+003e8195   _CanLinkRemoteDeal
+003e8234   _CanLlinkDataDeal
+00008e13   _CanRxTxCon
+003e8142   _CanlinkDataRec
+003e8169   _CanlinkDataTran
+003e826c   _CanlinkFun
+00008e1a   _CanlinkRecBuf
+003ef456   _ChangeCurrent
+003f163a   _ChangeMotorPar
+003e8b7c   _ChgAttr
+003f05b0   _ChgParForEst
+00001400   _Cla1Regs
+003e98ac   _ClearRecordDeal
+003ebdc8   _CodeRunMonitor
+003e87e3   _CommDataReRcv
+003e87c4   _CommDataSend
+003e88cd   _CommDpRcvDataDeal
+003e8935   _CommDpSendDataDeal
+003e852d   _CommRcvDataDeal
+003e8579   _CommRead
+003e834c   _CommRwFuncCode
+003e8646   _CommSendDataDeal
+003e8497   _CommWrite
+00006400   _Comp1Regs
+00006420   _Comp2Regs
+00006440   _Comp3Regs
+003e80b5   _ConfigCpuTimer
+003f0b43   _ControlFan
+000083b8   _CpuTimer0
+00000c00   _CpuTimer0Regs
+000083a8   _CpuTimer1
+00000c08   _CpuTimer1Regs
+000083b0   _CpuTimer2
+00000c10   _CpuTimer2Regs
+003e8b02   _CrcValueByteCalc
+003f7ff8   _CsmPwl
+00000ae0   _CsmRegs
+003f6870   _DISPLAY_CODE
+003f6b18   _DPDataNum
+00008bb8   _DPRcvTest
+003ef404   _DQToAmpTheta
+00008000   _DSP28x_usDelay
+003f2935   _DeadBandComp
+003ecf70   _DealCheckMenuModeGroupGrade
+003e8b7e   _DealKeyDebug
+003ec9d2   _DealUserMenuModeGroupGrade
+003ef88f   _DebugSaveDeal
+003f1d26   _DetectZeroPosOnce
+00000880   _DevEmuRegs
+003eb990   _Di2Bin
+003eb9e9   _DiCalc
+003f4526   _DisableDog
+003ecec4   _DispDataDeal
+003eeeba   _DisplayScan
+003eee5f   _DisplayScanPrepare
+003eb843   _Do2Bin
+003eb869   _DoCalc
+003eda56   _DormantDeal
+003eb31f   _Dout1
+003eb243   _Dout10
+003eb23a   _Dout11
+003eb22e   _Dout12
+003eb225   _Dout13
+003eb21c   _Dout14
+003eb20c   _Dout15
+003eb1fe   _Dout16
+003eb1e7   _Dout17
+003eb1cc   _Dout18
+003eb1c3   _Dout19
+003eb301   _Dout2
+003eb1c2   _Dout21
+003eb1c1   _Dout22
+003eb1b8   _Dout23
+003eb1ac   _Dout24
+003eb17b   _Dout25
+003eb154   _Dout26
+003eb12d   _Dout27
+003eb0fc   _Dout28
+003eb0c8   _Dout29
+003eb2d0   _Dout3
+003eb0af   _Dout30
+003eb09f   _Dout31
+003eb096   _Dout32
+003eb083   _Dout33
+003eb03f   _Dout34
+003eb035   _Dout35
+003eb026   _Dout36
+003eb00f   _Dout37
+003eaff8   _Dout38
+003eafef   _Dout39
+003eb297   _Dout4
+003eafe2   _Dout40
+003eafc0   _Dout41
+003eb28a   _Dout5
+003eb282   _Dout6
+003eb279   _Dout7
+003eb265   _Dout8
+003eb251   _Dout9
+003eb328   _DoutRSVD
+003e892d   _DpDataDeal
+00006040   _ECanaLAMRegs
+000060c0   _ECanaMOTORegs
+00006080   _ECanaMOTSRegs
+00006100   _ECanaMboxes
+00006000   _ECanaRegs
+00006a00   _ECap1Regs
+003ef042   _EPWM1_TZ_isr
+003ef010   _EPWM1_zero_isr
+00008c40   _EPWMFlagU
+00008c42   _EPWMFlagV
+00008c43   _EPWMFlagW
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+00006980   _EPwm7Regs
+00006b00   _EQep1Regs
+00008840   _EQepRegs
+003e90e7   _EepromDeal
+003e90b4   _EepromOperateTimeDeal
+00000d01   _EmuBMode
+00000d00   _EmuKey
+003f464d   _EnableDog
+003f0264   _EnableTimer
+003f175d   _EndOfParIdentify
+003e8a92   _ErrAgainSend
+003e967a   _ErrorDeal
+003e95f6   _ErrorReset
+003e950d   _ErrorSceneSave
+003eb81b   _FMPDeal
+003ecead   _FcDigit2Bin
+00000a80   _FlashRegs
+00000d04   _Flash_CPUScaleFactor
+00000d02   _Flash_CallbackPtr
+003e99ad   _FrqAimUpDownDeal
+003ea5e9   _FrqPidSetDeal
+003e9d72   _FrqPlcSetDeal
+003ea106   _FrqSrcDeal
+003ea0d1   _FrqSrcOperate
+003e9e72   _FrqXyCalc
+003ed5fe   _FuncCodeRwAtrrib
+003ec04d   _FuncVariableInit
+003f069d   _GetCurExcursion
+003f060f   _GetCurrentInfo
+003e88c3   _GetDataByteNum
+003ecc34   _GetDispDigits
+003e90a1   _GetEepromIndexFromFcIndex
+003e924c   _GetErrorAttribute
+003e94df   _GetErrorResetDeal
+003e909c   _GetFcIndexFromEepromIndex
+003e9fc9   _GetFrq
+003e9f60   _GetFrqComp
+003e9f4b   _GetFrqX
+003e9ef1   _GetFrqY
+003e979b   _GetFuncCodeInit
+003e977f   _GetFuncCodeInitOriginal
+003efe1d   _GetMDetaPos
+003efdff   _GetMTTimeNum
+003e9324   _GetNewError
+003e94a8   _GetNewErrorAttribute
+003ec105   _GetNumberDigit
+003ec0d5   _GetNumberDigit1
+003ec0c0   _GetNumberDigit2
+003f4231   _GetPGPos
+003efd18   _GetRotorTransPos
+003ef9e0   _GetSpeedMMethod
+003efa40   _GetSpeedMTMethod
+003eb388   _GetTemperature
+003eb349   _GetTemperatureCalc
+003f05f1   _GetUDCInfo
+003ef933   _GetUvwPhase
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+003ecc2c   _GroupUpDown
+003f414e   _HVfCurReDecomp
+003f4080   _HVfDeadBandComp
+003f4049   _HVfOscDampDeal
+003f27cc   _HardWareErrorDeal
+003f27a6   _HardWareOverUDCDeal
+003e9023   _I2CNoACK
+003e8ff3   _I2CRcvByte
+003e8fda   _I2CStop
+0000898b   _I2CWrongTimer
+003e903f   _I2cDealBeforeInit
+003e8f8e   _I2cIntDeal
+0000945e   _I2cMsg
+00007900   _I2caRegs
+003f6aca   _INV_TYPE_BIG_ACC_DEC_START_TABLE
+003f6ad0   _INV_TYPE_POINT_LIMIT_TABLE
+003f1cae   _IPMCalAcrPIDCoff
+003f1c40   _IPMCheckInitPos
+003f045a   _ImCalKpKi
+003e812c   _InitCanlink
+003e80fe   _InitCanlinkRec
+003e80da   _InitCanlinkTran
+003e807a   _InitCpuTimers
+003eb7b6   _InitDIGpio
+003eb779   _InitDOGpio
+003e8b7d   _InitDebug
+003ec014   _InitDspFunc
+003eb76a   _InitECap1Gpio
+003eb769   _InitECap2Gpio
+003eb768   _InitECap3Gpio
+003eb767   _InitECap4Gpio
+003eb751   _InitEPwm4Gpio
+003eb73c   _InitEPwm5Gpio
+003eb727   _InitEPwm6Gpio
+00008004   _InitFlash
+003ec0b9   _InitForFunctionApp
+003f10c0   _InitForMotorApp
+003ebe6e   _InitFuncCode
+003e8f71   _InitI2CGpio
+003e8b7b   _InitI2cDebug
+003f462c   _InitInterrupt
+003e8b7a   _InitKeyDebug
+003f049c   _InitLmIoVaribale
+003f4567   _InitPeripheralClocks
+003f461f   _InitPeripherals
+003f4610   _InitPieCtrl
+003f45ff   _InitPieVectTable
+003f452e   _InitPll
+003e8d2f   _InitRecMbox
+003f0252   _InitRrLoVariable
+003efbd2   _InitRtInterface
+003e8892   _InitSciDpBaudRate
+003e8857   _InitSciaGpio
+003e8a65   _InitSciaGpioDp
+003e8a38   _InitScibGpioDp
+003f45b7   _InitSetAdc
+003eb6fd   _InitSetEPWM4
+003eb6cd   _InitSetEPWM5
+003eb6a3   _InitSetEPWM6
+003eb695   _InitSetEcap1
+003f4586   _InitSetGpio
+003e8f5e   _InitSetI2ca
+003f2a91   _InitSetPWM
+003f1d43   _InitSetPosTune
+003efce0   _InitSetQEP
+003e8898   _InitSetSciDp
+003e86cf   _InitSetScia
+003eee48   _InitSetSpiForFunc
+003eee11   _InitSpiaGpio
+003f4575   _InitSysCtrl
+003e8cdc   _InitTranMbox
+003e8c2d   _InitdspECan
+003f0aee   _InputPhaseLoseDetect
+003f15ba   _InvCalcPower
+003f0c63   _InvDeviceControl
+00009782   _InvRecFastTab
+00009790   _InvRecSlowTab
+003ed69e   _InvRecTabCfg
+00009781   _InvTrFastIndex
+00009789   _InvTrFastTab
+00009780   _InvTrSlowIndex
+000097c0   _InvTrSlowTab
+003ed678   _InvTranTabCfg
+003eac74   _InverterTypeRelatedNoMotorParaDeal
+003eacd8   _InverterTypeRelatedNoMotorParaSaveDeal
+003ead25   _InverterTypeRelatedParaDeal
+003ee18d   _JogRunCtrl
+003efcb8   _JudgeABDir
+003efc90   _JudgeRTDir
+003efc5f   _JudgeUVWDir
+003e9cab   _JumpFrqDeal
+003e9c9e   _JumpFrqEndCalc
+003eed4b   _KeyBordTest
+003eed5a   _KeyProcess
+003eecac   _KeyScan
+003f451c   _KickDog
+003f6a3c   _LED_CODE
+003ec7eb   _LimitDeal
+003e9681   _LimitOtherCodeDeal
+003ec9ae   _LimitOverTurnDeal
+00006c00   _LinaRegs
+003e8832   _Lina_Level0_ISR
+003e8829   _Lina_Level1_ISR
+003eaf84   _LineCalc
+003ee8f1   _LineChangeCalc
+003f035f   _LmIoCalValue
+003f04b0   _LmIoIdentify
+003f03ce   _LmIoInPeriodInt
+003f0a89   _LoadLoseDetect
+003ee157   _LoseLoadRunCtrl
+003ee1c0   _LowerThanLowerFrqDeal
+003eb329   _LpfCalc
+003ebe5f   _Main05msFunctionA
+003ebe42   _Main05msFunctionB
+003ebe23   _Main05msFunctionC
+003ebe0b   _Main05msFunctionD
+003ebda1   _Main05msFunctionEachEnd
+003ebd78   _Main05msFunctionEachStart
+003f10bd   _Main05msMotor
+003ebd75   _Main0msFunction
+003f10b4   _Main0msMotor
+003ebd74   _Main2msFunction
+003f109c   _Main2msMotorA
+003f0ed0   _Main2msMotorB
+003f0ec9   _Main2msMotorC
+003f0eb7   _Main2msMotorD
+003f278c   _MaxUVWCurrent
+003eca43   _Menu0AddMenuLevel
+003ecea5   _Menu0OnEnter
+003eca4f   _Menu0OnPrg
+003ece9a   _Menu0OnShift
+003ece8a   _Menu0OnUpDown
+003ece86   _Menu1OnDown
+003eca2f   _Menu1OnEnter
+003ece6a   _Menu1OnPrg
+003ece85   _Menu1OnShift
+003ece81   _Menu1OnUp
+003ecc98   _Menu1OnUpDown
+003ece7d   _Menu2OnDown
+003ecc69   _Menu2OnEnter
+003ece70   _Menu2OnPrg
+003ece56   _Menu2OnShift
+003ece52   _Menu2OnUp
+003ecca3   _Menu2OnUpDown
+003ece4e   _Menu3OnDown
+003ecd72   _Menu3OnEnter
+003ecd6a   _Menu3OnPrg
+003ecd5a   _Menu3OnShift
+003ecd56   _Menu3OnUp
+003eccf6   _Menu3OnUpDown
+003ecc1e   _MenuInit
+003ec9f8   _MenuModeDeal
+003eca77   _MenuModeSwitch
+003ecbf4   _MenuOnMfk
+003ecbc6   _MenuOnQuick
+003ecbc5   _MenuOnRun
+003ecbc4   _MenuOnStop
+003ecbb8   _MenuPwdHint2Input
+003ecbc3   _MenuPwdHintOnQuick
+003ecbb8   _MenuPwdHintOnShift
+003ecbb4   _MenuPwdInputOnDown
+003ecba6   _MenuPwdInputOnEnter
+003ecba5   _MenuPwdInputOnQuick
+003ecb9d   _MenuPwdInputOnShift
+003ecb99   _MenuPwdInputOnUp
+003ecb82   _MenuPwdInputOnUpDown
+003ecb79   _MenuPwdOnPrg
+003ed0be   _ModbusCommErrCheck
+003ed0a5   _ModbusRcvDataDeal
+003ed02f   _ModbusSendDataDeal
+003ecfff   _ModbusStartDeal
+003ecabf   _ModifyFunccodeEnter
+003ec857   _ModifyFunccodeUpDown
+003ec785   _MotorDebugFcDeal
+003eab87   _MotorPowerRelatedParaDeal
+003f44f7   _MovePrgFrFlashToRam
+00007060   _NmiIntruptRegs
+003ec807   _NoSameDeal
+003ee20e   _NormalRunCtrl
+003ed230   _OscControlRead
+003ed223   _OscControlWriter
+003ed475   _OscSciFunction
+003f2a30   _OutPutPWMVC
+003f2976   _OutPutPWMVF
+003f0a5e   _OutputLoseAdd
+003f09fc   _OutputLoseReset
+003f0a05   _OutputPhaseLoseDetect
+003f0851   _OverLoadProtect
+003ec7df   _OverTurnDeal
+003ed4ba   _P2PDataDeal
+003f1ba1   _PG_Zero_isr
+003f4449   _PID
+003f440c   _PID32
+003f4353   _PIDLongRegulate
+003f0e92   _PWMZeroInterrupt
+003ef827   _ParGet05Ms
+003ef61e   _ParGet2Ms
+003ef61d   _ParSend05Ms
+003ef517   _ParSend2Ms
+003ef4ce   _ParSendTune
+003d7e80   _PartIdRegs
+003ea18b   _PidFuncCalc
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+003ed549   _PlcDataFramDeal
+003f1b9a   _PmChkInitPosRest
+003f1b48   _PmDecoupleDeal
+003f1a3e   _PmFluxWeakDeal
+003ee0cb   _PowerOffNoStopDeal
+003e9728   _PowerOffRemDeal
+003e8b79   _PowerOnDebug
+003f367d   _PrepImCsrPara
+003f19df   _PrepPmsmCsrPrar
+003f3569   _PrepareAsrPar
+003f2d5d   _PrepareForSpeedCheck
+003f0d05   _PrepareParForRun
+003f1800   _PrepareParForTune
+003ed8ee   _ProfibusCommErrCheck
+003ed8a0   _ProfibusRcvDataDeal
+003ed763   _ProfibusSendDataDeal
+003ed6f9   _ProfibusStartDeal
+003eb575   _PulseInCalc
+003eb546   _PulseInSample
+003eb44d   _PulseOutCalc
+003efbf9   _ReInitForPG
+003e8e14   _ReadFuncCode
+003f3143   _ResetAsrPar
+003f314e   _ResetCsrPar
+003ef884   _ResetDebugBuffer
+003f318e   _ResetParForVC
+003f3115   _ResetSVC
+003e9c91   _ResetUpDownFrq
+003e9704   _RestoreCompanyParaOtherDeal
+003e8aef   _Reverse4Bit
+003e8ad6   _Reverse8Bit
+003efb03   _RotorTransCalVel
+003efbbd   _RotorTransSamplePos
+003f022d   _RrGetVoltReBegin
+003f0130   _RrLoCalVaule
+003f027f   _RrLoIdentify
+003f00af   _RrLoInPeriodAndCmpInt
+003f008a   _RrWaitAddGetUdc
+003efe9c   _RsIdentify
+003f2736   _RunCaseDcBrake
+003f17b1   _RunCaseGetPar
+003f196d   _RunCaseIpmInitPos
+003f26a4   _RunCaseLowPower
+003f0d70   _RunCaseRun2Ms
+003f25ef   _RunCaseShortGnd
+003f2b9a   _RunCaseSpeedCheck
+003f0dee   _RunCaseStop
+003ee3c2   _RunSrcDeal
+003ee261   _RunSrcUpdateFrq
+003f13d9   _RunStateParChg2Ms
+003e8dde   _RwEeprom
+003e8d94   _RwI2cBus
+003e89c7   _SCI_DP_RXD_isr
+003e899d   _SCI_DP_TXD_isr
+003e8806   _SCI_RXD_isr
+003e87d8   _SCI_TXD_isr
+003ee701   _SCurveOridinaryCalc
+003ee469   _SCurveSpecialCalc
+000086c4   _SVC0Signal
+003f2f64   _SVCCalFlux_380
+003f2e95   _SVCCalRotorSpeed
+003f2dd5   _SVCCalRotorSpeed_380
+003ef877   _SaveDebugData16
+003ef864   _SaveDebugData32
+00008ba8   _SaveTmCnt
+003eab5d   _SaveTuneData
+003e87a7   _SciDeal
+003e8985   _SciDpDeal
+003e8607   _SciErrCheck
+00007050   _SciaRegs
+003f0c83   _SendDataPrepare
+003f28a9   _SendPWM
+003f083e   _SetCBCDisable
+003f082a   _SetCBCEnable
+003f1ce8   _SetIPMPos
+003f1d07   _SetIPMPos_ABZRef
+003f4511   _SetInterruptEnable
+003efe38   _SetPwmForRrLoId
+003ee06d   _ShutDownRunCtrl
+003f431d   _SlipFilter
+003ef1b4   _SoftPWMProcess
+003ebd63   _SoftVersionDeal
+003f079b   _SoftWareErrorDeal
+003f2b7f   _SpeedCheckCycleOver
+003f2b77   _SpeedCheckCycleSUB2
+003f2b4f   _SpeedCheckSUB1
+003f2b01   _SpeedCheckUdcRiseDeal
+003ef9c0   _SpeedSmoothDeal
+00007040   _SpiaRegs
+00007740   _SpibRegs
+003edf87   _StartRunCtrl
+003edf02   _StopRunCtrl
+003f3467   _SvcCalOutVolt
+003f339b   _SvcCalOutVolt_380
+003ede93   _SwingDeal
+003f2342   _SynCalLabAndLbc
+003f1925   _SynCalLdAndLq
+003f189f   _SynCalRealPos
+003f23ae   _SynInitPosDetCal
+003f22aa   _SynInitPosDetSetPwm
+003f2408   _SynInitPosDetSetTs
+003f241f   _SynInitPosDetect
+003ef0f6   _SynPWMAngleCal
+003f211f   _SynTuneBemf
+003f20c1   _SynTuneInitPos
+003f1f1a   _SynTunePGZero_Load
+003f1d60   _SynTunePGZero_No_Load
+00007010   _SysCtrlRegs
+00000985   _SysPwrCtrlRegs
+003f137b   _SystemParChg05Ms
+003f11f0   _SystemParChg2Ms
+003eb41a   _TemperatureAfterDeal
+003f0700   _TemperatureCheck
+003eb435   _TemperatureDeal
+003eb39e   _TemperatureSensorDeal
+003e8b78   _TestI2cDebug
+003eab4a   _TorqueBoostDeal
+003eeb0a   _TorqueCalc
+003eea85   _TorqueLimitCalc
+003ede09   _TuneRunCtrl
+003f0c78   _TurnToStopStatus
+003e8b1b   _UniversalDebug
+003e8b1a   _UniversalDebug32
+003ec79d   _UpdataFuncCodeGrade
+003eddf4   _UpdateBenchTime
+003ea9d8   _UpdateDataCore2Func
+003ea949   _UpdateDataFunc2Core0p5ms
+003ea8ac   _UpdateDataFunc2Core2ms
+003eebf5   _UpdateDisplayBuffer
+003ec31c   _UpdateDisplayBufferAttribute
+003ec415   _UpdateDisplayBufferVisualDiFunc
+003ec437   _UpdateDisplayBufferVisualIoStatus
+003e94ba   _UpdateError
+003ec6c6   _UpdateErrorDisplayBuffer
+003eae83   _UpdateFmpAoValue
+003e9b8c   _UpdateFrqAim
+003ec308   _UpdateGroupDisplay
+003e8f3a   _UpdateIndexForEepromDeal
+003eab28   _UpdateInvType
+003e9b2e   _UpdateLimitFrq
+003ec69e   _UpdateMenu0DispStatus
+003ec701   _UpdateMenu0DisplayBuffer
+003ec682   _UpdateMenu1DisplayBuffer
+003ec600   _UpdateMenu2DisplayBuffer
+003ec462   _UpdateMenu3DisplayBuffer
+003eebd7   _UpdateMenuModeDisplayBuffer
+003ec2f5   _UpdateMenuPwdHintDisplayBuffer
+003ec2cd   _UpdateMenuPwdInputDisplayBuffer
+003ecfeb   _UpdateModbusCommFormat
+003ed0ce   _UpdateMotorPara
+003e9ace   _UpdateMultiSetFrq
+003ea476   _UpdatePidFuncPara
+003ea373   _UpdatePidFuncRefFdb
+003ed6e6   _UpdateProfibusCommFormat
+003edab0   _UpdateRunCmd
+003e996a   _UpdateRunMode
+003e88b3   _UpdateSciDpFormat
+003e8716   _UpdateSciFormat
+003ed9b3   _UpdateSwingPara
+003eea09   _UpdateTorqueAim
+003ec2b4   _UpdateTuneDisplayBuffer
+003ec184   _UpdateU0Data
+003f32f1   _VCCsrControl
+003f3244   _VCCsrControl_380
+003efb89   _VCGetFeedBackSpeed
+003f3f8c   _VFAutoTorqueBoost
+003f3bcd   _VFOVUdcLimit
+003f3f31   _VFOverMagneticControl
+003f3f1a   _VFSpeedControl
+003f3d68   _VFWSCompControl
+003f3c98   _VFWsTorqueBoostComm
+003eab0b   _ValidateInvType
+003ec162   _ValidateTuneCmd
+003f319a   _VcAsrControl
+003f3bec   _VfFreqDeal
+003f3b86   _VfOscIndexCalc
+003f3a76   _VfOverCurDeal
+003f3994   _VfOverUdcDeal
+003f393d   _VfVarInitiate
+003eeb0f   _WinkDeal
+003e8e8e   _WriteFuncCode
+00007070   _XIntruptRegs
+00008e56   _ZCount
+003f4248   _ZeroPosControl
+003f4236   _ZeroPosJudge
+00000400   __STACK_SIZE
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_var_size
+ffffffff   ___TI_prof_var_start
+ffffffff   ___binit__
+00000000   ___bss__
+ffffffff   ___c_args__
+003f6b33   ___cinit__
+00000000   ___data__
+00000000   ___edata__
+00000000   ___end__
+003f4868   ___etext__
+ffffffff   ___pinit__
+003e8000   ___text__
+003e8065   __args_main
+0000877a   __cleanup_ptr
+0000877c   __dtors_ptr
+000084bc   __lock
+003e8064   __nop
+003e8060   __register_lock
+003e805c   __register_unlock
+00000400   __stack
+000084ba   __unlock
+003e8044   _abort
+003f426f   _abs
+003f4273   _absl
+00008bda   _accDecFrqPrcFlag
+00008bdc   _accDecFrqTicker
+00008de8   _accDecTimeSrcPlc
+00008e04   _accFrqTime
+00008ed8   _accTimeOld
+00008326   _aiDeal
+00008340   _aiLpf
+000085c0   _aiaoChckReadOK
+00008e5b   _antiVibrateCoeff
+0000878e   _aoComm
+000082e8   _aoFmpMax
+000082e6   _aoFmpValue
+003f4300   _atan
+00008b42   _bAntiReverseRun
+00008699   _bEnflash
+00008ec0   _bFrqCurAimChg
+00008b4f   _bFrqDigital
+00008bdf   _bFrqDigitalDone4WaitDelay
+00008686   _bKeyEsc
+00008687   _bKeyProc
+000086a7   _bLight
+0000869d   _bOnShift
+000082d5   _bOverFlowCounterTicker
+000082d2   _bOverFlowLengthCurrent
+00008a43   _bPidFdbLose
+00008b45   _bPlcEndOneLoop
+00008de5   _bRunJog
+00008b4a   _bStopPlc
+00008831   _bUv
+00008b46   _benchFrq
+003e8000   _c_int00
+0000878a   _canLinkTicker
+000082f4   _capturePeriodSum
+000082c4   _captureTicker
+00008bcc   _checkMenuModeCmd
+00008bca   _checkMenuModeDealStatus
+00008bcb   _checkMenuModePara
+00008bc5   _checkMenuModeSerachNone
+003ea862   _checkSpeedFdbDir
+003e86c8   _closeRTX
+003f6896   _commDispIndex
+003e86b2   _commErrorDeal
+003f6b1c   _commParitys
+00008781   _commProtocol
+000087a3   _commRcvData
+00008797   _commReadData
+00008784   _commRunCmd
+00008791   _commSendData
+00008785   _commStatus
+003e866f   _commStatusDeal
+0000878c   _commTicker
+00008788   _commType
+00008780   _companyPwdPass4Comm
+003ea861   _copyDataCore2Func05ms
+003ea7df   _copyDataCore2Func2ms
+003ea7d8   _copyDataCore2Uf2ms
+003ea7d1   _copyDataFunc2CF2ms
+003ea79a   _copyDataFunc2Motor05ms
+003ea6c3   _copyDataFunc2Motor2ms
+003f4504   _copy_prg
+003f629b   _crc16Table
+00008bf2   _curFc
+00008bc9   _curFcDispDigits
+0000883a   _curTime
+00008e5c   _currentOc
+00008bd5   _currentOcDisp
+00008e59   _currentPu
+003ec11e   _cycleShiftDeal
+000084c1   _dataByteNum
+003f6aec   _dataByteNums
+003f6af1   _debugTuneProcess
+00008e02   _decFrqTime
+003f6af6   _decNumber
+00008ec4   _decTimeOld
+003f6b2b   _deltaK
+00008332   _diDelayTicker
+000082fc   _diFunc
+003f69cf   _diFuncIndex
+000086a2   _diHwStatus
+000082e2   _diLogic
+00008300   _diSelectFunc
+00008304   _diStatus
+003f6659   _dispAttributeU0
+003f68f3   _dispCodeMenuMode
+000086b1   _displayBuffer
+00008782   _doComm
+00008380   _doDelayTicker
+0000830a   _doFunc
+003f48e0   _doFuncCal
+000082c0   _doHwStatus
+000082d1   _doLogic
+000082f8   _doStatus
+00008de6   _dormantStatus
+00008bbc   _dpControlCmd
+00008bbb   _dpControlCmdBak
+00008bba   _dpFrqAim
+000084c4   _dpParameter
+000084c2   _dpSciCommRcvFlag
+000084c3   _dpSciCommSendFlag
+00008bbe   _dpStatus
+000084c0   _dpTest
+000085dc   _driveCoeff
+00008e5d   _driveCoeffFrqFdb
+003f67a2   _dspBaudRegData
+00008dce   _dspMainCmd
+00008dd5   _dspMainCmd1
+00008dcb   _dspStatus
+00008dcc   _dspSubCmd
+00008dd0   _dspSubStatus
+003f6994   _eCanBaud
+003e8beb   _eCanDataRec
+003e8b7f   _eCanDataTran
+000082bc   _eCanReEnFlag
+000082be   _eCanTranEnFlag
+003f5ba7   _eeprom2Fc
+00009458   _eepromOperateTime
+00008e58   _enCoderPosition
+00009446   _endIndexRwFuncCode
+00009444   _endIndexWriteSeries
+00008838   _errAutoRstClrWaitTicker
+00008836   _errAutoRstNum
+0000882a   _errorAttribute
+0000882b   _errorAttributeOld
+00008825   _errorCode
+00008e42   _errorCodeFromMotor
+003f69a9   _errorCodeFromMotorList
+0000882d   _errorCodeOld
+00008828   _errorDealStatus
+00008826   _errorEeprom
+00008827   _errorInfo
+00008833   _errorInfoFromMotor
+00008830   _errorInfoOld
+00008829   _errorOther
+00008824   _errorOtherOld
+00008832   _errorSpaceTicker
+00008e68   _errorsCodeFromMotor
+003e8046   _exit
+00008bc2   _facPassViewStatus
+00008689   _factoryPwd
+00008bdb   _factoryPwdStatus
+003f67d6   _fcNoAttri2Eeprom
+0000869f   _flashMaxSDSD
+000086ac   _flashTicker
+000086b7   _flashTickerLed
+00008b80   _frq
+00008e5f   _frq2Core
+00008b6e   _frqAiPu
+00008b86   _frqAim
+00008be6   _frqAimDisp
+00008b6c   _frqAimOld4Dir
+00008be0   _frqAimPLCDisp
+00008b88   _frqAimTmp
+00008b82   _frqAimTmp0
+00008b43   _frqCalcSrc
+00008b4e   _frqCalcSrcOld
+00008b84   _frqCurAim
+00008e61   _frqCurAim2Core
+00008b8a   _frqCurAimFrac
+00008eda   _frqCurAimOld
+00008b62   _frqDigitalPlc
+00008b60   _frqDigitalTmp
+00008be3   _frqDisp
+00008b7a   _frqDroop
+00008e44   _frqFdb
+00008e45   _frqFdbDisp
+00008e5e   _frqFdbFlag
+00008e6e   _frqFdbTmp
+00008b50   _frqFlag
+00008b7e   _frqFrac
+00008b4c   _frqKeyUpDownDelta
+00008f00   _frqLine
+00008b68   _frqMax
+00008b64   _frqMin
+00008be1   _frqPLCDisp
+00008b59   _frqPlcType
+00008b44   _frqPuQ15
+00008e6c   _frqRun
+00008bd8   _frqRunDisp
+003f6b31   _frqSrcFuncIndex
+00008b7c   _frqTmp
+00008b78   _frqTmpFrac
+00008e66   _frqVFRun
+00008e6a   _frqVFRunRemainder
+00008bd7   _frqXDisp
+00008b94   _frqXy
+00008bd6   _frqYDisp
+00008fc0   _funcCode
+003f49e6   _funcCodeAttribute
+003f66bd   _funcCodeGradeAll
+00008f40   _funcCodeGradeCurMenuMode
+003f6710   _funcCodeGradeSum
+000085c3   _funcCodeInitStatus
+00009480   _funcCodeOneWriteIndex
+0000944f   _funcCodeOneWriteNum
+00009454   _funcCodeRead
+00009443   _funcCodeRwMode
+00009442   _funcCodeRwModeTmp
+00009440   _funcCodeRwStatus
+00009450   _funcCodeWrite
+000088e8   _gABFluxS_LowFilter
+000088e0   _gABFluxS_comp
+000086ce   _gABVoltSet
+00008ae4   _gADC
+00008b00   _gAI
+00008754   _gAsr
+000083ca   _gBasePar
+00008ca3   _gBrake
+00008188   _gBuffResCnt
+000081a8   _gCBCProtect
+000088e4   _gCalFlux
+000083d8   _gComPar
+00008440   _gCpuTime
+000083c1   _gCtrMotorType
+00008b0c   _gCurSamp
+00008ca8   _gDCBrake
+000085b4   _gDeadBand
+003f6a13   _gDeadBandTable
+003f6a21   _gDeadCompTable
+00009800   _gDebugBuffer
+00008baa   _gDebugFlag
+00008bab   _gDebugPoint
+00008194   _gError
+000084bf   _gErrorIntCnt
+00008cd8   _gEstBemf
+00008b18   _gExcursionInfo
+003f5f89   _gExponentVf
+000083c2   _gExtendCmd
+00008896   _gFVCSpeed
+00008186   _gFanCtrl
+000085a0   _gFcCal
+00008d80   _gFeisu
+00008d5c   _gFeisuNew
+000088de   _gFluxR
+000088dc   _gFluxS
+00008940   _gFluxWeak
+000089c0   _gGetParVarable
+000081c0   _gHVfCur
+0000820c   _gHVfDeadBandCompOpt
+000081cb   _gHVfOscDamp
+000081c5   _gHVfOscIndex
+00008ac8   _gIAlphBeta
+00008ad0   _gIAlphBetaQ12
+00008ad8   _gIAmpTheta
+0000870e   _gIMSetAcr
+00008ac2   _gIMTQ12
+000088ec   _gIMTQ12_obs
+00008ad4   _gIMTQ24
+000088f0   _gIMTQ24_obs
+000086c6   _gIMTSet
+000086ca   _gIMTSetApply
+00008ac0   _gIMTSetQ12
+00008d00   _gIPMInitPos
+00008926   _gIPMPos
+00008908   _gIPMPosCheck
+00008cca   _gIPMZero
+00008ac4   _gIUVWQ12
+00008ade   _gIUVWQ24
+0000871c   _gImAcrQ24
+0000818d   _gInLose
+003f69bc   _gInvCurrentTable1140T
+003f6ab5   _gInvCurrentTable220S
+003f69f3   _gInvCurrentTable220T
+003f68d8   _gInvCurrentTable380T
+003f68b7   _gInvCurrentTable690T
+000083eb   _gInvInfo
+003f4984   _gInvOverLoadDecTable
+003f6a65   _gInvOverLoadTable
+003f6a6e   _gInvOverLoadTableForP
+003f6a77   _gInvVoltageInfo1140T
+003f6a80   _gInvVoltageInfo220S
+003f6a89   _gInvVoltageInfo220T
+003f6a92   _gInvVoltageInfo380T
+003f6a9b   _gInvVoltageInfo480T
+003f6aa4   _gInvVoltageInfo690T
+00008700   _gItAcrQ24
+00008aea   _gLineCur
+000089ca   _gLmIoIdentify
+0000818a   _gLoadLose
+00008c9c   _gLowPower
+00008428   _gMainCmd
+000083c3   _gMainStatus
+00008414   _gMotorExtInfo
+00008400   _gMotorExtPer
+000089d8   _gMotorExtReg
+000083e0   _gMotorInfo
+003f499c   _gMotorOverLoadDecTable
+003f6abd   _gMotorOverLoadTable
+00008280   _gOscAmp
+00008c44   _gOutVolt
+000081e8   _gOvCur
+000081f3   _gOvCur2
+00008200   _gOvUdc
+0000819e   _gOverLoad
+00008858   _gPGData
+0000884c   _gPGDir
+00008912   _gPMInitPos
+00008c8c   _gPWM
+000086c0   _gPWMVAlphBeta
+00009595   _gParaIdToFunctionDataBuff
+000085aa   _gPhase
+000081b4   _gPhaseLose
+00008e40   _gPhiRt
+00008e41   _gPhiRtDisp
+00008900   _gPmDecoup
+00008cc0   _gPmParEst
+000083d0   _gPowerTrq
+00008c41   _gRatio
+00009582   _gRealTimeToFunctionDataBuff
+00008880   _gRotorTrans
+00008a16   _gRrLoIdentify
+000088f4   _gSVCSpeed
+000095c0   _gSendToFunctionDataBuff
+00009587   _gSendToMotor05MsDataBuff
+00009600   _gSendToMotor2MsDataBuff
+00008c9f   _gShortGnd
+00009580   _gSoftVersion
+00008d40   _gSpeedCheckPID
+00008d4e   _gSpeedCheckPID1
+00008842   _gSpeedFilter
+00008868   _gSpeedLine
+000083c0   _gSubCommand
+000086ee   _gSvcVoltAdj
+003f6a51   _gSynFreqTable
+003f6a5b   _gSynNcTable
+000085a4   _gSynPWM
+003f49b4   _gSynStepAngleTable
+003f690b   _gTempTableBSMXX
+003f6922   _gTempTableP44X
+003f6939   _gTempTableP8XX
+003f6950   _gTempTableSEMIKON
+003f6967   _gTempTableWAIZHI
+00008acc   _gTemperature
+0000845c   _gTestDataDisplay
+00008480   _gTestDataReceive
+000086d2   _gUAmpTheta
+00008af2   _gUDC
+000086c2   _gUMTSet
+00008a00   _gUVCoff
+003f6ad6   _gUVWAngleTable
+000088c0   _gUVWPG
+00008740   _gUdcLimitIt
+0000872a   _gVCPar
+00008258   _gVFAutoVar
+00008240   _gVFPar
+000081c2   _gVarAvr
+000086d8   _gVcCsrPara
+000081de   _gVfFreq2
+00008218   _gVfOsc
+00008298   _gVfOverUdc
+000081d4   _gWsComp
+000086e0   _gWspid
+00008c26   _gZeroPos
+00008e4c   _generatrixVoltage
+003ed6e5   _getDPControlCmd
+003eae33   _getDiHwStatus
+003ebd5b   _getMomeryValue
+003e92d3   _getMotorError
+003e98ed   _getUpDownLimit
+00008bee   _groupDisplay
+00008be4   _groupHideChkOkFlag
+00008786   _groupHidePassComm
+00008bdd   _groupHidePwdStatus
+003f6b20   _hexNumber
+0000898e   _i
+00008c5b   _iTrig1_Cpwm
+00008c67   _iTrig1_Dpwm
+00008c4f   _iTrig2_Pwm
+00008c80   _iTrig3_Cpwm
+00008c73   _iTrig3_Dpwm
+0000944c   _index4EepromDeal
+000084a8   _invPara
+003f69e1   _invTypeLimitTable
+003f6763   _invTypeParaTableS220
+003f648e   _invTypeParaTableT1140
+003f6539   _invTypeParaTableT220
+003f618d   _invTypeParaTableT380
+003f639b   _invTypeParaTableT480
+003f65c9   _invTypeParaTableT690
+00008dcd   _invtStatus
+00008bd1   _itDisp
+00008e4b   _jerkFf
+00008ba0   _jumpFrq1
+00008b9a   _jumpFrq2
+00008682   _keyAge
+00008697   _keyBordTestFlag
+0000868c   _keyBordValue
+0000869a   _keyChecking
+00008683   _keyFunc
+00008688   _keyPreCtrl
+0000868d   _keyPreFunc
+0000869e   _keySelStatus
+000086a1   _keySelType
+0000869b   _keySelTypeBak
+00008684   _keyStatus
+00008685   _keyValue
+0000898f   _keyValueDebug
+0000898a   _keyValueDebugIndex
+003f6a2f   _limitOtherCodeIndex
+000096c0   _limitedByOtherCodeIndex
+00009680   _limitedByOtherCodeIndexNum
+000082c6   _lineSpeed
+00008bd0   _loadSpeedDisp
+00008e0a   _lowerDelayTicker
+00008b49   _lowerFrq
+003eefb3   _main
+000085c2   _mainLoopTicker
+000089b2   _matlabDebug
+0000898c   _matlabDebugRsvd
+00008b47   _maxFrq
+000085c5   _memoryValue
+003f4868   _menu
+00008bce   _menu0DispStatus
+00008bc7   _menu3Number
+00008c14   _menuAttri
+00008c00   _menuFc
+00008bc0   _menuLevel
+00008bcd   _menuMode
+00008bc1   _menuModeOld
+00008bc8   _menuModeStatus
+00008bc3   _menuModeTmp
+00008bc4   _menuPwdNumber
+003f6afb   _minRate
+003f697e   _motor1ParaIndex
+00008def   _motorCtrlTuneStatus
+00008bf0   _motorDebugFc
+00008e70   _motorErrInfor
+00008640   _motorFc
+000082d8   _motorForeOT
+000082d9   _motorOT
+00008600   _motorPara
+00008e49   _motorRun
+000085c1   _motorSn
+003f6b24   _motorSnIndexIncToMotor1
+003f6b2e   _motorSnIndexNIncToMotor2
+000082d4   _noCaptureTicker
+003f6b00   _noTuneProgress
+0000944b   _number4EepromDeal
+000082c1   _oCurrentCheckFlag
+000082f0   _oCurrentChkTicker
+000086a0   _onQuickTicker
+0000869c   _onQuickTickerMax
+0000868b   _onShiftPassViewTicker
+0000868e   _onShiftPassViewTickerMax
+00008dd2   _otherStopLowerSrc
+00008dd7   _otherStopSrc
+00008e4f   _outCurrent
+00008bd9   _outCurrentDisp
+00008e43   _outCurrentDispOld
+00008e4d   _outPower
+00008e4e   _outVoltage
+00008bd3   _outVoltageDisp
+003f6adc   _ovVoltageInitValue
+00008c36   _p2pData
+000084ae   _pInvTypeParaTable
+00008bb0   _pVD1
+00008bb2   _pVD2
+00008bac   _pVD3
+00008bae   _pVD4
+00008be2   _pcOriginDisp
+00008a42   _pidCalcFlag
+00008a46   _pidError
+00008a44   _pidFdbLoseTicker
+00008a80   _pidFunc
+00008bd4   _pidFuncFdbDisp
+00008a4a   _pidFuncRef
+00008be5   _pidFuncRefDisp
+00008a48   _pidInitTicker
+00008a66   _pidLpf
+00008a56   _pidParaLine
+00008b4d   _plcStep
+00008b4b   _plcStepOld
+00008b48   _plcStepRemOld
+00008b8e   _plcTime
+00008b8c   _plcTimeRemOld
+003f6b05   _pmTuneProgLoad
+003f6b0a   _pmTuneProgNoLoad
+00008e47   _pmsmRotorPos
+000084be   _polePair
+00008e50   _powerAddDec
+000085c4   _powerOnStatus
+00008dca   _powerUpTimeAddupTicker
+00008b5c   _presetFrqOld
+003f6d1c   _prginRAM
+003f49c8   _protocolFunc
+000082f6   _pulseInFrq
+000082f2   _pulseInFrq1
+00008bd2   _pulseInFrqDisp
+0000831a   _pulseInLpf
+000082c5   _pulseInSet
+003f429a   _qatan
+003f4277   _qsin
+003f42d0   _qsqrt
+0000898d   _rcvDataI2C
+000084c6   _rcvData_DP
+00008800   _rcvFrame
+00008bb9   _rcvRigthFlag
+00008695   _repeatNum
+003f6b0f   _repeatNumMax
+00008696   _repeatStep
+003e8343   _resetLinSci
+00008b6a   _reverseTicker
+00008e60   _rsvdData
+003f44fc   _rsvd_ISR
+00008df0   _runCmd
+00008b5e   _runCmdBind
+00008ded   _runDirPanelOld
+00008df1   _runFlag
+00008b5d   _runMode
+00008dc4   _runSrc
+00008dd1   _runStatus
+00008dcf   _runStatus1Step
+00008dc9   _runStatusOld4Jog
+00008dc2   _runStatusOld4LoseLoad
+00008dc0   _runStatusOld4POffNoStop
+00008dc5   _runTimeAddupTicker
+003ed942   _runTimeCal
+00008e0e   _runTimeTicker
+00009441   _rwFuncCodeRepeatDelayTicker
+00008ba6   _saveCurveNum
+00008bbd   _saveEepromFlag
+00008bbf   _saveEepromIndex
+00008bb4   _saveIndexFunc
+00008bb6   _saveIndexP
+00008ba9   _saveRstMem
+00008de9   _saveTuneDataFlag
+0000868a   _scanStep
+00008787   _sciFlag
+00008540   _sciM380DpData
+00008994   _scope0
+00008995   _scope1
+00008992   _scope2
+00008993   _scope3
+00008996   _scope4
+00008991   _scope5
+000089ac   _scopeIndex
+000089a6   _scopeInterval
+00008990   _sendDataI2C
+00008500   _sendData_DP
+000087c0   _sendFrame
+003eadee   _setDOStatus
+003ed6c0   _setDPStatusInfo
+00008dd3   _setRunLostTime
+00008dc6   _setRunTimeAim
+003e833c   _setRxConfig
+003ed907   _setTimeRun
+003e8335   _setTxConfig
+00008dc7   _shuntFlag
+00008e08   _shuntTicker
+00008e62   _softOCTicker
+000082d3   _softOcDoFlag
+00008e5a   _spdLoopOut
+00008e48   _speedMotor
+000086a4   _spiData
+00009445   _startIndexWriteSeries
+00008dd4   _startProtectSrc
+00008dd6   _startRunStatus
+00008ba7   _startSave
+003f6a03   _stopDispIndex
+00008de7   _stopRemFlag
+00008dc3   _stopRunStatus
+00008bde   _superFactoryPass
+003f4275   _swap
+00008e00   _swingAccTime
+00008dfe   _swingDecTime
+00008e0c   _swingDoubleAw
+00008dc8   _swingFrqLimit
+00008dfa   _swingJumpFrq
+00008e06   _swingMaxFrq
+00008dfc   _swingMinFrq
+00008dc1   _swingStatus
+000082e4   _tempSampleSum
+000082d6   _temperature
+000082cc   _temperatureVoltage
+000082cd   _temperatureVoltageOrigin
+000085ec   _ticker05msFuncEa
+000085cc   _ticker05msFuncEach
+000085d8   _ticker05msFuncEachDisp
+000085e4   _ticker05msFuncIn
+000085d0   _ticker05msFuncInternal
+000085d4   _ticker05msFuncInternalDisp
+00008bc6   _ticker4LowerDisp
+000082d7   _tickerTempDeal
+000085ce   _timeBase
+000085d2   _timeBase05msOld
+00008b52   _timeBench
+00008c08   _torQueFrqDispLpf
+00008b28   _torqueAim
+00008e57   _torqueCurrent
+00008bec   _torqueCurrentAct
+00008b29   _torqueSetEthDp
+00008b2c   _torqueUpperEthDp
+00008b2e   _torqurLine
+00008de4   _tuneCmd
+00008b90   _uPDownFrqLower1
+00008b92   _uPDownFrqLower2
+00008b70   _uPDownFrqMax
+00008b72   _uPDownFrqMin
+00009581   _uReservedData
+003e920d   _underVoltageDeal
+00008698   _upDownDelta
+00008b74   _upDownFrq
+00008b41   _upDownFrqInit
+00008b76   _upDownFrqTmp
+00008b40   _upperFrq
+00008b2d   _upperTorque
+00008bcf   _userMenuModeFcIndex
+00008783   _userPwdPass4Comm
+00008835   _uvDealStatus
+00008998   _vDL
+00008e46   _vcSpdLoopKp1
+00008e4a   _vcSpdLoopKp2
+000082cf   _vdiFcSet
+000082d0   _vdiSrc
+003eeed2   _vfSeparateDeal
+00008d1d   _vfSeparateVol
+00008d1e   _vfSeprateVolAccLine
+00008d1c   _vfSeprateVolAim
+003f680a   _voltageTempPT100
+003f683d   _voltageTempPT1000
+ffffffff   binit
+003f6b33   cinit
+003f7ff6   code_start
+00000000   edata
+00000000   end
+003f4868   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   .bss
+00000000   .data
+00000000   ___bss__
+00000000   ___data__
+00000000   ___edata__
+00000000   ___end__
+00000000   edata
+00000000   end
+00000400   __STACK_SIZE
+00000400   __stack
+00000880   _DevEmuRegs
+00000985   _SysPwrCtrlRegs
+00000a80   _FlashRegs
+00000ae0   _CsmRegs
+00000b00   _AdcResult
+00000c00   _CpuTimer0Regs
+00000c08   _CpuTimer1Regs
+00000c10   _CpuTimer2Regs
+00000ce0   _PieCtrlRegs
+00000d00   _EmuKey
+00000d00   _PieVectTable
+00000d01   _EmuBMode
+00000d02   _Flash_CallbackPtr
+00000d04   _Flash_CPUScaleFactor
+00001400   _Cla1Regs
+00006000   _ECanaRegs
+00006040   _ECanaLAMRegs
+00006080   _ECanaMOTSRegs
+000060c0   _ECanaMOTORegs
+00006100   _ECanaMboxes
+00006400   _Comp1Regs
+00006420   _Comp2Regs
+00006440   _Comp3Regs
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+00006980   _EPwm7Regs
+00006a00   _ECap1Regs
+00006b00   _EQep1Regs
+00006c00   _LinaRegs
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+00007010   _SysCtrlRegs
+00007040   _SpiaRegs
+00007050   _SciaRegs
+00007060   _NmiIntruptRegs
+00007070   _XIntruptRegs
+00007100   _AdcRegs
+00007740   _SpibRegs
+00007900   _I2caRegs
+00008000   _DSP28x_usDelay
+00008004   _InitFlash
+00008186   _gFanCtrl
+00008188   _gBuffResCnt
+0000818a   _gLoadLose
+0000818d   _gInLose
+00008194   _gError
+0000819e   _gOverLoad
+000081a8   _gCBCProtect
+000081b4   _gPhaseLose
+000081c0   _gHVfCur
+000081c2   _gVarAvr
+000081c5   _gHVfOscIndex
+000081cb   _gHVfOscDamp
+000081d4   _gWsComp
+000081de   _gVfFreq2
+000081e8   _gOvCur
+000081f3   _gOvCur2
+00008200   _gOvUdc
+0000820c   _gHVfDeadBandCompOpt
+00008218   _gVfOsc
+00008240   _gVFPar
+00008258   _gVFAutoVar
+00008280   _gOscAmp
+00008298   _gVfOverUdc
+000082bc   _eCanReEnFlag
+000082be   _eCanTranEnFlag
+000082c0   _doHwStatus
+000082c1   _oCurrentCheckFlag
+000082c4   _captureTicker
+000082c5   _pulseInSet
+000082c6   _lineSpeed
+000082cc   _temperatureVoltage
+000082cd   _temperatureVoltageOrigin
+000082cf   _vdiFcSet
+000082d0   _vdiSrc
+000082d1   _doLogic
+000082d2   _bOverFlowLengthCurrent
+000082d3   _softOcDoFlag
+000082d4   _noCaptureTicker
+000082d5   _bOverFlowCounterTicker
+000082d6   _temperature
+000082d7   _tickerTempDeal
+000082d8   _motorForeOT
+000082d9   _motorOT
+000082e2   _diLogic
+000082e4   _tempSampleSum
+000082e6   _aoFmpValue
+000082e8   _aoFmpMax
+000082f0   _oCurrentChkTicker
+000082f2   _pulseInFrq1
+000082f4   _capturePeriodSum
+000082f6   _pulseInFrq
+000082f8   _doStatus
+000082fc   _diFunc
+00008300   _diSelectFunc
+00008304   _diStatus
+0000830a   _doFunc
+0000831a   _pulseInLpf
+00008326   _aiDeal
+00008332   _diDelayTicker
+00008340   _aiLpf
+00008380   _doDelayTicker
+000083a8   _CpuTimer1
+000083b0   _CpuTimer2
+000083b8   _CpuTimer0
+000083c0   _gSubCommand
+000083c1   _gCtrMotorType
+000083c2   _gExtendCmd
+000083c3   _gMainStatus
+000083ca   _gBasePar
+000083d0   _gPowerTrq
+000083d8   _gComPar
+000083e0   _gMotorInfo
+000083eb   _gInvInfo
+00008400   _gMotorExtPer
+00008414   _gMotorExtInfo
+00008428   _gMainCmd
+00008440   _gCpuTime
+0000845c   _gTestDataDisplay
+00008480   _gTestDataReceive
+000084a8   _invPara
+000084ae   _pInvTypeParaTable
+000084ba   __unlock
+000084bc   __lock
+000084be   _polePair
+000084bf   _gErrorIntCnt
+000084c0   _dpTest
+000084c1   _dataByteNum
+000084c2   _dpSciCommRcvFlag
+000084c3   _dpSciCommSendFlag
+000084c4   _dpParameter
+000084c6   _rcvData_DP
+00008500   _sendData_DP
+00008540   _sciM380DpData
+000085a0   _gFcCal
+000085a4   _gSynPWM
+000085aa   _gPhase
+000085b4   _gDeadBand
+000085c0   _aiaoChckReadOK
+000085c1   _motorSn
+000085c2   _mainLoopTicker
+000085c3   _funcCodeInitStatus
+000085c4   _powerOnStatus
+000085c5   _memoryValue
+000085c8   _CODE_RUN_DISPLAY_UPDATE_TIME
+000085cc   _ticker05msFuncEach
+000085ce   _timeBase
+000085d0   _ticker05msFuncInternal
+000085d2   _timeBase05msOld
+000085d4   _ticker05msFuncInternalDisp
+000085d8   _ticker05msFuncEachDisp
+000085dc   _driveCoeff
+000085e4   _ticker05msFuncIn
+000085ec   _ticker05msFuncEa
+00008600   _motorPara
+00008640   _motorFc
+00008682   _keyAge
+00008683   _keyFunc
+00008684   _keyStatus
+00008685   _keyValue
+00008686   _bKeyEsc
+00008687   _bKeyProc
+00008688   _keyPreCtrl
+00008689   _factoryPwd
+0000868a   _scanStep
+0000868b   _onShiftPassViewTicker
+0000868c   _keyBordValue
+0000868d   _keyPreFunc
+0000868e   _onShiftPassViewTickerMax
+00008695   _repeatNum
+00008696   _repeatStep
+00008697   _keyBordTestFlag
+00008698   _upDownDelta
+00008699   _bEnflash
+0000869a   _keyChecking
+0000869b   _keySelTypeBak
+0000869c   _onQuickTickerMax
+0000869d   _bOnShift
+0000869e   _keySelStatus
+0000869f   _flashMaxSDSD
+000086a0   _onQuickTicker
+000086a1   _keySelType
+000086a2   _diHwStatus
+000086a4   _spiData
+000086a7   _bLight
+000086ac   _flashTicker
+000086b1   _displayBuffer
+000086b7   _flashTickerLed
+000086c0   _gPWMVAlphBeta
+000086c2   _gUMTSet
+000086c4   _SVC0Signal
+000086c6   _gIMTSet
+000086ca   _gIMTSetApply
+000086ce   _gABVoltSet
+000086d2   _gUAmpTheta
+000086d8   _gVcCsrPara
+000086e0   _gWspid
+000086ee   _gSvcVoltAdj
+00008700   _gItAcrQ24
+0000870e   _gIMSetAcr
+0000871c   _gImAcrQ24
+0000872a   _gVCPar
+00008740   _gUdcLimitIt
+00008754   _gAsr
+0000877a   __cleanup_ptr
+0000877c   __dtors_ptr
+00008780   _companyPwdPass4Comm
+00008781   _commProtocol
+00008782   _doComm
+00008783   _userPwdPass4Comm
+00008784   _commRunCmd
+00008785   _commStatus
+00008786   _groupHidePassComm
+00008787   _sciFlag
+00008788   _commType
+0000878a   _canLinkTicker
+0000878c   _commTicker
+0000878e   _aoComm
+00008791   _commSendData
+00008797   _commReadData
+000087a3   _commRcvData
+000087c0   _sendFrame
+00008800   _rcvFrame
+00008824   _errorOtherOld
+00008825   _errorCode
+00008826   _errorEeprom
+00008827   _errorInfo
+00008828   _errorDealStatus
+00008829   _errorOther
+0000882a   _errorAttribute
+0000882b   _errorAttributeOld
+0000882d   _errorCodeOld
+00008830   _errorInfoOld
+00008831   _bUv
+00008832   _errorSpaceTicker
+00008833   _errorInfoFromMotor
+00008835   _uvDealStatus
+00008836   _errAutoRstNum
+00008838   _errAutoRstClrWaitTicker
+0000883a   _curTime
+00008840   _EQepRegs
+00008842   _gSpeedFilter
+0000884c   _gPGDir
+00008858   _gPGData
+00008868   _gSpeedLine
+00008880   _gRotorTrans
+00008896   _gFVCSpeed
+000088c0   _gUVWPG
+000088dc   _gFluxS
+000088de   _gFluxR
+000088e0   _gABFluxS_comp
+000088e4   _gCalFlux
+000088e8   _gABFluxS_LowFilter
+000088ec   _gIMTQ12_obs
+000088f0   _gIMTQ24_obs
+000088f4   _gSVCSpeed
+00008900   _gPmDecoup
+00008908   _gIPMPosCheck
+00008912   _gPMInitPos
+00008926   _gIPMPos
+00008940   _gFluxWeak
+0000898a   _keyValueDebugIndex
+0000898b   _I2CWrongTimer
+0000898c   _matlabDebugRsvd
+0000898d   _rcvDataI2C
+0000898e   _i
+0000898f   _keyValueDebug
+00008990   _sendDataI2C
+00008991   _scope5
+00008992   _scope2
+00008993   _scope3
+00008994   _scope0
+00008995   _scope1
+00008996   _scope4
+00008998   _vDL
+000089a6   _scopeInterval
+000089ac   _scopeIndex
+000089b2   _matlabDebug
+000089c0   _gGetParVarable
+000089ca   _gLmIoIdentify
+000089d8   _gMotorExtReg
+00008a00   _gUVCoff
+00008a16   _gRrLoIdentify
+00008a42   _pidCalcFlag
+00008a43   _bPidFdbLose
+00008a44   _pidFdbLoseTicker
+00008a46   _pidError
+00008a48   _pidInitTicker
+00008a4a   _pidFuncRef
+00008a56   _pidParaLine
+00008a66   _pidLpf
+00008a80   _pidFunc
+00008ac0   _gIMTSetQ12
+00008ac2   _gIMTQ12
+00008ac4   _gIUVWQ12
+00008ac8   _gIAlphBeta
+00008acc   _gTemperature
+00008ad0   _gIAlphBetaQ12
+00008ad4   _gIMTQ24
+00008ad8   _gIAmpTheta
+00008ade   _gIUVWQ24
+00008ae4   _gADC
+00008aea   _gLineCur
+00008af2   _gUDC
+00008b00   _gAI
+00008b0c   _gCurSamp
+00008b18   _gExcursionInfo
+00008b28   _torqueAim
+00008b29   _torqueSetEthDp
+00008b2c   _torqueUpperEthDp
+00008b2d   _upperTorque
+00008b2e   _torqurLine
+00008b40   _upperFrq
+00008b41   _upDownFrqInit
+00008b42   _bAntiReverseRun
+00008b43   _frqCalcSrc
+00008b44   _frqPuQ15
+00008b45   _bPlcEndOneLoop
+00008b46   _benchFrq
+00008b47   _maxFrq
+00008b48   _plcStepRemOld
+00008b49   _lowerFrq
+00008b4a   _bStopPlc
+00008b4b   _plcStepOld
+00008b4c   _frqKeyUpDownDelta
+00008b4d   _plcStep
+00008b4e   _frqCalcSrcOld
+00008b4f   _bFrqDigital
+00008b50   _frqFlag
+00008b52   _timeBench
+00008b59   _frqPlcType
+00008b5c   _presetFrqOld
+00008b5d   _runMode
+00008b5e   _runCmdBind
+00008b60   _frqDigitalTmp
+00008b62   _frqDigitalPlc
+00008b64   _frqMin
+00008b68   _frqMax
+00008b6a   _reverseTicker
+00008b6c   _frqAimOld4Dir
+00008b6e   _frqAiPu
+00008b70   _uPDownFrqMax
+00008b72   _uPDownFrqMin
+00008b74   _upDownFrq
+00008b76   _upDownFrqTmp
+00008b78   _frqTmpFrac
+00008b7a   _frqDroop
+00008b7c   _frqTmp
+00008b7e   _frqFrac
+00008b80   _frq
+00008b82   _frqAimTmp0
+00008b84   _frqCurAim
+00008b86   _frqAim
+00008b88   _frqAimTmp
+00008b8a   _frqCurAimFrac
+00008b8c   _plcTimeRemOld
+00008b8e   _plcTime
+00008b90   _uPDownFrqLower1
+00008b92   _uPDownFrqLower2
+00008b94   _frqXy
+00008b9a   _jumpFrq2
+00008ba0   _jumpFrq1
+00008ba6   _saveCurveNum
+00008ba7   _startSave
+00008ba8   _SaveTmCnt
+00008ba9   _saveRstMem
+00008baa   _gDebugFlag
+00008bab   _gDebugPoint
+00008bac   _pVD3
+00008bae   _pVD4
+00008bb0   _pVD1
+00008bb2   _pVD2
+00008bb4   _saveIndexFunc
+00008bb6   _saveIndexP
+00008bb8   _DPRcvTest
+00008bb9   _rcvRigthFlag
+00008bba   _dpFrqAim
+00008bbb   _dpControlCmdBak
+00008bbc   _dpControlCmd
+00008bbd   _saveEepromFlag
+00008bbe   _dpStatus
+00008bbf   _saveEepromIndex
+00008bc0   _menuLevel
+00008bc1   _menuModeOld
+00008bc2   _facPassViewStatus
+00008bc3   _menuModeTmp
+00008bc4   _menuPwdNumber
+00008bc5   _checkMenuModeSerachNone
+00008bc6   _ticker4LowerDisp
+00008bc7   _menu3Number
+00008bc8   _menuModeStatus
+00008bc9   _curFcDispDigits
+00008bca   _checkMenuModeDealStatus
+00008bcb   _checkMenuModePara
+00008bcc   _checkMenuModeCmd
+00008bcd   _menuMode
+00008bce   _menu0DispStatus
+00008bcf   _userMenuModeFcIndex
+00008bd0   _loadSpeedDisp
+00008bd1   _itDisp
+00008bd2   _pulseInFrqDisp
+00008bd3   _outVoltageDisp
+00008bd4   _pidFuncFdbDisp
+00008bd5   _currentOcDisp
+00008bd6   _frqYDisp
+00008bd7   _frqXDisp
+00008bd8   _frqRunDisp
+00008bd9   _outCurrentDisp
+00008bda   _accDecFrqPrcFlag
+00008bdb   _factoryPwdStatus
+00008bdc   _accDecFrqTicker
+00008bdd   _groupHidePwdStatus
+00008bde   _superFactoryPass
+00008bdf   _bFrqDigitalDone4WaitDelay
+00008be0   _frqAimPLCDisp
+00008be1   _frqPLCDisp
+00008be2   _pcOriginDisp
+00008be3   _frqDisp
+00008be4   _groupHideChkOkFlag
+00008be5   _pidFuncRefDisp
+00008be6   _frqAimDisp
+00008bec   _torqueCurrentAct
+00008bee   _groupDisplay
+00008bf0   _motorDebugFc
+00008bf2   _curFc
+00008c00   _menuFc
+00008c08   _torQueFrqDispLpf
+00008c14   _menuAttri
+00008c26   _gZeroPos
+00008c36   _p2pData
+00008c40   _EPWMFlagU
+00008c41   _gRatio
+00008c42   _EPWMFlagV
+00008c43   _EPWMFlagW
+00008c44   _gOutVolt
+00008c4f   _iTrig2_Pwm
+00008c5b   _iTrig1_Cpwm
+00008c67   _iTrig1_Dpwm
+00008c73   _iTrig3_Dpwm
+00008c80   _iTrig3_Cpwm
+00008c8c   _gPWM
+00008c9c   _gLowPower
+00008c9f   _gShortGnd
+00008ca3   _gBrake
+00008ca8   _gDCBrake
+00008cc0   _gPmParEst
+00008cca   _gIPMZero
+00008cd8   _gEstBemf
+00008d00   _gIPMInitPos
+00008d1c   _vfSeprateVolAim
+00008d1d   _vfSeparateVol
+00008d1e   _vfSeprateVolAccLine
+00008d40   _gSpeedCheckPID
+00008d4e   _gSpeedCheckPID1
+00008d5c   _gFeisuNew
+00008d80   _gFeisu
+00008dc0   _runStatusOld4POffNoStop
+00008dc1   _swingStatus
+00008dc2   _runStatusOld4LoseLoad
+00008dc3   _stopRunStatus
+00008dc4   _runSrc
+00008dc5   _runTimeAddupTicker
+00008dc6   _setRunTimeAim
+00008dc7   _shuntFlag
+00008dc8   _swingFrqLimit
+00008dc9   _runStatusOld4Jog
+00008dca   _powerUpTimeAddupTicker
+00008dcb   _dspStatus
+00008dcc   _dspSubCmd
+00008dcd   _invtStatus
+00008dce   _dspMainCmd
+00008dcf   _runStatus1Step
+00008dd0   _dspSubStatus
+00008dd1   _runStatus
+00008dd2   _otherStopLowerSrc
+00008dd3   _setRunLostTime
+00008dd4   _startProtectSrc
+00008dd5   _dspMainCmd1
+00008dd6   _startRunStatus
+00008dd7   _otherStopSrc
+00008de4   _tuneCmd
+00008de5   _bRunJog
+00008de6   _dormantStatus
+00008de7   _stopRemFlag
+00008de8   _accDecTimeSrcPlc
+00008de9   _saveTuneDataFlag
+00008ded   _runDirPanelOld
+00008def   _motorCtrlTuneStatus
+00008df0   _runCmd
+00008df1   _runFlag
+00008dfa   _swingJumpFrq
+00008dfc   _swingMinFrq
+00008dfe   _swingDecTime
+00008e00   _swingAccTime
+00008e02   _decFrqTime
+00008e04   _accFrqTime
+00008e06   _swingMaxFrq
+00008e08   _shuntTicker
+00008e0a   _lowerDelayTicker
+00008e0c   _swingDoubleAw
+00008e0e   _runTimeTicker
+00008e13   _CanRxTxCon
+00008e16   _CanLinkChara
+00008e1a   _CanlinkRecBuf
+00008e40   _gPhiRt
+00008e41   _gPhiRtDisp
+00008e42   _errorCodeFromMotor
+00008e43   _outCurrentDispOld
+00008e44   _frqFdb
+00008e45   _frqFdbDisp
+00008e46   _vcSpdLoopKp1
+00008e47   _pmsmRotorPos
+00008e48   _speedMotor
+00008e49   _motorRun
+00008e4a   _vcSpdLoopKp2
+00008e4b   _jerkFf
+00008e4c   _generatrixVoltage
+00008e4d   _outPower
+00008e4e   _outVoltage
+00008e4f   _outCurrent
+00008e50   _powerAddDec
+00008e55   _ABZPos
+00008e56   _ZCount
+00008e57   _torqueCurrent
+00008e58   _enCoderPosition
+00008e59   _currentPu
+00008e5a   _spdLoopOut
+00008e5b   _antiVibrateCoeff
+00008e5c   _currentOc
+00008e5d   _driveCoeffFrqFdb
+00008e5e   _frqFdbFlag
+00008e5f   _frq2Core
+00008e60   _rsvdData
+00008e61   _frqCurAim2Core
+00008e62   _softOCTicker
+00008e66   _frqVFRun
+00008e68   _errorsCodeFromMotor
+00008e6a   _frqVFRunRemainder
+00008e6c   _frqRun
+00008e6e   _frqFdbTmp
+00008e70   _motorErrInfor
+00008ec0   _bFrqCurAimChg
+00008ec4   _decTimeOld
+00008ed8   _accTimeOld
+00008eda   _frqCurAimOld
+00008f00   _frqLine
+00008f40   _funcCodeGradeCurMenuMode
+00008fc0   _funcCode
+00009440   _funcCodeRwStatus
+00009441   _rwFuncCodeRepeatDelayTicker
+00009442   _funcCodeRwModeTmp
+00009443   _funcCodeRwMode
+00009444   _endIndexWriteSeries
+00009445   _startIndexWriteSeries
+00009446   _endIndexRwFuncCode
+0000944b   _number4EepromDeal
+0000944c   _index4EepromDeal
+0000944f   _funcCodeOneWriteNum
+00009450   _funcCodeWrite
+00009454   _funcCodeRead
+00009458   _eepromOperateTime
+0000945e   _I2cMsg
+00009480   _funcCodeOneWriteIndex
+00009580   _gSoftVersion
+00009581   _uReservedData
+00009582   _gRealTimeToFunctionDataBuff
+00009587   _gSendToMotor05MsDataBuff
+00009595   _gParaIdToFunctionDataBuff
+000095c0   _gSendToFunctionDataBuff
+00009600   _gSendToMotor2MsDataBuff
+00009680   _limitedByOtherCodeIndexNum
+000096c0   _limitedByOtherCodeIndex
+00009780   _InvTrSlowIndex
+00009781   _InvTrFastIndex
+00009782   _InvRecFastTab
+00009789   _InvTrFastTab
+00009790   _InvRecSlowTab
+000097c0   _InvTrSlowTab
+00009800   _gDebugBuffer
+003d7e80   _PartIdRegs
+003e8000   .text
+003e8000   ___text__
+003e8000   _c_int00
+003e8044   C$$EXIT
+003e8044   _abort
+003e8046   _exit
+003e805c   __register_unlock
+003e8060   __register_lock
+003e8064   __nop
+003e8065   __args_main
+003e807a   _InitCpuTimers
+003e80b5   _ConfigCpuTimer
+003e80da   _InitCanlinkTran
+003e80fe   _InitCanlinkRec
+003e812c   _InitCanlink
+003e8142   _CanlinkDataRec
+003e8169   _CanlinkDataTran
+003e8195   _CanLinkRemoteDeal
+003e81b5   _CanControlWriter
+003e81c5   _CanControlRead
+003e81d3   _CanLinkConDeal
+003e8234   _CanLlinkDataDeal
+003e824f   _CanHostTx
+003e826c   _CanlinkFun
+003e8335   _setTxConfig
+003e833c   _setRxConfig
+003e8343   _resetLinSci
+003e834c   _CommRwFuncCode
+003e8497   _CommWrite
+003e852d   _CommRcvDataDeal
+003e8579   _CommRead
+003e8607   _SciErrCheck
+003e8646   _CommSendDataDeal
+003e866f   _commStatusDeal
+003e86b2   _commErrorDeal
+003e86c8   _closeRTX
+003e86cf   _InitSetScia
+003e8716   _UpdateSciFormat
+003e87a7   _SciDeal
+003e87c4   _CommDataSend
+003e87d8   _SCI_TXD_isr
+003e87e3   _CommDataReRcv
+003e8806   _SCI_RXD_isr
+003e8829   _Lina_Level1_ISR
+003e8832   _Lina_Level0_ISR
+003e8857   _InitSciaGpio
+003e8892   _InitSciDpBaudRate
+003e8898   _InitSetSciDp
+003e88b3   _UpdateSciDpFormat
+003e88c3   _GetDataByteNum
+003e88cd   _CommDpRcvDataDeal
+003e892d   _DpDataDeal
+003e8935   _CommDpSendDataDeal
+003e8985   _SciDpDeal
+003e899d   _SCI_DP_TXD_isr
+003e89c7   _SCI_DP_RXD_isr
+003e8a38   _InitScibGpioDp
+003e8a65   _InitSciaGpioDp
+003e8a92   _ErrAgainSend
+003e8ad6   _Reverse8Bit
+003e8aef   _Reverse4Bit
+003e8b02   _CrcValueByteCalc
+003e8b1a   _UniversalDebug32
+003e8b1b   _UniversalDebug
+003e8b78   _TestI2cDebug
+003e8b79   _PowerOnDebug
+003e8b7a   _InitKeyDebug
+003e8b7b   _InitI2cDebug
+003e8b7c   _ChgAttr
+003e8b7d   _InitDebug
+003e8b7e   _DealKeyDebug
+003e8b7f   _eCanDataTran
+003e8beb   _eCanDataRec
+003e8c2d   _InitdspECan
+003e8cdc   _InitTranMbox
+003e8d2f   _InitRecMbox
+003e8d94   _RwI2cBus
+003e8dde   _RwEeprom
+003e8e14   _ReadFuncCode
+003e8e8e   _WriteFuncCode
+003e8f3a   _UpdateIndexForEepromDeal
+003e8f5e   _InitSetI2ca
+003e8f71   _InitI2CGpio
+003e8f8e   _I2cIntDeal
+003e8fda   _I2CStop
+003e8ff3   _I2CRcvByte
+003e9023   _I2CNoACK
+003e903f   _I2cDealBeforeInit
+003e909c   _GetFcIndexFromEepromIndex
+003e90a1   _GetEepromIndexFromFcIndex
+003e90b4   _EepromOperateTimeDeal
+003e90e7   _EepromDeal
+003e920d   _underVoltageDeal
+003e924c   _GetErrorAttribute
+003e92d3   _getMotorError
+003e9324   _GetNewError
+003e94a8   _GetNewErrorAttribute
+003e94ba   _UpdateError
+003e94df   _GetErrorResetDeal
+003e950d   _ErrorSceneSave
+003e958a   _AutoResetErrorTrueDeal
+003e95a9   _AutoResetErrorFcDeal
+003e95ea   _AutoResetErrorDeal
+003e95f6   _ErrorReset
+003e967a   _ErrorDeal
+003e9681   _LimitOtherCodeDeal
+003e9704   _RestoreCompanyParaOtherDeal
+003e9728   _PowerOffRemDeal
+003e977f   _GetFuncCodeInitOriginal
+003e979b   _GetFuncCodeInit
+003e98ac   _ClearRecordDeal
+003e98ed   _getUpDownLimit
+003e996a   _UpdateRunMode
+003e99ad   _FrqAimUpDownDeal
+003e9ace   _UpdateMultiSetFrq
+003e9b2e   _UpdateLimitFrq
+003e9b8c   _UpdateFrqAim
+003e9c91   _ResetUpDownFrq
+003e9c9e   _JumpFrqEndCalc
+003e9cab   _JumpFrqDeal
+003e9d72   _FrqPlcSetDeal
+003e9e72   _FrqXyCalc
+003e9ef1   _GetFrqY
+003e9f4b   _GetFrqX
+003e9f60   _GetFrqComp
+003e9fc9   _GetFrq
+003ea0d1   _FrqSrcOperate
+003ea106   _FrqSrcDeal
+003ea18b   _PidFuncCalc
+003ea373   _UpdatePidFuncRefFdb
+003ea476   _UpdatePidFuncPara
+003ea5e9   _FrqPidSetDeal
+003ea6c3   _copyDataFunc2Motor2ms
+003ea79a   _copyDataFunc2Motor05ms
+003ea7d1   _copyDataFunc2CF2ms
+003ea7d8   _copyDataCore2Uf2ms
+003ea7df   _copyDataCore2Func2ms
+003ea861   _copyDataCore2Func05ms
+003ea862   _checkSpeedFdbDir
+003ea8ac   _UpdateDataFunc2Core2ms
+003ea949   _UpdateDataFunc2Core0p5ms
+003ea9d8   _UpdateDataCore2Func
+003eab0b   _ValidateInvType
+003eab28   _UpdateInvType
+003eab4a   _TorqueBoostDeal
+003eab5d   _SaveTuneData
+003eab87   _MotorPowerRelatedParaDeal
+003eac74   _InverterTypeRelatedNoMotorParaDeal
+003eacd8   _InverterTypeRelatedNoMotorParaSaveDeal
+003ead25   _InverterTypeRelatedParaDeal
+003eadee   _setDOStatus
+003eae33   _getDiHwStatus
+003eae83   _UpdateFmpAoValue
+003eaf84   _LineCalc
+003eafc0   _Dout41
+003eafe2   _Dout40
+003eafef   _Dout39
+003eaff8   _Dout38
+003eb00f   _Dout37
+003eb026   _Dout36
+003eb035   _Dout35
+003eb03f   _Dout34
+003eb083   _Dout33
+003eb096   _Dout32
+003eb09f   _Dout31
+003eb0af   _Dout30
+003eb0c8   _Dout29
+003eb0fc   _Dout28
+003eb12d   _Dout27
+003eb154   _Dout26
+003eb17b   _Dout25
+003eb1ac   _Dout24
+003eb1b8   _Dout23
+003eb1c1   _Dout22
+003eb1c2   _Dout21
+003eb1c3   _Dout19
+003eb1cc   _Dout18
+003eb1e7   _Dout17
+003eb1fe   _Dout16
+003eb20c   _Dout15
+003eb21c   _Dout14
+003eb225   _Dout13
+003eb22e   _Dout12
+003eb23a   _Dout11
+003eb243   _Dout10
+003eb251   _Dout9
+003eb265   _Dout8
+003eb279   _Dout7
+003eb282   _Dout6
+003eb28a   _Dout5
+003eb297   _Dout4
+003eb2d0   _Dout3
+003eb301   _Dout2
+003eb31f   _Dout1
+003eb328   _DoutRSVD
+003eb329   _LpfCalc
+003eb349   _GetTemperatureCalc
+003eb388   _GetTemperature
+003eb39e   _TemperatureSensorDeal
+003eb41a   _TemperatureAfterDeal
+003eb435   _TemperatureDeal
+003eb44d   _PulseOutCalc
+003eb546   _PulseInSample
+003eb575   _PulseInCalc
+003eb695   _InitSetEcap1
+003eb6a3   _InitSetEPWM6
+003eb6cd   _InitSetEPWM5
+003eb6fd   _InitSetEPWM4
+003eb727   _InitEPwm6Gpio
+003eb73c   _InitEPwm5Gpio
+003eb751   _InitEPwm4Gpio
+003eb767   _InitECap4Gpio
+003eb768   _InitECap3Gpio
+003eb769   _InitECap2Gpio
+003eb76a   _InitECap1Gpio
+003eb779   _InitDOGpio
+003eb7b6   _InitDIGpio
+003eb81b   _FMPDeal
+003eb843   _Do2Bin
+003eb869   _DoCalc
+003eb990   _Di2Bin
+003eb9e9   _DiCalc
+003ebb6c   _AoCalcChannel
+003ebc2b   _AiCalc
+003ebd5b   _getMomeryValue
+003ebd63   _SoftVersionDeal
+003ebd74   _Main2msFunction
+003ebd75   _Main0msFunction
+003ebd78   _Main05msFunctionEachStart
+003ebda1   _Main05msFunctionEachEnd
+003ebdc8   _CodeRunMonitor
+003ebe0b   _Main05msFunctionD
+003ebe23   _Main05msFunctionC
+003ebe42   _Main05msFunctionB
+003ebe5f   _Main05msFunctionA
+003ebe6e   _InitFuncCode
+003ec014   _InitDspFunc
+003ec04d   _FuncVariableInit
+003ec0b9   _InitForFunctionApp
+003ec0c0   _GetNumberDigit2
+003ec0d5   _GetNumberDigit1
+003ec105   _GetNumberDigit
+003ec11e   _cycleShiftDeal
+003ec162   _ValidateTuneCmd
+003ec184   _UpdateU0Data
+003ec2b4   _UpdateTuneDisplayBuffer
+003ec2cd   _UpdateMenuPwdInputDisplayBuffer
+003ec2f5   _UpdateMenuPwdHintDisplayBuffer
+003ec308   _UpdateGroupDisplay
+003ec31c   _UpdateDisplayBufferAttribute
+003ec415   _UpdateDisplayBufferVisualDiFunc
+003ec437   _UpdateDisplayBufferVisualIoStatus
+003ec462   _UpdateMenu3DisplayBuffer
+003ec600   _UpdateMenu2DisplayBuffer
+003ec682   _UpdateMenu1DisplayBuffer
+003ec69e   _UpdateMenu0DispStatus
+003ec6c6   _UpdateErrorDisplayBuffer
+003ec701   _UpdateMenu0DisplayBuffer
+003ec785   _MotorDebugFcDeal
+003ec79d   _UpdataFuncCodeGrade
+003ec7df   _OverTurnDeal
+003ec7eb   _LimitDeal
+003ec807   _NoSameDeal
+003ec857   _ModifyFunccodeUpDown
+003ec9ae   _LimitOverTurnDeal
+003ec9d2   _DealUserMenuModeGroupGrade
+003ec9f8   _MenuModeDeal
+003eca2f   _Menu1OnEnter
+003eca43   _Menu0AddMenuLevel
+003eca4f   _Menu0OnPrg
+003eca77   _MenuModeSwitch
+003ecabf   _ModifyFunccodeEnter
+003ecb79   _MenuPwdOnPrg
+003ecb82   _MenuPwdInputOnUpDown
+003ecb99   _MenuPwdInputOnUp
+003ecb9d   _MenuPwdInputOnShift
+003ecba5   _MenuPwdInputOnQuick
+003ecba6   _MenuPwdInputOnEnter
+003ecbb4   _MenuPwdInputOnDown
+003ecbb8   _MenuPwdHint2Input
+003ecbb8   _MenuPwdHintOnShift
+003ecbc3   _MenuPwdHintOnQuick
+003ecbc4   _MenuOnStop
+003ecbc5   _MenuOnRun
+003ecbc6   _MenuOnQuick
+003ecbf4   _MenuOnMfk
+003ecc1e   _MenuInit
+003ecc2c   _GroupUpDown
+003ecc34   _GetDispDigits
+003ecc69   _Menu2OnEnter
+003ecc98   _Menu1OnUpDown
+003ecca3   _Menu2OnUpDown
+003eccf6   _Menu3OnUpDown
+003ecd56   _Menu3OnUp
+003ecd5a   _Menu3OnShift
+003ecd6a   _Menu3OnPrg
+003ecd72   _Menu3OnEnter
+003ece4e   _Menu3OnDown
+003ece52   _Menu2OnUp
+003ece56   _Menu2OnShift
+003ece6a   _Menu1OnPrg
+003ece70   _Menu2OnPrg
+003ece7d   _Menu2OnDown
+003ece81   _Menu1OnUp
+003ece85   _Menu1OnShift
+003ece86   _Menu1OnDown
+003ece8a   _Menu0OnUpDown
+003ece9a   _Menu0OnShift
+003ecea5   _Menu0OnEnter
+003ecead   _FcDigit2Bin
+003ecec4   _DispDataDeal
+003ecf70   _DealCheckMenuModeGroupGrade
+003ecfeb   _UpdateModbusCommFormat
+003ecfff   _ModbusStartDeal
+003ed02f   _ModbusSendDataDeal
+003ed0a5   _ModbusRcvDataDeal
+003ed0be   _ModbusCommErrCheck
+003ed0ce   _UpdateMotorPara
+003ed223   _OscControlWriter
+003ed230   _OscControlRead
+003ed475   _OscSciFunction
+003ed4ba   _P2PDataDeal
+003ed549   _PlcDataFramDeal
+003ed5fe   _FuncCodeRwAtrrib
+003ed678   _InvTranTabCfg
+003ed69e   _InvRecTabCfg
+003ed6c0   _setDPStatusInfo
+003ed6e5   _getDPControlCmd
+003ed6e6   _UpdateProfibusCommFormat
+003ed6f9   _ProfibusStartDeal
+003ed763   _ProfibusSendDataDeal
+003ed8a0   _ProfibusRcvDataDeal
+003ed8ee   _ProfibusCommErrCheck
+003ed907   _setTimeRun
+003ed942   _runTimeCal
+003ed9b3   _UpdateSwingPara
+003eda56   _DormantDeal
+003edab0   _UpdateRunCmd
+003eddf4   _UpdateBenchTime
+003ede09   _TuneRunCtrl
+003ede93   _SwingDeal
+003edf02   _StopRunCtrl
+003edf87   _StartRunCtrl
+003ee06d   _ShutDownRunCtrl
+003ee0cb   _PowerOffNoStopDeal
+003ee157   _LoseLoadRunCtrl
+003ee18d   _JogRunCtrl
+003ee1c0   _LowerThanLowerFrqDeal
+003ee20e   _NormalRunCtrl
+003ee261   _RunSrcUpdateFrq
+003ee3c2   _RunSrcDeal
+003ee3c7   _AccDecTimeCalc
+003ee469   _SCurveSpecialCalc
+003ee701   _SCurveOridinaryCalc
+003ee8f1   _LineChangeCalc
+003ee920   _AccDecFrqCalc
+003eea09   _UpdateTorqueAim
+003eea85   _TorqueLimitCalc
+003eeacb   _AccDecTorqueCalc
+003eeb0a   _TorqueCalc
+003eeb0f   _WinkDeal
+003eebd7   _UpdateMenuModeDisplayBuffer
+003eebf5   _UpdateDisplayBuffer
+003eecac   _KeyScan
+003eed4b   _KeyBordTest
+003eed5a   _KeyProcess
+003eee11   _InitSpiaGpio
+003eee48   _InitSetSpiForFunc
+003eee5f   _DisplayScanPrepare
+003eeeba   _DisplayScan
+003eeed2   _vfSeparateDeal
+003eefb3   _main
+003ef010   _EPWM1_zero_isr
+003ef042   _EPWM1_TZ_isr
+003ef05e   _ADC_Over_isr
+003ef09c   _AsynPWMAngleCal
+003ef0f6   _SynPWMAngleCal
+003ef1b4   _SoftPWMProcess
+003ef204   _CalOutputPhase
+003ef287   _CalDeadBandComp
+003ef2dd   _CalCarrierWaveFreq
+003ef404   _DQToAmpTheta
+003ef418   _AlphBetaToDQ
+003ef456   _ChangeCurrent
+003ef4ce   _ParSendTune
+003ef517   _ParSend2Ms
+003ef61d   _ParSend05Ms
+003ef61e   _ParGet2Ms
+003ef827   _ParGet05Ms
+003ef864   _SaveDebugData32
+003ef877   _SaveDebugData16
+003ef884   _ResetDebugBuffer
+003ef88f   _DebugSaveDeal
+003ef933   _GetUvwPhase
+003ef9c0   _SpeedSmoothDeal
+003ef9e0   _GetSpeedMMethod
+003efa40   _GetSpeedMTMethod
+003efb03   _RotorTransCalVel
+003efb89   _VCGetFeedBackSpeed
+003efbbd   _RotorTransSamplePos
+003efbd2   _InitRtInterface
+003efbf9   _ReInitForPG
+003efc5f   _JudgeUVWDir
+003efc90   _JudgeRTDir
+003efcb8   _JudgeABDir
+003efce0   _InitSetQEP
+003efd18   _GetRotorTransPos
+003efdff   _GetMTTimeNum
+003efe1d   _GetMDetaPos
+003efe38   _SetPwmForRrLoId
+003efe9c   _RsIdentify
+003f008a   _RrWaitAddGetUdc
+003f00af   _RrLoInPeriodAndCmpInt
+003f0130   _RrLoCalVaule
+003f022d   _RrGetVoltReBegin
+003f0252   _InitRrLoVariable
+003f0264   _EnableTimer
+003f027f   _RrLoIdentify
+003f035f   _LmIoCalValue
+003f03ce   _LmIoInPeriodInt
+003f045a   _ImCalKpKi
+003f049c   _InitLmIoVaribale
+003f04b0   _LmIoIdentify
+003f05b0   _ChgParForEst
+003f05f1   _GetUDCInfo
+003f060f   _GetCurrentInfo
+003f069d   _GetCurExcursion
+003f0700   _TemperatureCheck
+003f079b   _SoftWareErrorDeal
+003f082a   _SetCBCEnable
+003f083e   _SetCBCDisable
+003f0851   _OverLoadProtect
+003f09fc   _OutputLoseReset
+003f0a05   _OutputPhaseLoseDetect
+003f0a5e   _OutputLoseAdd
+003f0a89   _LoadLoseDetect
+003f0aee   _InputPhaseLoseDetect
+003f0b43   _ControlFan
+003f0b84   _CBCLimitCurProtect
+003f0c4f   _BufferResProtect
+003f0c63   _InvDeviceControl
+003f0c78   _TurnToStopStatus
+003f0c83   _SendDataPrepare
+003f0d05   _PrepareParForRun
+003f0d70   _RunCaseRun2Ms
+003f0dee   _RunCaseStop
+003f0e5b   _CalRatioFromVot
+003f0e92   _PWMZeroInterrupt
+003f0eb7   _Main2msMotorD
+003f0ec9   _Main2msMotorC
+003f0ed0   _Main2msMotorB
+003f109c   _Main2msMotorA
+003f10b4   _Main0msMotor
+003f10bd   _Main05msMotor
+003f10c0   _InitForMotorApp
+003f1127   _ADCOverInterrupt
+003f11f0   _SystemParChg2Ms
+003f137b   _SystemParChg05Ms
+003f13d9   _RunStateParChg2Ms
+003f15ba   _InvCalcPower
+003f163a   _ChangeMotorPar
+003f175d   _EndOfParIdentify
+003f17b1   _RunCaseGetPar
+003f1800   _PrepareParForTune
+003f189f   _SynCalRealPos
+003f1925   _SynCalLdAndLq
+003f196d   _RunCaseIpmInitPos
+003f19df   _PrepPmsmCsrPrar
+003f1a3e   _PmFluxWeakDeal
+003f1b48   _PmDecoupleDeal
+003f1b9a   _PmChkInitPosRest
+003f1ba1   _PG_Zero_isr
+003f1c40   _IPMCheckInitPos
+003f1cae   _IPMCalAcrPIDCoff
+003f1ce8   _SetIPMPos
+003f1d07   _SetIPMPos_ABZRef
+003f1d26   _DetectZeroPosOnce
+003f1d43   _InitSetPosTune
+003f1d60   _SynTunePGZero_No_Load
+003f1f1a   _SynTunePGZero_Load
+003f20c1   _SynTuneInitPos
+003f211f   _SynTuneBemf
+003f22aa   _SynInitPosDetSetPwm
+003f2342   _SynCalLabAndLbc
+003f23ae   _SynInitPosDetCal
+003f2408   _SynInitPosDetSetTs
+003f241f   _SynInitPosDetect
+003f25ef   _RunCaseShortGnd
+003f26a4   _RunCaseLowPower
+003f2736   _RunCaseDcBrake
+003f278c   _MaxUVWCurrent
+003f27a6   _HardWareOverUDCDeal
+003f27cc   _HardWareErrorDeal
+003f280a   _CBCLimitCurPrepare
+003f2830   _BrakeResControl
+003f28a9   _SendPWM
+003f2935   _DeadBandComp
+003f2976   _OutPutPWMVF
+003f2a30   _OutPutPWMVC
+003f2a91   _InitSetPWM
+003f2b01   _SpeedCheckUdcRiseDeal
+003f2b4f   _SpeedCheckSUB1
+003f2b77   _SpeedCheckCycleSUB2
+003f2b7f   _SpeedCheckCycleOver
+003f2b9a   _RunCaseSpeedCheck
+003f2d5d   _PrepareForSpeedCheck
+003f2dd5   _SVCCalRotorSpeed_380
+003f2e95   _SVCCalRotorSpeed
+003f2f64   _SVCCalFlux_380
+003f3115   _ResetSVC
+003f3143   _ResetAsrPar
+003f314e   _ResetCsrPar
+003f318e   _ResetParForVC
+003f319a   _VcAsrControl
+003f3244   _VCCsrControl_380
+003f32f1   _VCCsrControl
+003f339b   _SvcCalOutVolt_380
+003f3467   _SvcCalOutVolt
+003f3569   _PrepareAsrPar
+003f367d   _PrepImCsrPara
+003f369c   _CalcABVolt
+003f36d5   _CalWsAndSynFreq_380
+003f370a   _CalWsAndSynFreq
+003f3742   _CalUdcLimitIT
+003f37b7   _CalTorqueLimitPar
+003f38aa   _CalIMSet
+003f393d   _VfVarInitiate
+003f3994   _VfOverUdcDeal
+003f3a76   _VfOverCurDeal
+003f3b86   _VfOscIndexCalc
+003f3bcd   _VFOVUdcLimit
+003f3bec   _VfFreqDeal
+003f3c98   _VFWsTorqueBoostComm
+003f3d68   _VFWSCompControl
+003f3e1f   _CalOutVotInVFStatus
+003f3f1a   _VFSpeedControl
+003f3f31   _VFOverMagneticControl
+003f3f8c   _VFAutoTorqueBoost
+003f4049   _HVfOscDampDeal
+003f4080   _HVfDeadBandComp
+003f414e   _HVfCurReDecomp
+003f41ce   _CalTorqueUp
+003f4231   _GetPGPos
+003f4236   _ZeroPosJudge
+003f4248   _ZeroPosControl
+003f426f   _abs
+003f4273   _absl
+003f4275   _swap
+003f4277   _qsin
+003f429a   _qatan
+003f42d0   _qsqrt
+003f4300   _atan
+003f431d   _SlipFilter
+003f4353   _PIDLongRegulate
+003f440c   _PID32
+003f4449   _PID
+003f44b3   _BurrFilter
+003f44f7   _MovePrgFrFlashToRam
+003f44fc   _rsvd_ISR
+003f4504   _copy_prg
+003f4511   _SetInterruptEnable
+003f451c   _KickDog
+003f4526   _DisableDog
+003f452e   _InitPll
+003f4567   _InitPeripheralClocks
+003f4575   _InitSysCtrl
+003f4586   _InitSetGpio
+003f45b7   _InitSetAdc
+003f45ff   _InitPieVectTable
+003f4610   _InitPieCtrl
+003f461f   _InitPeripherals
+003f462c   _InitInterrupt
+003f464d   _EnableDog
+003f4655   FS$$MPY
+003f46af   FS$$TOL
+003f46d8   I$$DIV
+003f46e9   I$$MOD
+003f46fa   L$$DIV
+003f4709   L$$MOD
+003f4717   UL$$DIV
+003f471e   UL$$MOD
+003f4724   LL$$CMP
+003f4736   ULL$$CMP
+003f4742   LL$$DIV
+003f477e   LL$$MOD
+003f47b8   ULL$$DIV
+003f47e7   ULL$$MOD
+003f4849   LL$$MPY
+003f485d   U$$DIV
+003f4862   U$$MOD
+003f4868   ___etext__
+003f4868   _menu
+003f4868   etext
+003f48e0   _doFuncCal
+003f4984   _gInvOverLoadDecTable
+003f499c   _gMotorOverLoadDecTable
+003f49b4   _gSynStepAngleTable
+003f49c8   _protocolFunc
+003f49e6   _funcCodeAttribute
+003f5ba7   _eeprom2Fc
+003f5f89   _gExponentVf
+003f618d   _invTypeParaTableT380
+003f629b   _crc16Table
+003f639b   _invTypeParaTableT480
+003f648e   _invTypeParaTableT1140
+003f6539   _invTypeParaTableT220
+003f65c9   _invTypeParaTableT690
+003f6659   _dispAttributeU0
+003f66bd   _funcCodeGradeAll
+003f6710   _funcCodeGradeSum
+003f6763   _invTypeParaTableS220
+003f67a2   _dspBaudRegData
+003f67d6   _fcNoAttri2Eeprom
+003f680a   _voltageTempPT100
+003f683d   _voltageTempPT1000
+003f6870   _DISPLAY_CODE
+003f6896   _commDispIndex
+003f68b7   _gInvCurrentTable690T
+003f68d8   _gInvCurrentTable380T
+003f68f3   _dispCodeMenuMode
+003f690b   _gTempTableBSMXX
+003f6922   _gTempTableP44X
+003f6939   _gTempTableP8XX
+003f6950   _gTempTableSEMIKON
+003f6967   _gTempTableWAIZHI
+003f697e   _motor1ParaIndex
+003f6994   _eCanBaud
+003f69a9   _errorCodeFromMotorList
+003f69bc   _gInvCurrentTable1140T
+003f69cf   _diFuncIndex
+003f69e1   _invTypeLimitTable
+003f69f3   _gInvCurrentTable220T
+003f6a03   _stopDispIndex
+003f6a13   _gDeadBandTable
+003f6a21   _gDeadCompTable
+003f6a2f   _limitOtherCodeIndex
+003f6a3c   _LED_CODE
+003f6a51   _gSynFreqTable
+003f6a5b   _gSynNcTable
+003f6a65   _gInvOverLoadTable
+003f6a6e   _gInvOverLoadTableForP
+003f6a77   _gInvVoltageInfo1140T
+003f6a80   _gInvVoltageInfo220S
+003f6a89   _gInvVoltageInfo220T
+003f6a92   _gInvVoltageInfo380T
+003f6a9b   _gInvVoltageInfo480T
+003f6aa4   _gInvVoltageInfo690T
+003f6aad   _COMM_ERR_INDEX
+003f6ab5   _gInvCurrentTable220S
+003f6abd   _gMotorOverLoadTable
+003f6aca   _INV_TYPE_BIG_ACC_DEC_START_TABLE
+003f6ad0   _INV_TYPE_POINT_LIMIT_TABLE
+003f6ad6   _gUVWAngleTable
+003f6adc   _ovVoltageInitValue
+003f6ae2   _AsynParEstRotor
+003f6ae7   _AsynParEstStatic
+003f6aec   _dataByteNums
+003f6af1   _debugTuneProcess
+003f6af6   _decNumber
+003f6afb   _minRate
+003f6b00   _noTuneProgress
+003f6b05   _pmTuneProgLoad
+003f6b0a   _pmTuneProgNoLoad
+003f6b0f   _repeatNumMax
+003f6b18   _DPDataNum
+003f6b1c   _commParitys
+003f6b20   _hexNumber
+003f6b24   _motorSnIndexIncToMotor1
+003f6b2b   _deltaK
+003f6b2e   _motorSnIndexNIncToMotor2
+003f6b31   _frqSrcFuncIndex
+003f6b33   ___cinit__
+003f6b33   cinit
+003f6d1c   _prginRAM
+003f7ff6   code_start
+003f7ff8   _CsmPwl
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_var_size
+ffffffff   ___TI_prof_var_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[1279 symbols]

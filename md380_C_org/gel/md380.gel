@@ -1,0 +1,1040 @@
+
+//*********F0 *****************************************************
+//F0_RAM:                 ;»ù±¾¹¦ÄÜ×é       0X9040 -- 0X905C  ¹²29
+//*****************************************************************
+menuitem "f_funCode_MD380";
+
+hotmenu F0_RAM_Regs()
+{                                                                               //DP = 0X241
+ 		    GEL_WatchAdd("*(int*)inverterGpTypeDisp");//          ;F0.00 ±äÆµÆ÷GPÀàĞÍÑ¡Ôñ            = 0
+ 		    GEL_WatchAdd("*(int*)m1Fun_motorCtrlMode");//      	;F0.01 µÚÒ»µç»ú¿ØÖÆ·½Ê½            = 1
+ 		    GEL_WatchAdd("*(int*)runSrc");//   					;F0.02 ÃüÁîÔ´Ñ¡Ôñ
+ 		    GEL_WatchAdd("*(int*)frqXSrc");//  					;F0.03 ÆµÂÊÔ´Ñ¡ÔñX
+ 		    GEL_WatchAdd("*(int*)frqYSrc");//  					;F0.04 ÆµÂÊÔ´Ñ¡ÔñY
+ 		    GEL_WatchAdd("*(int*)frqYRangeBase");//       		;F0.05 µş¼ÓÊ±¸¨ÖúÆµÂÊÔ´Y·¶Î§Ñ¡Ôñ
+ 		    GEL_WatchAdd("*(int*)frqYRange");//       			;F0.06 µş¼ÓÊ±¸¨ÖúÆµÂÊÔ´Y·¶Î§
+ 		    GEL_WatchAdd("*(int*)frqCalcSrc");//  				;F0.07 XYÆµÂÊÔ´µş¼Ó·½Ê½
+ 		    GEL_WatchAdd("*(int*)presetFrq");//  					;F0.08 Ô¤ÖÃÆµÂÊ
+ 		    GEL_WatchAdd("*(int*)runDir");//  					;F0.09 ÔËĞĞ·½ÏòÑ¡Ôñ
+	        GEL_WatchAdd("*(int*)maxFrq");//  					;F0.10 ×î´óÆµÂÊ
+	        GEL_WatchAdd("*(int*)upperFrqSrc");//  				;F0.11 ÉÏÏŞÆµÂÊÔ´
+	        GEL_WatchAdd("*(int*)upperFrq");//  					;F0.12 ÉÏÏŞÆµÂÊ
+	        GEL_WatchAdd("*(int*)upperFrqOffset");//  			;F0.13 ÉÏÏŞÆµÂÊÆ«ÖÃ
+	        GEL_WatchAdd("*(int*)lowerFrq");//  					;F0.14 ÏÂÏŞÆµÂÊ
+	        GEL_WatchAdd("*(int*)carrierFrq");//  				;F0.15 ÔØ²¨ÆµÂÊ
+	        GEL_WatchAdd("*(int*)carFcByTem");//  				;F0.16 ÔØ²¨ËæÎÂ¶Èµ÷Õû
+	        GEL_WatchAdd("*(int*)accTime1");//				  	;F0.17 ¼ÓËÙÊ±¼ä1
+	        GEL_WatchAdd("*(int*)decTime1");//  					;F0.18 ¼õËÙÊ±¼ä1
+	        GEL_WatchAdd("*(int*)accDecTimeUnit");//		  		;F0.19 ¼Ó¼õËÙÊ±¼äµ¥Î»
+	        GEL_WatchAdd("*(int*)rsvd1F0  						");//  ;F0.20 ±£Áô  
+	        GEL_WatchAdd("*(int*)frqYOffsetSrc  			");//  		;F0.21 µş¼ÓÊ±¸¨ÖúÆµÂÊÔ´Æ«ÖÃÆµÂÊ
+	        GEL_WatchAdd("*(int*)frqPoint  					");//  	;F0.22 ÆµÂÊÖ¸Áî·Ö±æÂÊ
+	        GEL_WatchAdd("*(int*)frqRemMode  				");//  	;F0.23 Êı×ÖÉè¶¨ÆµÂÊÍ£»ú¼ÇÒäÑ¡Ôñ
+	        GEL_WatchAdd("*(int*)motorSn  						");//  ;F0.24 µç»úÑ¡Ôñ
+	        GEL_WatchAdd("*(int*)accDecTimeRef  			");//  		;F0.25 ¼Ó¼õËÙÊ±¼ä»ù×¼ÆµÂÊ
+	        GEL_WatchAdd("*(int*)frqUpDownRef  			");//  		;F0.26 ÔËĞĞÊ±ÆµÂÊÖ¸ÁîUP/DN»ù×¼
+	        GEL_WatchAdd("*(int*)runSrcBandFrqSrc  	");//  	    	;F0.27 ÃüÁîÔ´À¦°óÆµÂÊÔ´
+	        GEL_WatchAdd("*(int*)commCardType  			");//  		;F0.28 Í¨Ñ¶À©Õ¹¿¨ÀàĞÍ              = 28
+
+}
+//*********F1 **********************************************
+//F1_RAM:                       ;0x905d -- 0x9082  ¹² 38 
+//***********************************************************
+
+hotmenu F1_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) m1Fun_motorType  			   ");//   ;F1.00 µç»úÀàĞÍÑ¡Ôñ                 = 29
+        GEL_WatchAdd("*(int*) m1Fun_ratingPower			   ");//   ;F1.01 µç»ú¶î¶¨¹¦ÂÊ                 = 30
+        GEL_WatchAdd("*(int*) m1Fun_ratingVoltage		   ");//       ;F1.02 µç»ú¶î¶¨µçÑ¹
+        GEL_WatchAdd("*(int*) m1Fun_ratingCurrent		   ");//       ;F1.03 µç»ú¶î¶¨µçÁ÷
+        GEL_WatchAdd("*(int*) m1Fun_ratingFrq				   ");//   ;F1.04 µç»ú¶î¶¨ÆµÂÊ
+        GEL_WatchAdd("*(int*) m1Fun_ratingSpeed			   ");//   ;F1.05 µç»ú¶î¶¨×ªËÙ
+        GEL_WatchAdd("*(int*) m1Fun_statorResistance	   ");//	   ;F1.06 Òì²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m1Fun_rotorResistance	   ");//	   ;F1.07 Òì²½µç»ú×ª×Óµç×è
+        GEL_WatchAdd("*(int*) m1Fun_leakInductance		   ");//   ;F1.08 Òì²½µç»úÂ©¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m1Fun_mutualInductance	   ");//	   ;F1.09 Òì²½µç»ú»¥¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m1Fun_zeroLoadCurrent	   ");//	   ;F1.10 Òì²½µç»ú¼¤´ÅµçÁ÷             = 39
+        GEL_WatchAdd("*(int*) rsvd1F1			             ");//     ;F1.11 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2F1			             ");//     ;F1.12 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3F1			             ");//     ;F1.13 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd4F1			             ");//     ;F1.14 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd5F1			             ");//     ;F1.15 ±£Áô
+        GEL_WatchAdd("*(int*) m1Fun_pmsmRs			         ");// ;F1.16 Í¬²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m1Fun_pmsmLd			         ");// ;F1.17 Í¬²½µç»úDÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) m1Fun_pmsmLq			         ");// ;F1.18 Í¬²½µç»úQÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) rsvd6F1			             ");//     ;F1.19 ±£Áô
+        GEL_WatchAdd("*(int*) m1Fun_motorCoeff			     ");// ;F1.20 Òì²½µç»ú·´µç¶¯ÊÆ
+        GEL_WatchAdd("*(int*) rsvd7F1			             ");//     ;F1.21 ±£Áô                        = 50
+        GEL_WatchAdd("*(int*) rsvd8F1			             ");//     ;F1.22 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd9F1			             ");//     ;F1.23 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd10F1		               ");//   ;F1.24 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd11F1		               ");//   ;F1.25 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd12F1		               ");//   ;F1.26 ±£Áô
+        GEL_WatchAdd("*(int*) m1Fun_encoderPulse			   ");//   ;F1.27 ±àÂëÆ÷ÏßÊı
+        GEL_WatchAdd("*(int*) m1Fun_encoderType			   ");//   ;F1.28 ±àÂëÆ÷ÀàĞÍ
+        GEL_WatchAdd("*(int*) rsvd13F1			             ");// ;F1.29 ±£Áô
+        GEL_WatchAdd("*(int*) m1Fun_encoderABZPhase	   ");//	   ;F1.30 ABZÔöÁ¿±àÂëÆ÷ABÏàĞò
+        GEL_WatchAdd("*(int*) m1Fun_encoderAngle			   ");//   ;F1.31 ±àÂëÆ÷°²×°½Ç               = 60
+        GEL_WatchAdd("*(int*) m1Fun_encoderUVWPhase	   ");//	   ;F1.32 UVW±àÂëÆ÷ÏàĞò
+        GEL_WatchAdd("*(int*) m1Fun_encoderUVWBiasAngle ");//    ;F1.33 UVW±àÂëÆ÷Æ«ÖÃ½Ç
+        GEL_WatchAdd("*(int*) m1Fun_transfPal		       ");//       ;F1.34 Ğı×ª±äÑ¹Æ÷¼«¶ÔÊı           = 63
+        GEL_WatchAdd("*(int*) rsvd14F1			             ");// ;F1.35 ±£Áô                   ;DP = 0X242
+        GEL_WatchAdd("*(int*) m1Fun_fvcPgLoseTime		   ");//       ;F1.36 ËÙ¶È·´À¡PG¶ÏÏß¼ì²âÊ±¼ä     = 1    
+        GEL_WatchAdd("*(int*) m1Fun_tuneCmd			 		   ");//;F1.37 µ÷Ğ³Ñ¡Ôñ
+}   
+//********************F2***********************************
+// F2_RAM:               ;0X9083 -- 0X9099   ¹²23
+//*********************************************************
+hotmenu F2_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopKp1			    ");//	;F2.00 ËÙ¶È»·±ÈÀıÔöÒæ1             
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopTi1			    ");//	;F2.01 ËÙ¶È»·»ı·ÖÊ±¼ä1     
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopChgFrq1	    ");//  	;F2.02 ÇĞ»»µÍµãÆµÂÊ     
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopKp2			    ");//	;F2.03 ËÙ¶È»·±ÈÀıÔöÒæ2         
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopTi2			    ");//	;F2.04 ËÙ¶È»·»ı·ÖÊ±¼ä2 
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopChgFrq2	    ");//  	;F2.05 ÇĞ»»ÆµÂÊ2
+        GEL_WatchAdd("*(int*) m1Fun_vcSlipCompCoef		    ");//	;F2.06 Ê¸Á¿¿ØÖÆ×ª²î²¹³¥ÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopFilterTime	");//	;F2.07 ËÙ¶È»·ÂË²¨Ê±¼ä³£Êı      = 10
+        GEL_WatchAdd("*(int*) m1Fun_vcOverMagGain			  ");//  ;F2.08 Ê¸Á¿¿ØÖÆ¹ıÀø´ÅÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_spdCtrlTorqueLimitSrc");//	  	;F2.09 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÔ´
+        GEL_WatchAdd("*(int*) m1Fun_spdCtrlTorqueLimit		");//  ;F2.10 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÊı×ÖÉè¶¨
+        GEL_WatchAdd("*(int*) rsvd1F2			              ");//  ;F2.11 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2F2			              ");//  ;F2.12 ±£Áô 
+        GEL_WatchAdd("*(int*) m1Fun_magAdjKp			        ");//	;F2.13 Àø´Åµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_magAdjTi			        ");//	;F2.14 Àø´Åµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_torqueAdjKp		      ");//  ;F2.15 ×ª¾Øµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_torqueAdjTi		      ");//  ;F2.16 ×ª¾Øµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_vcSpdLoopTiAttri		  ");//  ;F2.17 ËÙ¶È»·»ı·ÖÊôĞÔ            = 20
+        GEL_WatchAdd("*(int*) m1Fun_synFluxWeakMode			");//	;F2.18 Í¬²½»úÈõ´Å¿ØÖÆÄ£Ê½ 
+        GEL_WatchAdd("*(int*) m1Fun_synFluxWeakDepth		  ");//  ;F2.19 Í¬²½»úÈõ´ÅÉî¶È
+        GEL_WatchAdd("*(int*) m1Fun_maxFluxWeakCurr			");//	;F2.20 ×î´óÈõ´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) m1Fun_fulxWeakAutAdjGain	  ");//  ;F2.21 Èõ´Å×Ô¶¯µ÷ÕûÔöÒæ          
+        GEL_WatchAdd("*(int*) m1Fun_fulxWeakKiMult				");//	;F2.22 Èõ´Å»ı·Ö±¶Êı
+}
+//************************F3***********************************
+// F3_RAM:               ;0X909A -- 0x90a9   ¹² 16
+//*************************************************************
+hotmenu F3_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) vfCurve			           ");//      ;F3.00 VFÇúÏßÉè¶¨  
+        GEL_WatchAdd("*(int*) m1Fun_torqueBoost		   ");//      ;F3.01 ×ª¾ØÌáÉı  
+        GEL_WatchAdd("*(int*) boostCloseFrq			     ");//    ;F3.02 ×ª¾ØÌáÉı½ØÖ¹ÆµÂÊ
+        GEL_WatchAdd("*(int*) vfFrq1			             ");//    ;F3.03 ¶àµãV/FÆµÂÊµã1
+        GEL_WatchAdd("*(int*) vfVol1			             ");//    ;F3.04 ¶àµãV/FµçÑ¹µã1         = 30
+        GEL_WatchAdd("*(int*) vfFrq2			             ");//    ;F3.05 ¶àµãV/FÆµÂÊµã2
+        GEL_WatchAdd("*(int*) vfVol2			             ");//    ;F3.06 ¶àµãV/FµçÑ¹µã2
+        GEL_WatchAdd("*(int*) vfFrq3			             ");//    ;F3.07 ¶àµãV/FÆµÂÊµã3
+        GEL_WatchAdd("*(int*) vfVol3			             ");//    ;F3.08 ¶àµãV/VµçÑ¹µã3		
+        GEL_WatchAdd("*(int*) slipCompCoef		         ");//    ;F3.09 VF×ª²î²¹³¥ÔöÒæ
+        GEL_WatchAdd("*(int*) vfOverMagGain		       ");//      ;F3.10 VF¹ıÀø´ÅÔöÒæ
+        GEL_WatchAdd("*(int*) m1Fun_antiVibrateGain	 ");//      ;F3.11 Õñµ´ÒÖÖÆÔöÒæ
+        GEL_WatchAdd("*(int*) rsvd1F3			           ");//      ;F3.12 ±£Áô 
+        GEL_WatchAdd("*(int*) vfVoltageSrc			       ");//  ;F3.13 VF·ÖÀëµÄµçÑ¹Ô´
+        GEL_WatchAdd("*(int*) vfVoltageDigtalSet			 ");//    ;F3.14 VF·ÖÀëµÄµçÑ¹Êı×ÖÉè¶¨  = 40
+        GEL_WatchAdd("*(int*) vfVoltageAccTime		     ");//    ;F3.15 VF·ÖÀëµÄµçÑ¹ÉÏÉıÊ±¼ä
+} 
+//************************F4***********************************
+// F4_RAM:              ;0X90AA -- 0X90D1   ¹²40
+//*************************************************************
+hotmenu F4_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) di1Func						");//		;F4.00 DI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di2Func						");//		;F4.01 DI2¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di3Func						");//		;F4.02 DI3¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di4Func						");//		;F4.03 DI4¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di5Func						");//		;F4.04 DI5¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di6Func						");//		;F4.05 DI6¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di7Func						");//		;F4.06 DI7¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di8Func						");//		;F4.07 DI8¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) di9Func						");//		;F4.08 DI9¶Ë×Ó¹¦ÄÜÑ¡Ôñ      = 50
+        GEL_WatchAdd("*(int*) di10Func			      ");//    	    ;F4.09 DI10¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) diFilterTime	      ");//          	;F4.10 DIÂË²¨Ê±¼ä
+        GEL_WatchAdd("*(int*) diControlMode	    ");//            	;F4.11 ¶Ë×ÓÃüÁî·½Ê½
+        GEL_WatchAdd("*(int*) diUpDownSlope	    ");//            	;F4.12 ¶Ë×ÓUP/DOWN±ä»¯ÂÊ
+        GEL_WatchAdd("*(int*) ai1MinIn			      ");//         	;F4.13 AiÇúÏß1×îĞ¡ÊäÈë
+        GEL_WatchAdd("*(int*) ai1MinInSet		    ");//         	  	;F4.14 AiÇúÏß1îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) ai1MaxIn			      ");//       	;F4.15 AiÇúÏß1×î´óÊäÈë
+        GEL_WatchAdd("*(int*) ai1MaxInSet		    ");//        	  	;F4.16 AiÇúÏß1×î´óÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) ai1FilterTime	    ");//            	;F4.17 AiÇúÏß1ÂË²¨Ê±¼ä
+        GEL_WatchAdd("*(int*) ai2MinIn			      ");//         	;F4.18 AiÇúÏß2×îĞ¡ÊäÈë            =60
+        GEL_WatchAdd("*(int*) ai2MinInSet		    ");//         	  	;F4.19 AiÇúÏß2×îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) ai2MaxIn			      ");//       	;F4.20 AiÇúÏß2×î´óÊäÈë
+        GEL_WatchAdd("*(int*) ai2MaxInSet		    ");//        	  	;F4.21 AiÇúÏß2×î´óÊäÈë¶ÔÓ¦Éè¶¨    =63
+        GEL_WatchAdd("*(int*) ai2FilterTime	    ");//            	;F4.22 AiÇúÏß2ÂË²¨Ê±¼ä        ;DP = 0X243
+        GEL_WatchAdd("*(int*) ai3MinIn			      ");//          ;F4.23 AiÇúÏß3×îĞ¡ÊäÈë
+        GEL_WatchAdd("*(int*) ai3MinInSet		    ");//         	  	;F4.24 AiÇúÏß3×îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) ai3MaxIn			      ");//       	;F4.25 AiÇúÏß3×î´óÊäÈë
+        GEL_WatchAdd("*(int*) ai3MaxInSet		    ");//        	  	;F4.26 AiÇúÏß3×î´óÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) ai3FilterTime	    ");//            	;F4.27 AiÇúÏß3ÂË²¨Ê±¼ä
+        GEL_WatchAdd("*(int*) pulseInMinIn	      ");//          	;F4.28 AiÇúÏß4×îĞ¡ÊäÈë
+        GEL_WatchAdd("*(int*) pulseInMinInSet		");//				;F4.29 AiÇúÏß4×îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) pulseInMaxIn				");//		;F4.30 AiÇúÏß4×î´óÊäÈë
+        GEL_WatchAdd("*(int*) pulseInMaxInSet		");//				;F4.31 AiÇúÏß4×î´óÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) pulseInFilterTime	");//				;F4.32 AiÇúÏß4ÂË²¨Ê±¼ä            = 10
+        GEL_WatchAdd("*(int*) aiCurveSrc			 		");//		;F4.33 AiÇúÏßÑ¡Ôñ
+        GEL_WatchAdd("*(int*) aiLowerThanMinSet	");//				;F4.34 AiµÍÓÚ×îĞ¡ÊäÈëÉè¶¨Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) di1DelayTime				");//		;F4.35 Di1ÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) di2DelayTime				");//		;F4.36 Di2ÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) di3DelayTime				");//		;F4.37 Di3ÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) diLogic1			    	");//		;F4.38 Di¶Ë×ÓÓĞĞ§Ä£Ê½Ñ¡Ôñ1
+        GEL_WatchAdd("*(int*) diLogic2			    	");//		;F4.39 Di¶Ë×ÓÓĞĞ§Ä£Ê½Ñ¡Ôñ2
+        
+}
+//*************************************F5***********************************
+//F5_RAM:                       ;0X90D2 -- 0X90E8   ¹²23
+//**************************************************************************
+hotmenu F5_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) fmOutSelect	         ");//         		;F5.00 fm¶à¹¦ÄÜ¶Ë×ÓÊä³öÑ¡Ôñ           
+        GEL_WatchAdd("*(int*) fmrFunc			   		   ");//         ;F5.01 fmrÊä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) relay1Func	        	 ");//       	;F5.02 ¿ØÖÆ°å¼ÌµçÆ÷Êä³öÑ¡Ôñ          = 20
+        GEL_WatchAdd("*(int*) relay2Func	     	     ");//     		;F5.03 À©Õ¹¿¨¼ÌµçÆ÷Êä³öÑ¡Ôñ
+        GEL_WatchAdd("*(int*) do1Func			   		   ");//         ;F5.04 Do1Êä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) do2Func			  			 ");//       ;F5.05 Do2Êä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) fmpFunc			         ");//         	;F5.06 FMPÊä³öÑ¡Ôñ
+        GEL_WatchAdd("*(int*) ao1Func			         ");//         	;F5.07 AO1Êä³öÑ¡Ôñ
+        GEL_WatchAdd("*(int*) ao2Func			         ");//         	;F5.08 AO2Êä³öÑ¡Ôñ
+        GEL_WatchAdd("*(int*) fmpOutMaxFrq          ");//        		;F5.09 FMPÊä³ö×î´óÆµÂÊ
+        GEL_WatchAdd("*(int*) ao1Offset		         ");//         	;F5.10 AO1ÁãÆ«ÏµÊı
+        GEL_WatchAdd("*(int*) ao1Gain			         ");//         	;F5.11 AO1ÔöÒæ
+        GEL_WatchAdd("*(int*) ao2Offset		         ");//         	;F5.12 AO2ÁãÆ«ÏµÊı                  = 30
+        GEL_WatchAdd("*(int*) ao2Gain			         ");//         	;F5.13 AO2ÔöÒæ
+        GEL_WatchAdd("*(int*) rsvd1F5			         ");//         	;F5.14 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2F5			         ");//         	;F5.15 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3F5			         ");//         	;F5.16 ±£Áô
+        GEL_WatchAdd("*(int*) fmrOutputDelay		     ");//       	;F5.17 fmrÊä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) relay1OutputDelay	   ");//         	;F5.18 relay1Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) relay2OutputDelay	   ");//         	;F5.19 relay2Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) do1OutputDelay		     ");//       	;F5.20 do1Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) do2OutputDelay		     ");//       	;F5.21 do2Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) doLogic		           ");//        	;F5.22 DoÊä³ö¶Ë×ÓÓĞĞ§×´Ì¬Ñ¡Ôñ       = 40
+        
+}        
+//******************************F6************************************
+//F6_RAM:                 ;0X90E9 -- 0x90f8  ¹²16
+//********************************************************************
+hotmenu F6_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) startMode			        ");//        ;F6.00 Æô¶¯·½Ê½
+        GEL_WatchAdd("*(int*) speedTrackMode         ");//       		;F6.01 ×ªËÙ¸ú×Ù·½Ê½
+        GEL_WatchAdd("*(int*) speedTrackVelocity	    ");//      		;F6.02 ×ªËÙ¸ú×Ù¿ìÂı
+        GEL_WatchAdd("*(int*) startFrq			          ");//      ;F6.03 Æô¶¯ÆµÂÊ
+        GEL_WatchAdd("*(int*) startFrqTime	          ");//      	;F6.04 Æô¶¯ÆµÂÊ±£³ÖÊ±¼ä
+        GEL_WatchAdd("*(int*) startBrakeCurrent		  ");//        	;F6.05 Æô¶¯Ö±Á÷ÖÆ¶¯µçÁ÷
+        GEL_WatchAdd("*(int*) startBrakeTime			    ");//      	;F6.06 Æô¶¯Ö±Á÷ÖÆ¶¯Ê±¼ä
+        GEL_WatchAdd("*(int*) accDecSpdCurve			    ");//      	;F6.07 ¼Ó¼õËÙ·½Ê½
+        GEL_WatchAdd("*(int*) sCurveStartPhaseTime	  ");//      	;F6.08 SÇúÏß¿ªÊ¼¶ÎÊ±¼ä±ÈÀı
+        GEL_WatchAdd("*(int*) sCurveEndPhaseTime		  ");//      	;F6.09 SÇúÏß½áÊø¶ÎÊ±¼ä±ÈÀı
+        GEL_WatchAdd("*(int*) stopMode			          ");//      ;F6.10 Í£»ú·½Ê½
+        GEL_WatchAdd("*(int*) stopBrakeFrq			      ");//      ;F6.11 Í£»úÖ±Á÷ÖÆ¶¯ÆğÊ¼ÆµÂÊ
+        GEL_WatchAdd("*(int*) stopBrakeWaitTime	    ");//        	;F6.12 Í£»úÖ±Á÷ÖÆ¶¯µÈ´ıÊ±¼ä
+        GEL_WatchAdd("*(int*) stopBrakeCurrentV	    ");//        	;F6.13 Í£»úÖ±Á÷ÖÆ¶¯µçÁ÷
+        GEL_WatchAdd("*(int*) stopBrakeTime			    ");//        ;F6.14 Í£»úÖ±Á÷ÖÆ¶¯Ê±¼ä
+        GEL_WatchAdd("*(int*) brakeDutyRatio		      ");//      	;F6.15 ÖÆ¶¯Ê¹ÓÃÂÊ
+}
+//****************************F7*******************************
+// F7_RAM:            ;0x90f9 -- 0x9107    ¹²15
+//***************************************************************
+hotmenu F7_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) rsvd1F7			           ");//       	;F7.00 ±£Áô
+        GEL_WatchAdd("*(int*) mfkKeyFunc			         ");//     	;F7.01 MF.K¼ü¹¦ÄÜÑ¡Ôñ		
+        GEL_WatchAdd("*(int*) stopKeyFunc			       ");//      	;F7.02 STOP/RESET¼ü¹¦ÄÜ
+        GEL_WatchAdd("*(int*) ledDispParaRun1	       ");//       		;F7.03 LEDÔËĞĞÏÔÊ¾²ÎÊı1
+        GEL_WatchAdd("*(int*) ledDispParaRun2	       ");//       		;F7.04 LEDÔËĞĞÏÔÊ¾²ÎÊı2
+        GEL_WatchAdd("*(int*) ledDispParaStop	       ");//       		;F7.05 LEDÍ£»úÏÔÊ¾²ÎÊı
+        GEL_WatchAdd("*(int*) speedDispCoeff	         ");//     		;F7.06 ¸ºÔØËÙ¶ÈÏÔÊ¾ÏµÊı
+        GEL_WatchAdd("*(int*) radiatorTemp		         ");//     	;F7.07 Äæ±äÆ÷Ä£¿éÉ¢ÈÈÆ÷ÎÂ¶È
+        GEL_WatchAdd("*(int*) temp2			             ");//       ;F7.08 ÕûÁ÷ÇÅÉ¢ÈÈÆ÷ÎÂ¶È
+        GEL_WatchAdd("*(int*) runTimeAddup		         ");//     	;F7.09 ÀÛ¼ÆÔËĞĞÊ±¼ä, µ¥Î»: h
+        GEL_WatchAdd("*(int*) productVersion	         ");//     		;F7.10 ²úÆ·ºÅ
+        GEL_WatchAdd("*(int*) softVersion			       ");//       	;F7.11 Èí¼ş°æ±¾ºÅ
+        GEL_WatchAdd("*(int*) speedDispPoint	         ");//     		;F7.12 ¸ºÔØËÙ¶ÈÏÔÊ¾Ğ¡ÊıµãÎ»Êı
+        GEL_WatchAdd("*(int*) powerUpTimeAddup        ");//      		;F7.13 ÀÛ¼ÆÉÏµçÊ±¼ä
+        GEL_WatchAdd("*(int*) powerAddup		           ");//     	;F7.14 ÀÛ¼ÆºÄµçÁ¿
+        
+}        
+//;********************F8**************************************
+//F8_RAM:            ;0x9108 -- 0x913d  ¹²54
+//**************************************************************
+hotmenu F8_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) jogFrq			         "   ) 	;//;F8.00 µã¶¯ÔËĞĞÆµÂÊ
+        GEL_WatchAdd("*(int*) jogAccTime	             "   ) 		;//;F8.01 µã¶¯¼ÓËÙÊ±¼ä
+        GEL_WatchAdd("*(int*) jogDecTime	             "   ) 		;//;F8.02 µã¶¯¼õËÙÊ±¼ä
+        GEL_WatchAdd("*(int*) accTime2		             "   ) 	;//;F8.03 ¼ÓËÙÊ±¼ä2
+        GEL_WatchAdd("*(int*) decTime2		             "   ) 	;//;F8.04 ¼õËÙÊ±¼ä2
+        GEL_WatchAdd("*(int*) accTime3		             "   ) 	;//;F8.05 ¼ÓËÙÊ±¼ä3
+        GEL_WatchAdd("*(int*) decTime3		             "   ) 	;//;F8.06 ¼õËÙÊ±¼ä3
+        GEL_WatchAdd("*(int*) accTime4		             "   ) 	;//;F8.07 ¼ÓËÙÊ±¼ä4
+        GEL_WatchAdd("*(int*) decTime4		             "   ) 	;//;F8.08 ¼õËÙÊ±¼ä4
+        GEL_WatchAdd("*(int*) jumpFrq1		             "   ) 	;//;F8.09 ÌøÔ¾ÆµÂÊ1
+        GEL_WatchAdd("*(int*) jumpFrq2		             "   ) 	;//;F8.10 ÌøÔ¾ÆµÂÊ2
+        GEL_WatchAdd("*(int*) jumpFrqRange			     "   ) ;//;F8.11 ÌøÔ¾ÆµÂÊ·ù¶È
+        GEL_WatchAdd("*(int*) zeroSpeedDeadTime		 "   )   	;//;F8.12 Õı·´×ªËÀÇøÊ±¼ä
+        GEL_WatchAdd("*(int*) antiReverseRun			 "   ) 	;//;F8.13 ·´×ª¿ØÖÆ, 0-ÔÊĞí·´×ª£¬1-½ûÖ¹·´×ª
+        GEL_WatchAdd("*(int*) lowerDeal			     "   )   ;//;F8.14 ÆµÂÊµÍÓÚÏÂÏŞÆµÂÊÔËĞĞ¶¯×÷
+        GEL_WatchAdd("*(int*) droopCtrl			     "   )   ;//;F8.15 ÏÂ´¹¿ØÖÆ
+        GEL_WatchAdd("*(int*) powerUpTimeArriveSet		  "  )  ;//;F8.16 Éè¶¨ÉÏµçµ½´ïÊ±¼ä
+        GEL_WatchAdd("*(int*) runTimeArriveSet			 "   ) ;//;F8.17 Éè¶¨ÔËĞĞµ½´ïÊ±¼ä
+        GEL_WatchAdd("*(int*) startProtect			     "   ) ;//;F8.18 Æô¶¯±£»¤Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) frqFdt1Value			     "   ) ;//;F8.19 ÆµÂÊ¼ì²âÖµ(FDT1µçÆ½)
+        GEL_WatchAdd("*(int*) frqFdt1Lag			     "   ) 	;//;F8.20 ÆµÂÊ²âÖÍºóÖµ
+        GEL_WatchAdd("*(int*) frqArriveRange			     "   ) 	;//;F8.21 ÆµÂÊµ½´ï¼ì³ö·ù¶È
+        GEL_WatchAdd("*(int*) accDecJumpFrq			     "   )   ;//;F8.22 ¼Ó¼õËÙ¹ı³ÌÖĞÌøÔ¾ÆµÂÊÊÇ·ñÓĞĞ§
+        GEL_WatchAdd("*(int*) rsvd1F8			           "   )   	;//;F8.23 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2F8			           "   )   	;//;F8.24 ±£Áô
+        GEL_WatchAdd("*(int*) accTime12SwitchFrq			 "   ) 	;//;F8.25 ¼ÓËÙÊ±¼ä1ºÍ¼ÓËÙÊ±¼ä2ÇĞ»»ÆµÂÊµã
+        GEL_WatchAdd("*(int*) decTime12SwitchFrq			 "   ) 	;//;F8.26 ¼õËÙÊ±¼ä1ºÍ¼õËÙÊ±¼ä2ÇĞ»»ÆµÂÊµã
+        GEL_WatchAdd("*(int*) terminalJogPri			     "   ) 	;//;F8.27 ¶Ë×Óµã¶¯ÓÅÏÈ 0£ºÎŞĞ§   1£ºÓĞĞ§
+        GEL_WatchAdd("*(int*) frqFdt2Value			       "   ) ;//;F8.28 ÆµÂÊ¼ì²âÖµ(FDT2µçÆ½)
+        GEL_WatchAdd("*(int*) frqFdt2Lag			         "   ) 	;//;F8.29 ÆµÂÊ¼ì²âÖÍºóÖµ(FDT2)
+        GEL_WatchAdd("*(int*) arriveFrq1			         "   ) 	;//;F8.30 ÈÎÒâµ½´ïÆµÂÊ¼ì²âÖµ1
+        GEL_WatchAdd("*(int*) arriveFrq1Width			   "   )   	;//;F8.31 ÈÎÒâµ½´ïÆµÂÊ¼ì³ö¿í¶È1
+        GEL_WatchAdd("*(int*) arriveFrq2			         "   ) 	;//;F8.32 ÈÎÒâµ½´ïÆµÂÊ¼ì²âÖµ2
+        GEL_WatchAdd("*(int*) arriveFrq2Width			   "   )   	;//;F8.33 ÈÎÒâµ½´ïÆµÂÊ¼ì³ö¿í¶È2
+        GEL_WatchAdd("*(int*) zeroCurCheckLevel			 "   )	;//;F8.34 ÁãµçÁ÷¼ì²âË®Æ½
+        GEL_WatchAdd("*(int*) zeroCurCheckDelayTime		"	 )	;//;F8.35 ÁãµçÁ÷¼ì²âÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) currentOverVal			     "   ) 	;//;F8.36 Êä³öµçÁ÷³¬ÏŞÖµ
+        GEL_WatchAdd("*(int*) currentOverDelayTime			"  )  ;//;F8.37 Êä³öµçÁ÷³¬ÏŞÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) arriveCurrent1			     "   ) 	;//;F8.38 ÈÎÒâµ½´ïµçÁ÷1
+        GEL_WatchAdd("*(int*) arriveCurrent1Width			"  )    	;//;F8.39 ÈÎÒâµ½´ïµçÁ÷1¿í¶È
+        GEL_WatchAdd("*(int*) arriveCurrent2			     "   ) 	;//;F8.40 ÈÎÒâµ½´ïµçÁ÷2
+        GEL_WatchAdd("*(int*) arriveCurrent2Width			"  )    	;//;F8.41 ÈÎÒâµ½´ïµçÁ÷2¿í¶È
+        GEL_WatchAdd("*(int*) timingFunSel			       "   ) ;//;F8.42 ¶¨Ê±¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) timingRunTimeSel			   "   ) ;//;F8.43 ¶¨Ê±ÔËĞĞÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) timintRunTime			     "   )   ;//;F8.44 ¶¨Ê±ÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) ai1InVolProtLower			 "   )   ;//;F8.45 ai1ÊäÈëµçÑ¹±£»¤ÖµÏÂÏŞ
+        GEL_WatchAdd("*(int*) ai1InVolProtUpper			 "   )   ;//;F8.46 ai1ÊäÈëµçÑ¹±£»¤ÖµÉÏÏŞ 
+        GEL_WatchAdd("*(int*) igbtTempArrive			     "   ) 	;//;F8.47 Ä£¿éÎÂ¶Èµ½´ï
+        GEL_WatchAdd("*(int*) funCtrlMode			       "   )   	;//;F8.48 ·çÉÈ¿ØÖÆÄ£Ê½
+        GEL_WatchAdd("*(int*) frqAwake			           "   ) ;//;F8.49 »½ĞÑÆµÂÊ
+        GEL_WatchAdd("*(int*) awakeDelayTime			     "   ) 	;//;F8.50 »½ĞÑÑÓÊ±Ê±¼ä
+        GEL_WatchAdd("*(int*) frqSleep			           "   ) ;//;F8.51 ĞİÃßÆµÂÊ
+        GEL_WatchAdd("*(int*) sleepDelayTime			     "   ) 	;//;F8.52 ĞİÃßÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) runAriveTimeSet			   "   )   	;//;F8.53 ±¾´ÎÔËĞĞµ½´ïÊ±¼äÉè¶¨
+}        
+        
+//;********************F9**************************************
+//;F9_RAM:         ;0x913e -- 0x9184   ¹²71
+//*************************************************************
+hotmenu F9_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) overloadMode			          ");//  ;F9.00 µç»ú¹ıÔØ±£»¤Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) overloadGain			          ");//  ;F9.01 µç»ú¹ıÔØ±£»¤ÔöÒæ
+        GEL_WatchAdd("*(int*) foreOverloadCoef			      ");//  ;F9.02 µç»ú¹ıÔØÔ¤¾¯ÏµÊı
+        GEL_WatchAdd("*(int*) ovGain			                ");//  	;F9.03 ¹ıÑ¹Ê§ËÙÔöÒæ
+        GEL_WatchAdd("*(int*) ovPoint			              ");//    	;F9.04 ¹ıÑ¹Ê§ËÙ±£»¤µçÑ¹
+        GEL_WatchAdd("*(int*) ocGain			                ");//  	;F9.05 ¹ıÁ÷Ê§ËÙÔöÒæ
+        GEL_WatchAdd("*(int*) ocPoint			              ");//    	;F9.06 ¹ıÁ÷Ê§ËÙ±£»¤µçÁ÷
+        GEL_WatchAdd("*(int*) shortCheckMode			        ");//  	;F9.07 ÉÏµç¶ÔµØ¶ÌÂ·±£»¤¹¦ÄÜ
+        GEL_WatchAdd("*(int*) rsvd1F9			              ");//    	;F9.08 ±£»¤
+        GEL_WatchAdd("*(int*) errAutoRstNumMax			      ");//  ;F9.09 ¹ÊÕÏ×Ô¶¯¸´Î»´ÎÊı
+        GEL_WatchAdd("*(int*) errAutoRstRelayAct			    ");//  	;F9.10 ¹ÊÕÏ×Ô¶¯¸´Î»ÆÚ¼ä¹ÊÕÏ¼ÌµçÆ÷¶¯×÷Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) errAutoRstSpaceTime			  ");//    	;F9.11 ¹ÊÕÏ×Ô¶¯¸´Î»¼ä¸ôÊ±¼ä, 0.1s
+        GEL_WatchAdd("*(int*) inPhaseLossProtect			    ");//  	;F9.12 ÊäÈëÈ±Ïà±£»¤Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) outPhaseLossProtect			  ");//    	;F9.13 Êä³öÈ±Ïà±£»¤Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) errorLatest1			          ");//  ;F9.14 µÚÒ»´Î¹ÊÕÏÀàĞÍ
+        GEL_WatchAdd("*(int*) errorLatest2			          ");//  ;F9.15 µÚ¶ş´Î¹ÊÕÏÀàĞÍ
+        GEL_WatchAdd("*(int*) errorLatest3			          ");//  ;F9.16 µÚÈı´Î¹ÊÕÏÀàĞÍ
+        GEL_WatchAdd("*(int*) error3Frq			            ");//    ;F9.17 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±ÆµÂÊ
+        GEL_WatchAdd("*(int*) error3Current			        ");//    ;F9.18 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±µçÁ÷
+        GEL_WatchAdd("*(int*) error3GeneratrixVoltage		");//	  	;F9.19 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±Ä¸ÏßµçÑ¹
+        GEL_WatchAdd("*(int*) error3DiStatus			        ");//  	;F9.20 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±ÊäÈë¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error3DoStatus			        ");//  	;F9.21 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±Êä³ö¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error3InverterStatus			  ");//  ;F9.22 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±±äÆµÆ÷×´Ì¬
+        GEL_WatchAdd("*(int*) error3TimeFromPowerUp			");//    ;F9.23 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±Ê±¼ä£¨´Ó±¾´ÎÉÏµç¿ªÊ¼¼ÆÊ±£©
+        GEL_WatchAdd("*(int*) error3TimeFromRun			    ");//    ;F9.24 µÚÈı´Î(×î½üÒ»´Î)¹ÊÕÏÊ±Ê±¼ä£¨´ÓÔËĞĞÊ±¿ªÊ¼¼ÆÊ±©
+        GEL_WatchAdd("*(int*) rsvd2F9			              ");//    	;F9.25 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3F9			              ");//    	;F9.26 ±£Áô
+        GEL_WatchAdd("*(int*) error2Frq			            ");//    ;F9.27 µÚ¶ş´Î¹ÊÕÏÊ±ÆµÂÊ
+        GEL_WatchAdd("*(int*) error2Current			        ");//    ;F9.28 µÚ¶ş´Î¹ÊÕÏÊ±µçÁ÷
+        GEL_WatchAdd("*(int*) error2GeneratrixVoltage		");//	  	;F9.29 µÚ¶ş´Î¹ÊÕÏÊ±Ä¸ÏßµçÑ¹
+        GEL_WatchAdd("*(int*) error2DiStatus			        ");//  	;F9.30 µÚ¶ş´Î¹ÊÕÏÊ±ÊäÈë¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error2DoStatus			        ");//  	;F9.31 µÚ¶ş´Î¹ÊÕÏÊ±Êä³ö¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error2InverterStatus			  ");//  ;F9.32 µÚ¶ş´Î¹ÊÕÏÊ±±äÆµÆ÷×´Ì¬
+        GEL_WatchAdd("*(int*) error2TimeFromPowerUp			");//    ;F9.33 µÚ¶ş´Î¹ÊÕÏÊ±Ê±¼ä£¨´Ó±¾ÎÉÏµç¿ªÊ¼¼ÆÊ±£©
+        GEL_WatchAdd("*(int*) error2TimeFromRun			    ");//    ;F9.34 µÚ¶ş´Î¹ÊÕÏÊ±Ê±¼ä£¨´ÓÔËĞĞÊ±¿ªÊ¼¼ÆÊ±£©
+        GEL_WatchAdd("*(int*) rsvd4F9			              ");//    	;F9.35 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd5F9			              ");//    	;F9.36 ±£Áô
+        GEL_WatchAdd("*(int*) error1Frq			            ");//    ;F9.37 µÚÒ»´Î¹ÊÕÏÊ±ÆµÂÊ
+        GEL_WatchAdd("*(int*) error1Current			        ");//    ;F9.38 µÚÒ»´Î¹ÊÕÏÊ±µçÁ÷
+        GEL_WatchAdd("*(int*) error1GeneratrixVoltage		");//	  	;F9.39 µÚÒ»´Î¹ÊÕÏÊ±Ä¸ÏßµçÑ¹
+        GEL_WatchAdd("*(int*) error1DiStatus			        ");//  	;F9.40 µÚÒ»´Î¹ÊÕÏÊ±ÊäÈë¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error1DoStatus			        ");//  	;F9.41 µÚÒ»´Î¹ÊÏÊ±Êä³ö¶Ë×Ó×´Ì¬
+        GEL_WatchAdd("*(int*) error1InverterStatus			  ");//  ;F9.42 µÚÒ»´Î¹ÊÕÏÊ±±äÆµÆ÷×´Ì¬
+        GEL_WatchAdd("*(int*) error1TimeFromPowerUp			");//    ;F9.43 µÚÒ»´ÎÕÏÊ±Ê±¼ä£¨´Ó±¾´ÎÉÏµç¿ªÊ¼¼ÆÊ±£©
+        GEL_WatchAdd("*(int*) error1TimeFromRun			    ");//    ;F9.44 µÚÒ»´Î¹ÊÕÏÊ±Ê±ä£¨´ÓÔËĞĞÊ±¿ªÊ¼¼ÆÊ±£©
+        GEL_WatchAdd("*(int*) rsvd6F9			              ");//    	;F9.45 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd7F9			              ");//    	;F9.46 ±£Áô	
+        GEL_WatchAdd("*(int*) errorAction1			          ");//  ;F9.47 ¹ÊÕÏ±£»¤¶¯×÷Ñ¡Ôñ1
+        GEL_WatchAdd("*(int*) errorAction2			          ");//  ;F9.48 ¹ÊÕÏ±£»¤¶¯×÷Ñ¡Ôñ2
+        GEL_WatchAdd("*(int*) errorAction3			          ");//  ;F9.49 ¹ÊÕÏ±£»¤¶¯×÷Ñ¡Ôñ3
+        GEL_WatchAdd("*(int*) errorAction4			          ");//  ;F9.50 ¹ÊÕÏ±£»¤¶¯×÷Ñ¡Ôñ4
+        GEL_WatchAdd("*(int*) rsvd8F9			              ");//    	;F9.51 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd9F9			              ");//    	;F9.52 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd10F9			              ");//  ;F9.53 ±£Áô
+        GEL_WatchAdd("*(int*) errorRunFrqSrc			        ");//  	;F9.54 ¹ÊÕÏÊ±¼ÌĞøÔËĞĞÆµÂÊÑ¡Ôñ
+        GEL_WatchAdd("*(int*) errorSecondFrq			        ");//  	;F9.55 Òì³£±¸ÓÃÆµÂÊÉè¶¨
+        GEL_WatchAdd("*(int*) motorOtType			          ");//    	;F9.56 µç»úÎÂ¶È´«¸ĞÆ÷ÀàĞÍ
+        GEL_WatchAdd("*(int*) motorOtLimit			          ");//  ;F9.57 µç»ú¹ıÎÂ´«¸ĞÆ÷±£»¤ãĞÖµ
+        GEL_WatchAdd("*(int*) motorOtAlarm			          ");//  ;F9.58 µç»ú¹ıÈÈÔ¤±¨¾¯·§Öµ
+        GEL_WatchAdd("*(int*) pOffTransitoryNoStop			  ");//  ;F9.59 Ë²Í£²»Í£¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) rsvd11F9			              ");//  ;F9.60 ±£Áô
+        GEL_WatchAdd("*(int*) pOffVolBackTime			      ");//    	;F9.61 Ë²Í£²»Í£µçÑ¹»ØÉıÅĞ¶ÏÊ±¼ä
+        GEL_WatchAdd("*(int*) pOffThresholdVol			      ");//  ;F9.62 Ë²Í£²»Í£¶¯×÷ÅĞ¶ÏµçÑ¹
+        GEL_WatchAdd("*(int*) loseLoadProtectMode			  ");//    	;F9.63 µôÔØ±£»¤Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) loseLoadLevel			        ");//    ;F9.64 µôÔØ¼ì³öË®Æ½
+        GEL_WatchAdd("*(int*) loseLoadTime			          ");//  ;F9.65 µôÔØ¼ì³öÊ±¼ä
+        GEL_WatchAdd("*(int*) rsvd12F9			              ");//  ;F9.66 ±£Áô
+        GEL_WatchAdd("*(int*) overSpeedCheckVal			    ");//    ;F9.67 ¹ıËÙ¶È¼ì²âÖµ
+        GEL_WatchAdd("*(int*) overSpeedCheckTime			    ");//  	;F9.68 ¹ıËÙ¶È¼ì²âÊ±¼ä
+        GEL_WatchAdd("*(int*) errSpeedCheckVal			      ");//  ;F9.69 ËÙ¶ÈÆ«²î¹ı´ó¼ì²âÖµ
+        GEL_WatchAdd("*(int*) errSpeedCheckTime			    ");//    ;F9.70 ËÙ¶ÈÆ«²î¹ı´ó¼ì²âÊ±¼ä
+        
+}        
+//*********************FA******************************
+//;FA_RAM:    ;0x9185 -- 0x91a1  ¹²29
+//******************************************************        
+hotmenu FA_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) pidSetSrc			          ");//      ;FA.00 PID¸ø¶¨Ô´
+        GEL_WatchAdd("*(int*) pidSet			              ");//    	;FA.01 PIDÊıÖµ¸ø¶¨, 0.1%
+        GEL_WatchAdd("*(int*) pidFdbSrc			          ");//      ;FA.02 PID·´À¡Ô´
+        GEL_WatchAdd("*(int*) pidDir			              ");//    	;FA.03 PID×÷ÓÃ·½Ïò
+        GEL_WatchAdd("*(int*) pidDisp			            ");//      	;FA.04 PID¸ø¶¨·´À¡Á¿³Ì
+        GEL_WatchAdd("*(int*) pidKp			              ");//      ;FA.05 ±ÈÀıÔöÒæP
+        GEL_WatchAdd("*(int*) pidTi			              ");//      ;FA.06 »ı·ÖÊ±¼äI
+        GEL_WatchAdd("*(int*) pidTd			              ");//      ;FA.07 Î¢·ÖÊ±¼äD
+        GEL_WatchAdd("*(int*) reverseCutOffFrq			    ");//    ;FA.08 PID·´×ª½ØÖ¹ÆµÂÊ
+        GEL_WatchAdd("*(int*) pidErrMin			          ");//      ;FA.09 PIDÆ«²î¼«ÏŞ
+        GEL_WatchAdd("*(int*) pidDLimit			          ");//      ;FA.10 PIDÎ¢·ÖÏŞ·ù
+        GEL_WatchAdd("*(int*) pidSetChangeTime			    ");//    ;FA.11 PID¸ø¶¨±ä»¯Ê±¼ä
+        GEL_WatchAdd("*(int*) pidFdbLpfTime			      ");//      ;FA.12 ·´À¡ÂË²¨Ê±¼ä
+        GEL_WatchAdd("*(int*) pidOutLpfTime			      ");//      ;FA.13 Êä³öÂË²¨Ê±¼ä
+        GEL_WatchAdd("*(int*) rsvd1Fa			            ");//      	;FA.14 ±£Áô
+        GEL_WatchAdd("*(int*) pidKp2			              ");//    	;FA.15 ±ÈÀıÔöÒæP2
+        GEL_WatchAdd("*(int*) pidTi2			              ");//    	;FA.16 »ı·ÖÊ±¼äI2
+        GEL_WatchAdd("*(int*) pidTd2			              ");//    	;FA.17 Î¢·ÖÊ±¼äD2
+        GEL_WatchAdd("*(int*) pidParaChangeCondition		");//	  	;FA.18 PID²ÎÊıÇĞ»»Ìõ¼ş
+        GEL_WatchAdd("*(int*) pidDelta1			          ");//      ;FA.19 PID²ÎÊıÇĞ»»Æ«²î1
+        GEL_WatchAdd("*(int*) pidDelta2V               ");//     		;FA.20 PID²ÎÊıÇĞ»»Æ«²î2
+        GEL_WatchAdd("*(int*) pidInit			            ");//      	;FA.21 PID³õÖµ
+        GEL_WatchAdd("*(int*) pidInitTime			        ");//      	;FA.22 PID³õÖµ±£³ÖÊ±¼ä
+        GEL_WatchAdd("*(int*) outputErrPosMax			    ");//      	;FA.23 Á½´ÎÊä³öÆ«²îÕıÏò×î´óÖµ
+        GEL_WatchAdd("*(int*) outputErrNegMax			    ");//      	;FA.24 Á½´ÎÊä³öÆ«²î¸ºÏò×î´óÖµ
+        GEL_WatchAdd("*(int*) pidIAttri			          ");//      ;FA.25 PID»ı·ÖÊôĞÔ
+        GEL_WatchAdd("*(int*) pidFdbLoseDetect			    ");//    ;FA.26 PID·´À¡¶ªÊ§¼ì²âÖµ
+        GEL_WatchAdd("*(int*) pidFdbLoseDetectTime			 ");//   ;FA.27 PID·´À¡¶ªÊ§¼ì²âÊ±¼ä
+        GEL_WatchAdd("*(int*) pidCalcMode			        ");//      	;FA.28  PIDÔËËãÄ£Ê½. ¹©Ë®Ä£Ê½ÏÂ£¬Í£»úÊ±PIDÒ²¼ÆËã.	
+}        
+//**********************FB**********************************
+//;FB_RAM:            ;0x91a2 -- 0x91ab       ¹²10
+//***********************************************************
+
+hotmenu FB_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) swingBaseMode			     ");//       ;FB.00 °ÚÆµÉè¶¨·½Ê½
+        GEL_WatchAdd("*(int*) swingAmplitude			     ");//     	;FB.01 °ÚÆµ·ù¶È
+        GEL_WatchAdd("*(int*) swingJumpRange			     ");//     	;FB.02 Í»ÌøÆµÂÊ·ù¶È
+        GEL_WatchAdd("*(int*) swingPeriod			       ");//       	;FB.03 °ÚÆµÖÜÆÚ
+        GEL_WatchAdd("*(int*) swingRiseTimeCoeff			 ");//     	;FB.04 °ÚÆµµÄÈı½Ç²¨ÉÏÉıÊ±¼ä
+        GEL_WatchAdd("*(int*) lengthSet			         ");//       ;FB.05 Éè¶¨³¤¶È
+        GEL_WatchAdd("*(int*) lengthCurrent			     ");//       ;FB.06 Êµ¼Ê³¤¶È
+        GEL_WatchAdd("*(int*) lengthPulsePerMeter			");//      	;FB.07 Ã¿Ã×Âö³åÊı£¬µ¥Î»: 0.1
+        GEL_WatchAdd("*(int*) counterSet			         ");//     	;FB.08 Éè¶¨¼ÆÊıÖµ
+        GEL_WatchAdd("*(int*) counterPoint			       ");//     ;FB.09 Ö¸¶¨¼ÆÊıÖµ
+}        
+//********************FC***************************************
+//;;FC_RAM:           ;0x91ac -- 0x91df       ¹²52
+//*************************************************************
+
+hotmenu FC_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) plcFrq0			            ");//      	;FC.00 ¶à¶ÎÖ¸Áî0
+        GEL_WatchAdd("*(int*) plcFrq1			            ");//      	;FC.01 ¶à¶ÎÖ¸Áî1
+        GEL_WatchAdd("*(int*) plcFrq2			            ");//      	;FC.02 ¶à¶ÎÖ¸Áî2
+        GEL_WatchAdd("*(int*) plcFrq3			            ");//      	;FC.03 ¶à¶ÎÖ¸Áî3
+        GEL_WatchAdd("*(int*) plcFrq4			            ");//      	;FC.04 ¶à¶ÎÖ¸Áî4
+        GEL_WatchAdd("*(int*) plcFrq5			            ");//      	;FC.05 ¶à¶ÎÖ¸Áî5
+        GEL_WatchAdd("*(int*) plcFrq6			            ");//      	;FC.06 ¶à¶ÎÖ¸Áî6
+        GEL_WatchAdd("*(int*) plcFrq7			            ");//      	;FC.07 ¶à¶ÎÖ¸Áî7
+        GEL_WatchAdd("*(int*) plcFrq8			            ");//      	;FC.08 ¶à¶ÎÖ¸Áî8
+        GEL_WatchAdd("*(int*) plcFrq9			            ");//      	;FC.09 ¶à¶ÎÖ¸Áî9
+        GEL_WatchAdd("*(int*) plcFrq10			            ");//    ;FC.10 ¶à¶ÎÖ¸Áî10
+        GEL_WatchAdd("*(int*) plcFrq11			            ");//    ;FC.11 ¶à¶ÎÖ¸Áî11
+        GEL_WatchAdd("*(int*) plcFrq12			            ");//    ;FC.12 ¶à¶ÎÖ¸Áî12
+        GEL_WatchAdd("*(int*) plcFrq13			            ");//    ;FC.13 ¶à¶ÎÖ¸Áî13
+        GEL_WatchAdd("*(int*) plcFrq14			            ");//    ;FC.14 ¶à¶ÎÖ¸Áî14
+        GEL_WatchAdd("*(int*) plcFrq15			            ");//    ;FC.15 ¶à¶ÎÖ¸î15
+        GEL_WatchAdd("*(int*) plcRunMode			          ");//    	;FC.16 PLCÔËĞĞ·½Ê½
+        GEL_WatchAdd("*(int*) plcPowerOffRemMode			  ");//    	;FC.17 PLCµôµç¼ÇÒäÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq0RunTime			      ");//    	;FC.18 0¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq0AccDecTimeSel			");//    ;FC.19 0¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq1RunTime			      ");//    	;FC.20 1¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq1AccDecTimeSel			");//    ;FC.21 1¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq2RunTime			      ");//    	;FC.22 2¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq2AccDecTimeSel			");//    ;FC.23 2¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq3RunTime			      ");//    	;FC.24 3¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq3AccDecTimeSel			");//    ;FC.25 3¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq4RunTime			      ");//    	;FC.26 4¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq4AccDecTimeSel			");//    ;FC.27 4¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq5RunTime			      ");//    	;FC.28 5¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq5AccDecTimeSel			");//    ;FC.29 5¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq6RunTime			      ");//    	;FC.30 6¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq6AccDecTimeSel			");//    ;FC.31 6¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq7RunTime			      ");//    	;FC.32 7¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq7AccDecTimeSel			");//    ;FC.33 7¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq8RunTime			      ");//    	;FC.34 8¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq8AccDecTimeSel			");//    ;FC.35 8¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq9RunTime			      ");//    	;FC.36 9¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq9AccDecTimeSel			");//    ;FC.37 9¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq10RunTime			    ");//      	;FC.38 10¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq10AccDecTimeSel		");//	    ;FC.39 10¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq11RunTime			    ");//      	;FC.40 11¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq11AccDecTimeSel		");//	    ;FC.41 11¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq12RunTime			    ");//      	;FC.42 12¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq12AccDecTimeSel		");//	    ;FC.43 12¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq13RunTime			    ");//      	;FC.44 13¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq13AccDecTimeSel		");//	    ;FC.45 13¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq14RunTime			    ");//      	;FC.46 14¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq14AccDecTimeSel		");//	    ;FC.47 14¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcFrq15RunTime			    ");//      	;FC.48 15¶ÎÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) plcFrq15AccDecTimeSel		");//	    ;FC.49 15¶Î¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) plcTimeUnit			        ");//      	;FC.50 PLCÔËĞĞÊ±¼äµ¥Î»			
+        GEL_WatchAdd("*(int*) plcFrq0Src			          ");//    	;FC.51 ¶à¶ÎÖ¸Áî0¸ø¶¨·½Ê½
+}
+//**********************FD*******************************
+//;FD_RAM:           ;0x91e0 -- 0x91e7   ¹²8
+//*******************************************************
+
+hotmenu FD_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) commBaudRate			       ");//     ;FD.00 ²¨ÌØÂÊ
+        GEL_WatchAdd("*(int*) commParity				       ");//     ;FD.01 Êı¾İ¸ñÊ½
+        GEL_WatchAdd("*(int*) commSlaveAddress	       ");//     	;FD.02 ±¾»úµØÖ·
+        GEL_WatchAdd("*(int*) commDelay				       ");//     ;FD.03 Ó¦´ğÑÓ³Ù
+        GEL_WatchAdd("*(int*) commOverTime		         ");//     	;FD.04 Í¨Ñ¶³¬Ê±Ê±¼ä
+        GEL_WatchAdd("*(int*) commProtSel		         ");//       	;FD.05 Í¨Ñ¶Ğ­ÒéÑ¡Ôñ
+        GEL_WatchAdd("*(int*) commReadCurrentPoint	   ");//     	;FD.06 Í¨Ñ¶¶ÁÈ¡µçÁ÷·Ö±æÂÊ
+        GEL_WatchAdd("*(int*) rsvd1Fd		             ");//       	;FD.07 ±£Áô 		
+}
+//**********************FE*******************************
+//;FE_RAM:            ;0x91e8 -- 0x9205   ¹²30
+//*******************************************************
+
+hotmenu FE_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) userFun0			      ");//           ;FE.00 ÓÃ»§¹¦ÄÜÂë0
+        GEL_WatchAdd("*(int*) userFun1			      ");//           ;FE.01 ÓÃ»§¹¦ÄÜÂë1
+        GEL_WatchAdd("*(int*) userFun2			      ");//           ;FE.02 ÓÃ»§¹¦ÄÜÂë2
+        GEL_WatchAdd("*(int*) userFun3			      ");//           ;FE.03 ÓÃ»§¹¦ÄÜÂë3
+        GEL_WatchAdd("*(int*) userFun4			      ");//           ;FE.04 ÓÃ»§¹¦ÄÜÂë4
+        GEL_WatchAdd("*(int*) userFun5			      ");//           ;FE.05 ÓÃ»§¹¦ÄÜÂë5
+        GEL_WatchAdd("*(int*) userFun6			      ");//           ;FE.06 ÓÃ»§¹¦ÄÜÂë6
+        GEL_WatchAdd("*(int*) userFun7			      ");//           ;FE.07 ÓÃ»§¹¦ÄÜÂë7
+        GEL_WatchAdd("*(int*) userFun8			      ");//           ;FE.08 ÓÃ»§¹¦ÄÜÂë8
+        GEL_WatchAdd("*(int*) userFun9			      ");//           ;FE.09 ÓÃ»§¹¦ÄÜÂë9
+        GEL_WatchAdd("*(int*) userFun10			    ");//             ;FE.10 ÓÃ»§¹¦ÄÜÂë10
+        GEL_WatchAdd("*(int*) userFun11			    ");//             ;FE.11 ÓÃ»§¹¦ÄÜÂë11
+        GEL_WatchAdd("*(int*) userFun12			    ");//             ;FE.12 ÓÃ»§¹¦ÄÜÂë12
+        GEL_WatchAdd("*(int*) userFun13			    ");//             ;FE.13 ÓÃ»§¹¦ÄÜÂë13
+        GEL_WatchAdd("*(int*) userFun14			    ");//             ;FE.14 ÓÃ»§¹¦ÄÜÂë14
+        GEL_WatchAdd("*(int*) userFun15			    ");//             ;FE.15 ÓÃ»§¹¦ÄÜÂë15
+        GEL_WatchAdd("*(int*) userFun16			    ");//             ;FE.16 ÓÃ»§¹¦ÄÜÂë16
+        GEL_WatchAdd("*(int*) userFun17			    ");//             ;FE.17 ÓÃ»§¹¦ÄÜÂë17
+        GEL_WatchAdd("*(int*) userFun18			    ");//             ;FE.18 ÓÃ»§¹¦ÄÜÂë18
+        GEL_WatchAdd("*(int*) userFun19			    ");//             ;FE.19 ÓÃ»§¹¦ÜÂë19
+        GEL_WatchAdd("*(int*) userFun20			    ");//             ;FE.20 ÓÃ»§¹¦ÜÂë20
+        GEL_WatchAdd("*(int*) userFun21			    ");//             ;FE.21 ÓÃ»§¹¦ÄÜÂë21
+        GEL_WatchAdd("*(int*) userFun22			    ");//             ;FE.22 ÓÃ»§¹¦ÄÜÂë22
+        GEL_WatchAdd("*(int*) userFun23			    ");//             ;FE.23 ÓÃ»§¹¦ÄÜÂë23
+        GEL_WatchAdd("*(int*) userFun24			    ");//             ;FE.24 ÓÃ»§¹¦ÄÜÂë24
+        GEL_WatchAdd("*(int*) userFun25			    ");//             ;FE.25 ÓÃ»§¹¦ÄÜÂë25
+        GEL_WatchAdd("*(int*) userFun26			    ");//             ;FE.26 ÓÃ»§¹¦ÄÜÂë26
+        GEL_WatchAdd("*(int*) userFun27			    ");//             ;FE.27 ÓÃ»§¹¦ÄÜÂë27
+        GEL_WatchAdd("*(int*) userFun28			    ");//             ;FE.28 ÓÃ»§¹¦ÄÜÂë28
+        GEL_WatchAdd("*(int*) userFun29			    ");//             ;FE.29 ÓÃ»§¹¦ÄÜÂë29
+        
+}        
+//***************FF************************************************
+//;FF_RAM:            ;0x9208 -- 0x9214    ¹²13
+//*****************************************************************
+hotmenu FF_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) factoryPassword			 ");//         	;FF.00 ³§¼ÒÃÜÂë
+        GEL_WatchAdd("*(int*) inverterType			     ");//       ;FF.01 ±äÆµÆ÷ÀàĞÍ
+        GEL_WatchAdd("*(int*) inverterGpType			   ");//      	;FF.02 ±äÆµÆ÷GPÀàĞÍÉè¶¨
+        GEL_WatchAdd("*(int*) inverterPower			   ");//        	;FF.03 ÆµÆ÷¹¦ÂÊ 
+        GEL_WatchAdd("*(int*) tempCurve			       ");//         ;FF.04 ÎÂ¶ÈÇúÏß
+        GEL_WatchAdd("*(int*) uvGainWarp			       ");//       	;FF.05 UVÁ½ÏàµçÁ÷²ÉÑùÔöÒæÆ«²î
+        GEL_WatchAdd("*(int*) uvPoint1			         ");//       ;FF.06 ±£Áô
+        GEL_WatchAdd("*(int*) ocPoint1			         ");//       ;FF.07 ±£Áô 
+        GEL_WatchAdd("*(int*) volJudgeCoeff			   ");//         ;FF.08 µçÑ¹Ğ£ÕıÏµÊı
+        GEL_WatchAdd("*(int*) curJudgeCoeff			   ");//         ;FF.09 µçÁ÷Ğ£ÕıÏµÊı
+        GEL_WatchAdd("*(int*) motorDebugFc			     ");//       ;FF.10 ĞÔÄÜµ÷ÊÔ¹¦ÄÜÂëÏÔÊ¾¸öÊı
+        GEL_WatchAdd("*(int*) aiaoCalibrateDisp		");//       ;FF.11 AIAOĞ£Õı¹¦ÄÜÂëÏÔ¾
+        GEL_WatchAdd("*(int*) rsvd5Ff			         ");//         	;FF.12 ±£Áô
+}
+//*********************FP**************************************
+//;FP_RAM:           ;0x9215 -- 0x9219    ¹²5
+//************************************************************
+hotmenu FP_RAM_Regs()
+{   
+        GEL_WatchAdd("*(int*) passwordUser			   ");//     ;FP.00 ÓÃ»§ÃÜÂë
+        GEL_WatchAdd("*(int*) paraInitMode			   ");//     ;FP.01 ²ÎÊı³õÊ¼»¯
+        GEL_WatchAdd("*(int*) funGroupDispSel1		");//      ;FP.02 ¹¦ÄÜ²ÎÊı×éÏÔÊ¾Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) funGroupDispSel2		");//      ;FP.03 ¸öĞÔ²ÎÊı×éÏÔÊ¾Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) funCodeModAttri		");//        	;FP.04 ¹¦ÄÜÂëĞŞ¸ÄÊôĞÔ
+}
+//************************A0***********************************
+//;//;A0_RAM:            ;0x921b -- 0x9223   ¹²9
+//*************************************************************
+hotmenu A0_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) torqueCtrl			          " )  	;//;A0.00 ËÙ¶È/×ª¾Ø¿ØÖÆ·½Ê½Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) torqueCtrlSrc			      " )    ;//;A0.01 ×ª¾ØØÖÆ·½Ê½ÏÂ×ª¾ØÔ´Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) rsvd1A0			            " )    	;//;A0.02 ±£Áô
+        GEL_WatchAdd("*(int*) torqueCtrlDigSet			    " )  ;//;A0.03 ×ª¾Ø¿ØÖÆ·½Ê½ÏÂµÄ×ª¾ØÊı×ÖÉè¶¨
+        GEL_WatchAdd("*(int*) rsvd2A1			            " )    	;//;A0.04 ±£Áô	
+        GEL_WatchAdd("*(int*) torqueCtrlFwdMaxFrq			" )    	;//;A0.05 ×ª¾Ø¿ØÖÆÕıÏò×î´óÆµÂÊ
+        GEL_WatchAdd("*(int*) torqueCtrlRevMaxFrq			" )    	;//;A0.06 ×ª¾Ø¿ØÖÆ·´Ïò×î´óÆµÂÊ
+        GEL_WatchAdd("*(int*) torqueCtrlAccTime			  " )    ;//;A0.07 ×ª¾Ø¼ÓËÙÊ±¼ä
+        GEL_WatchAdd("*(int*) torqueCtrlDecTime			  " )    ;//;A0.08 ×ª¾Ø¼õËÙÊ±¼ä
+ }       
+//********************A1**************************************
+//;;A1_RAM:            ;0x9224 -- 0x9239   ¹²22
+//************************************************************
+hotmenu A1_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) vdi1Func			       ");//         ;A1.00 ĞéÄâVDI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdi2Func			       ");//         ;A1.01 ĞéÄâVDI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdi3Func			       ");//         ;A1.02 ĞéÄâVDI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdi4Func			       ");//         ;A1.03 ĞéÄâVDI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdi5Func			       ");//         ;A1.04 ĞéÄâVDI1¶Ë×Ó¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdiStatusSetMode			" );//       ;A1.05 ĞéÄâVDI×´Ì¬Éè¶¨Ä£Ê½
+        GEL_WatchAdd("*(int*) vdiStatusSet			   ");//         ;A1.06 ĞéÄâVDI×´Ì¬ÉèÖÃ
+        GEL_WatchAdd("*(int*) ai1AsDiFunc			   ");//           	;A1.07 AI1×÷ÎªDIÊ±µÄ¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) ai2AsDiFunc			   ");//           	;A1.08 AI2×÷ÎªDIÊ±µÄ¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) ai3AsDiFunc			   ");//           	;A1.09 AI3×÷ÎªDIÊ±µÄ¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) diLogicAiAsDi			 ");//           ;A1.10 AI¶Ë×Ó×÷ÎªDIÊ±ÓĞĞ§Ä£Ê½Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) vdo1Func			       ");//         ;A1.11 ĞéÄâVDO1¶Ë×ÓÊä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdo2Func			       ");//         ;A1.12 ĞéÄâVDO2¶Ë×ÓÊä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdo3Func			       ");//         ;A1.13 ĞéÄâVDO3¶Ë×ÓÊä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdo4Func			       ");//         ;A1.14 ĞéÄâVDO4¶Ë×ÓÊä³ö¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) vdo5Func			       ");//         ;A1.15 ĞéÄâVDO5¶Ë×ÓÊä³ö¹¦ÄÜÑ¡Ôñ	
+        GEL_WatchAdd("*(int*) vdo1DelayTime			 ");//           ;A1.16 VDO1Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) vdo2DelayTime			 ");//           ;A1.17 VDO2Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) vdo3DelayTime			 ");//           ;A1.18 VDO3Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) vdo4DelayTime			 ");//           ;A1.19 VDO4Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) vdo5DelayTime			 ");//           ;A1.20 VDO5Êä³öÑÓ³ÙÊ±¼ä
+        GEL_WatchAdd("*(int*) vdoLogic			       ");//         ;A1.21 VDOÊä³ö¶Ë×ÓÓĞĞ§×´Ì¬Ñ¡Ôñ
+ }       
+//************************A2*********************************
+//;//;A2_RAM:       ;µÚ¶şµç»ú²ÎÊı   0x923a --0x927b  ¹²66 
+//************************************************************* 
+hotmenu A2_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) m2Fun_motorType					 ");//     	;//;A2.00 µç»úÀàĞÍÑ¡Ôñ
+        GEL_WatchAdd("*(int*) m2Fun_ratingPower				 ");//     	;//;A2.01 µç»ú¶î¶¨¹¦ÂÊ
+        GEL_WatchAdd("*(int*) m2Fun_ratingVoltage			 ");//     		;//;A2.02 µç»ú¶î¶¨µçÑ¹
+        GEL_WatchAdd("*(int*) m2Fun_ratingCurrent			 ");//     		;//;A2.03 µç»ú¶î¶¨µçÁ÷
+        GEL_WatchAdd("*(int*) m2Fun_ratingFrq			     ");//           	;//;A2.04 µç»ú¶î¶¨ÆµÂÊ
+        GEL_WatchAdd("*(int*) m2Fun_ratingSpeed			   ");//           ;//;A2.05 µç»ú¶î¶¨×ªËÙ
+        GEL_WatchAdd("*(int*) m2Fun_statorResistance		 ");//     		;//;A2.06 Òì²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m2Fun_rotorResistance		 ");//     		;//;A2.07 Òì²½µç»ú×ª×Óµç×è
+        GEL_WatchAdd("*(int*) m2Fun_leakInductance			 ");//     	;//;A2.08 Òì²½µç»úÂ©¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m2Fun_mutualInductance		 ");//     		;//;A2.09 Òì²½µç»ú»¥¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m2Fun_zeroLoadCurrent		 ");//     		;//;A2.10 Òì²½µç»ú¼¤´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) rsvd1A2							     ");//          	;//;A2.11 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2A2			             ");//         		;//;A2.12 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3A2			             ");//         		;//;A2.13 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd4A2			             ");//         		;//;A2.14 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd5A2				           ");//         	;//;A2.15 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_pmsmRs					     ");//   	;//;A2.16 Í¬²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m2Fun_pmsmLd					     ");//   	;//;A2.17 Í¬²½µç»úDÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) m2Fun_pmsmLq					     ");//   	;//;A2.18 Í¬²½µç»úQÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) rsvd6A2							     ");//   	;//;A2.19 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_motorCoeff			     ");//   		;//;A2.20 Òì²½µç»ú·´µç¶¯ÊÆ
+        GEL_WatchAdd("*(int*) rsvd7A2						       ");//     	;//;A2.21 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd8A2			             ");//         		;//;A2.22 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd9A2			             ");//         		;//;A2.23 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd10A2			             ");//        	;//;A2.24 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd11A2			             ");//        	;//;A2.25 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd12A2			             ");//        	;//;A2.26 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_encoderPulse		     ");//   			;//;A2.27 ±àÂëÆ÷ÏßÊı
+        GEL_WatchAdd("*(int*) m2Fun_encoderType		     ");//   			;//;A2.28 ±àÂëÆ÷ÀàĞÍ
+        GEL_WatchAdd("*(int*) rsvd13A2			             ");//       	;//;A2.29
+        GEL_WatchAdd("*(int*) m2Fun_encoderABZPhase			"	);//;A2.30 ABZÔöÁ¿±àÂëÆ÷ABÏàĞò
+        GEL_WatchAdd("*(int*) m2Fun_encoderAngle					" )  ;//;A2.31 ±àÂëÆ÷°²×°½Ç
+        GEL_WatchAdd("*(int*) m2Fun_encoderUVWPhase			"	);//;A2.32 UVW±àÂëÆ÷ÏàĞò
+        GEL_WatchAdd("*(int*) m2Fun_encoderUVWBiasAngle	"	)	;//;A2.33 UVW±àÂëÆ÷Æ«ÖÃ½Ç
+        GEL_WatchAdd("*(int*) m2Fun_transfPal				   "  )  ;//;A2.34 Ğı×ªäÑ¹Æ÷¼«¶ÔÊı
+        GEL_WatchAdd("*(int*) rsvd14A2			             "  ) ;//;A2.35 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_fvcPgLoseTime			 "  )  	;//;A2.36 ËÙ¶È·´À¡PG¶ÏÏß¼ì²âÊ±¼ä
+        GEL_WatchAdd("*(int*) m2Fun_tuneCmd						 "  ) ;//;A2.37 µ÷Ğ³Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopKp1					" )  ;//;A2.38 ËÙ¶È»·±ÈÀıÔöÒæ1             
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopTi1			   "  )	;//;A2.39 ËÙ¶È»·»ı·ÖÊ±¼ä1     
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopChgFrq1			" ) 	;//;A2.40 ÇĞ»»µÍµãÆµÂÊ     
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopKp2			   "  )	;//;A2.41 ËÙ¶È»·±ÈÀıÔöÒæ2         
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopTi2			   "  )	;//;A2.42 ËÙ¶È»·»ı·ÖÊ±¼ä2 
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopChgFrq2			"	);//;A2.43 ÇĞ»»ÆµÂÊ2
+        GEL_WatchAdd("*(int*) m2Fun_vcSlipCompCoef			 "  );//;A2.44 Ê¸Á¿¿ØÖÆ×ª²î²¹³¥ÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopFilterTime	"	)	;//;A2.45 ËÙ¶È»·ÂË²¨Ê±¼ä³£Êı
+        GEL_WatchAdd("*(int*) m2Fun_vcOverMagGain				"	);//;A2.46 Ê¸Á¿¿ØÖÆ¹ıÀø´ÅÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_spdCtrlTorqueLimitSr"	)		;//;A2.47 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÔ´
+        GEL_WatchAdd("*(int*) m2Fun_spdCtrlTorqueLimit		"	);//;A2.48 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÊı×ÖÉè¶¨
+        GEL_WatchAdd("*(int*) rsvd15A2			             "  );//;A2.49 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd16A2			             "  );//;A2.50 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_magAdjKp						 "  );//;A2.51 Àø´Åµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_magAdjTi			       "  )	;//;A2.52 Àø´Åµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_torqueAdjKp			   "  )  ;//;A2.53 ×ª¾Øµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_torqueAdjTi			   "  )  ;//;A2.54 ×ª¾Øµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m2Fun_vcSpdLoopTiAttri			" ) 	;//;A2.55 ËÙ¶È»·»ı·ÖĞÔ
+        GEL_WatchAdd("*(int*) m2Fun_synFluxWeakMode			"	);//;A2.56 Í¬²½»úÈõ´Å¿ØÖÆÄ£Ê½ 
+        GEL_WatchAdd("*(int*) m2Fun_synFluxWeakDepth			"	);//;A2.57 Í¬²½»úÈõ´ÅÉî¶È
+        GEL_WatchAdd("*(int*) m2Fun_maxFluxWeakCurr			"	);//;A2.58 ×î´óÈõ´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) m2Fun_fulxWeakAutAdjGain		" ) 	;//;A2.59 Èõ´Å×Ô¶¯µ÷ÕûÔöÒæ          
+        GEL_WatchAdd("*(int*) m2Fun_fulxWeakKiMult				" ) ;//;A2.60 Èõ´Å»ı·Ö±¶Êı
+        GEL_WatchAdd("*(int*) m2Fun_motorCtrlMode				"	);//;A2.61 µÚ¶şµç»ú¿ØÖÆ·½Ê½
+        GEL_WatchAdd("*(int*) m2Fun_accDecTimeSel       "  ) 		;//;A2.62 µÚ¶şµç»ú¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) m2Fun_torqueBoost			   "  ) 	;//;A2.63 µÚ¶şµç»ú×ª¾ØÌáÉı 
+        GEL_WatchAdd("*(int*) rsvd17A2V                 "  ) 		;//;A2.64 ±£Áô
+        GEL_WatchAdd("*(int*) m2Fun_antiVibrateGain			" ) 	;//;A2.65 µÚ¶şµç»úÕñµ´ÒÖÖÆÔöÒæ	
+}        
+//********************A3******************************************
+//;A3_RAM:       ;µÚÈıµç»ú²ÎÊı   0x927c -- 0x92bd  ¹²66
+//****************************************************************
+hotmenu A3_RAM_Regs()
+{   
+        GEL_WatchAdd("*(int*) m3Fun_motorType					");//	;A3.00 µç»úÀàĞÍÑ¡Ôñ
+        GEL_WatchAdd("*(int*) m3Fun_ratingPower				");//	;A3.01 µç»ú¶î¶¨¹¦ÂÊ
+        GEL_WatchAdd("*(int*) m3Fun_ratingVoltage			");//		;A3.02 µç»ú¶î¶¨µçÑ¹
+        GEL_WatchAdd("*(int*) m3Fun_ratingCurrent			");//		;A3.03 µç»ú¶î¶¨µçÁ÷
+        GEL_WatchAdd("*(int*) m3Fun_ratingFrq			    ");//     	;A3.04 µç»ú¶î¶¨ÆµÂÊ
+        GEL_WatchAdd("*(int*) m3Fun_ratingSpeed			  ");//     	;A3.05 µç»ú¶î¶¨×ªËÙ
+        GEL_WatchAdd("*(int*) m3Fun_statorResistance		");//	 	;A3.06 Òì²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m3Fun_rotorResistance		");//		;A3.07 Òì²½µç»ú×ª×Óµç×è
+        GEL_WatchAdd("*(int*) m3Fun_leakInductance			");//	;A3.08 Òì²½µç»úÂ©¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m3Fun_mutualInductance		");//	 	;A3.09 Òì²½µç»ú»¥¸Ğ¿¹
+        GEL_WatchAdd("*(int*) m3Fun_zeroLoadCurrent		");//		;A3.10 Òì²½µç»ú¼¤´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) rsvd1A3								  ");//   ;A3.11 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2A3			            ");//      		;A3.12 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3A3			            ");//      		;A3.13 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd4A3			            ");//       	 	;A3.14 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd5A3				          ");//       	;A3.15 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_pmsmRs						  ");//   ;A3.16 Í¬²½µç»ú¶¨×Óµç×è
+        GEL_WatchAdd("*(int*) m3Fun_pmsmLd						  ");//   ;A3.17 Í¬²½µç»úDÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) m3Fun_pmsmLq						  ");//   ;A3.18 Í¬²½µç»úQÖáµç¸Ğ
+        GEL_WatchAdd("*(int*) rsvd6A3								  ");//   ;A3.19 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_motorCoeff				  ");//   	;A3.20 Òì²½µç»ú·´µç¶¯ÊÆ
+        GEL_WatchAdd("*(int*) rsvd7A3						      ");//   	;A3.21 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd8A3			            ");//       	 	;A3.22 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd9A3			            ");//       	 	;A3.23 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd10A3			            ");//     	;A3.24 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd11A3			            ");//      	;A3.25 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd12A3			            ");//     	;A3.26 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_encoderPulse			  ");//   		;A3.27 ±àÂëÆ÷ÏßÊı
+        GEL_WatchAdd("*(int*) m3Fun_encoderType			  ");//   		;A3.28 ±àÂëÆ÷ÀàĞÍ
+        GEL_WatchAdd("*(int*) rsvd13A3			            ");//      	;A3.29
+        GEL_WatchAdd("*(int*) m3Fun_encoderABZPhase		");//		;A3.30 ABZÔöÁ¿±àÂëÆ÷ABÏàĞò
+        GEL_WatchAdd("*(int*) m3Fun_encoderAngle				");//	   ;A3.31 ±àÂëÆ÷°²×°½Ç
+        GEL_WatchAdd("*(int*) m3Fun_encoderUVWPhase		");//	 	;A3.32 UVW±àÂëÆ÷ÏàĞò
+        GEL_WatchAdd("*(int*) m3Fun_encoderUVWBiasAngle");//		 	;A3.33 UVW±àÂëÆ÷Æ«ÖÃ½Ç
+        GEL_WatchAdd("*(int*) m3Fun_transfPal			 		");//    ;A3.34 Ğı×ª±äÑ¹Æ÷¼«¶ÔÊı
+        GEL_WatchAdd("*(int*) rsvd14A3			            ");// 	  ;A3.35 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_fvcPgLoseTime			");//     	;A3.36 ËÙ¶È·´À¡PG¶ÏÏß¼ì²âÊ±¼ä
+        GEL_WatchAdd("*(int*) m3Fun_tuneCmd						");//     ;A3.37 µ÷Ğ³Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopKp1				");//	  ;A3.38 ËÙ¶È»·±ÈÀıÔöÒæ1             
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopTi1			  ");//   	;A3.39 ËÙ¶È»·»ı·ÖÊ±¼ä1     
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopChgFrq1		");//	 	;A3.40 ÇĞ»»µÍµãÆµÂÊ     
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopKp2			  ");//   	;A3.41 ËÙ¶È»·±ÈÀıÔöÒæ2         
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopTi2			  ");//   	;A3.42 ËÙ¶È»·»ı·ÖÊ±¼ä2 
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopChgFrq2		");//	 	;A3.43 ÇĞ»»ÆµÂÊ2
+        GEL_WatchAdd("*(int*) m3Fun_vcSlipCompCoef			");//   	;A3.44 Ê¸Á¿¿ØÖÆ×ª²î²¹³¥ÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopFilterTime");//		 	;A3.45 ËÙ¶È»·ÂË²¨Ê±¼ä³£Êı
+        GEL_WatchAdd("*(int*) m3Fun_vcOverMagGain			");// 	   	;A3.46 Ê¸Á¿¿ØÖÆ¹ıÀø´ÅÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_spdCtrlTorqueLimitSrc");//	 		;A3.47 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÔ´
+        GEL_WatchAdd("*(int*) m3Fun_spdCtrlTorqueLimit ");// 	 		;A3.48 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÊı×ÖÉè¶¨
+        GEL_WatchAdd("*(int*) rsvd15A3			            ");//   	;A3.49 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd16A3			            ");//   	;A3.50 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_magAdjKp						");//     ;A3.51 Àø´Åµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_magAdjTi			      ");//   	;A3.52 Àø´Åµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_torqueAdjKp			  ");//     	;A3.53 ×ª¾Øµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_torqueAdjTi			  ");//     	;A3.54 ×ª¾Øµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m3Fun_vcSpdLoopTiAttri   ");//    		;A3.55 ËÙ¶È»·»ı·ÖÊôĞÔ
+        GEL_WatchAdd("*(int*) m3Fun_synFluxWeakMode	 	");//		;A3.56 Í¬²½»úÈõ´Å¿ØÖÆÄ£Ê½ 
+        GEL_WatchAdd("*(int*) m3Fun_synFluxWeakDepth		");//	 	;A3.57 Í¬²½»úÈõ´ÅÉî¶È
+        GEL_WatchAdd("*(int*) m3Fun_maxFluxWeakCurr		");//		;A3.58 ×î´óÈõ´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) m3Fun_fulxWeakAutAdjGain ");//		 	;A3.59 Èõ´Å×Ô¶¯µ÷ÕûÔöÒæ          
+        GEL_WatchAdd("*(int*) m3Fun_fulxWeakKiMult			");//	   ;A3.60 Èõ´Å»ı·Ö±¶Êı
+        GEL_WatchAdd("*(int*) m3Fun_motorCtrlMode		  ");//		 	;A3.61 µÚÈıµç»ú¿ØÖÆ·½Ê½
+        GEL_WatchAdd("*(int*) m3Fun_accDecTimeSel			");//     	;A3.62 µÚÈıµç»ú¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) m3Fun_torqueBoost		    ");//     	;A3.63 µÚÈıµç»ú×ª¾ØÌáÉı 
+        GEL_WatchAdd("*(int*) rsvd17A3			            ");//   	;A3.64 ±£Áô
+        GEL_WatchAdd("*(int*) m3Fun_antiVibrateGain		");//   	 	;A3.65 µÚÈıµç»úÕñµ´ÒÖÖÆÔöÒæ
+        
+ }       
+//***********************A4************************************
+//;//;A4_RAM:        ;µÚËÄµç»ú²ÎÊı   0x92be -- 0x92ff ¹²66
+//*************************************************************
+hotmenu A4_RAM_Regs()
+{  
+ 
+        GEL_WatchAdd("*(int*) m4Fun_motorType					 " )   	;//;A4.00 µç»úÀàĞÍÑ¡Ôñ													
+        GEL_WatchAdd("*(int*) m4Fun_ratingPower				 " )   	;//;A4.01 µç»ú¶î¶¨¹¦ÂÊ													
+        GEL_WatchAdd("*(int*) m4Fun_ratingVoltage			 " )   		;//;A4.02 µç»ú¶î¶¨µçÑ¹													
+        GEL_WatchAdd("*(int*) m4Fun_ratingCurrent			 " )   		;//;A4.03 µç»ú¶î¶¨µçÁ÷													
+        GEL_WatchAdd("*(int*) m4Fun_ratingFrq			     " )        	;//;A4.04 µç»ú¶î¶¨ÆµÂÊ													
+        GEL_WatchAdd("*(int*) m4Fun_ratingSpeed			   " )        	;//;A4.05 µç»ú¶î¶¨×ªËÙ													
+        GEL_WatchAdd("*(int*) m4Fun_statorResistance		 " )   	 	;//;A4.06 Òì²½ç»ú¶¨×Óµç×è													
+        GEL_WatchAdd("*(int*) m4Fun_rotorResistance		 " )   		;//;A4.07 Òì²½µç»ú×ª×Óµç×è													
+        GEL_WatchAdd("*(int*) m4Fun_leakInductance			 " )   	;//;A4.08 Òì²½µç»úÂ©¸Ğ¿¹													
+        GEL_WatchAdd("*(int*) m4Fun_mutualInductance		 " )   	 	;//;A4.09 Òì²½µç»ú»¥¸Ğ¿¹													
+        GEL_WatchAdd("*(int*) m4Fun_zeroLoadCurrent		 " )   		;//;A4.10 Òì²½µç»ú¼¤´ÅµçÁ÷													
+        GEL_WatchAdd("*(int*) rsvd1A4									 " )   		;//;A4.11 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd2A4			             " )     	 	;//;A4.12 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd3A4			             " )     	 	;//;A4.13 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd4A4			             " )     	 	;//;A4.14 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd5A4				           " )     	;//;A4.15 ±£Áô													
+        GEL_WatchAdd("*(int*) m4Fun_pmsmRs							 " )   		;//;A4.16 Í¬²½µç»ú¶¨×Óµç×è													
+        GEL_WatchAdd("*(int*) m4Fun_pmsmLd							 " )   		;//;A4.17 Í¬²½µç»úDÖáµç¸Ğ													
+        GEL_WatchAdd("*(int*) m4Fun_pmsmLq							 " )   		;//;A4.18 Í¬²½µç»úQÖáµç¸Ğ													
+        GEL_WatchAdd("*(int*) rsvd6A4									 " )   		;//;A4.19 ±£Áô													
+        GEL_WatchAdd("*(int*) m4Fun_motorCoeff					 " )   	;//;A4.20 Òì²½µç»ú·´µç¶¯ÊÆ													
+        GEL_WatchAdd("*(int*) rsvd7A4						    	 " )   	;//;A4.21 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd8A4			             " )     	 	;//;A4.22 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd9A4			             " )     	 	;//;A4.23 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd10A4			             " )   	;//;A4.24 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd11A4			             " )   	;//;A4.25 ±£Áô													
+        GEL_WatchAdd("*(int*) rsvd12A4			             " )      	;//;A4.26 ±£Áô													
+        GEL_WatchAdd("*(int*) m4Fun_encoderPulse				 " )   	;//;A4.27 ±àÂëÆ÷ÏßÊı													
+        GEL_WatchAdd("*(int*) m4Fun_encoderType				 " )   	;//;A4.28 ±àÂëÆ÷ÀàĞÍ													
+        GEL_WatchAdd("*(int*) rsvd13A4			           	 " )   	;//;A4.29													
+        GEL_WatchAdd("*(int*) m4Fun_encoderABZPhase		 " )   		;//;A4.30 ABZÔöÁ¿±àÂëÆ÷ABÏàĞ													ò
+        GEL_WatchAdd("*(int*) m4Fun_encoderAngle				 " )   	;//;A4.31 ±àÂëÆ÷°²×°½Ç													
+        GEL_WatchAdd("*(int*) m4Fun_encoderUVWPhase		 " )   		;//;A4.32 UVW±àÂëÆ÷ÏàĞò													
+        GEL_WatchAdd("*(int*) m4Fun_encoderUVWBiasAngle	");//	 	;//;A4.33 UVW±àÂëÆ÷Æ«ÖÃ½Ç
+        GEL_WatchAdd("*(int*) m4Fun_transfPal			 		  ");//        ;//;A4.34 Ğı×ª±äÑ¹Æ÷¼«¶ÔÊı
+        GEL_WatchAdd("*(int*) rsvd14A4			           	  ");//        ;//;A4.35 ±£Áô
+        GEL_WatchAdd("*(int*) m4Fun_fvcPgLoseTime		    ");//         		;//;A4.36 ËÙ¶È·´À¡PG¶ÏÏß¼ì²âÊ±¼ä
+        GEL_WatchAdd("*(int*) m4Fun_tuneCmd							");//	       ;//;A4.37 µ÷Ğ³Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopKp1					");//         ;//;A4.38 ËÙ¶È»·±ÈÀıÔöÒæ1             
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopTi1			   " )	       ;//;A4.39 ËÙ¶È»·»ı·ÖÊ±¼ä1     
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopChgFrq1			");//      	;//;A4.40 ÇĞ»»µÍµãÆµÂÊ     
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopKp2			   " )	     ;//;A4.41 ËÙ¶È»·±ÈÀıÔöÒæ2         
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopTi2			   " )	     ;//;A4.42 ËÙ¶È»·»ı·ÖÊ±¼ä2 
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopChgFrq2			");//      	;//;A4.43 ÇĞ»»ÆµÂÊ2
+        GEL_WatchAdd("*(int*) m4Fun_vcSlipCompCoef			 " )	     ;//;A4.44 Ê¸Á¿¿ØÖÆ×ª²î²¹³¥ÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopFilterTime	");//	      	;//;A4.45 ËÙ¶È»·ÂË²¨Ê±¼ä³£ı
+        GEL_WatchAdd("*(int*) m4Fun_vcOverMagGain				");//	     ;//;A4.46 Ê¸Á¿¿ØÖÆ¹ıÀø´ÅÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_spdCtrlTorqueLimitSrc");//	 		;//;A4.47 ËÙ¶È¿ØÖÆ·½Ê½ÏÂ×ª¾ØÉÏÏŞÔ´
+        GEL_WatchAdd("*(int*) m4Fun_spdCtrlTorqueLimit		");// 	;//;A4.48 ËÙ¶È¿ØÖÆ½Ê½ÏÂ×ª¾ØÉÏÏŞÊı×ÖÉè¶¨
+        GEL_WatchAdd("*(int*) rsvd15A4			              ");// 	;//;A4.49 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd16A4			              ");// 	;//;A4.50 ±£Áô
+        GEL_WatchAdd("*(int*) m4Fun_magAdjKp							");//		;//;A4.51 Àø´Åµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_magAdjTi			        ");// 	;//;A4.52 Àø´Åµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_torqueAdjKp			    ");//   	;//;A4.53 ×ª¾Øµ÷½Ú±ÈÀıÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_torqueAdjTiV         ");//  		;//;A4.54 ×ª¾Øµ÷½Ú»ı·ÖÔöÒæ
+        GEL_WatchAdd("*(int*) m4Fun_vcSpdLoopTiAttri			");// 	;//;A4.55 ËÙ¶È»·»ı·ÖÊôĞÔ
+        GEL_WatchAdd("*(int*) m4Fun_synFluxWeakMode			");//	;//;A4.56 Í¬²½»úÈõ´Å¿ØÖÆÄ£Ê½ 
+        GEL_WatchAdd("*(int*) m4Fun_synFluxWeakDepth			");// 	;//;A4.57 Í¬²½»úÈõ´ÅÉî¶È
+        GEL_WatchAdd("*(int*) m4Fun_maxFluxWeakCurr			");//	;//;A4.58 ×î´óÈõ´ÅµçÁ÷
+        GEL_WatchAdd("*(int*) m4Fun_fulxWeakAutAdjGain		");// 	;//;A4.59 Èõ´Å×Ô¶¯µ÷ÕûÔöÒæ          
+        GEL_WatchAdd("*(int*) m4Fun_fulxWeakKiMult				");//		;//;A4.60 Èõ´Å»ı·Ö±¶Êı
+        GEL_WatchAdd("*(int*) m4Fun_motorCtrlMode				");//	;//;A4.61 µÚËÄµç»ú¿ØÖÆ·½Ê½
+        GEL_WatchAdd("*(int*) m4Fun_accDecTimeSel			  ");//   	;//;A4.62 µÚËÄµç»ú¼Ó¼õËÙÊ±¼äÑ¡Ôñ
+        GEL_WatchAdd("*(int*) m4Fun_torqueBoost			    ");//   	;//;A4.63 µÚËÄµç»ú×ª¾ØÌáÉı 
+        GEL_WatchAdd("*(int*) rsvd17A4			              ");// 	;//;A4.64 ±£Áô
+        GEL_WatchAdd("*(int*) m4Fun_antiVibrateGain			");//   	;//;A4.65 µÚËÄµç»úÕñµ´ÒÖÖÆÔöÒæ
+}        
+//**********************A5*****************************************
+//;;A5_RAM:     ;0x9300 -- 0x9308  ¹²9
+//*****************************************************************
+hotmenu A5_RAM_Regs()
+{   
+        GEL_WatchAdd("*(int*) dpwmSwitUpperFrq			");//       	;A5.00 DPWMÇĞ»»ÉÏÏŞÆµÂÊ
+        GEL_WatchAdd("*(int*) modulationMode			  ");//       	;A5.01 µ÷ÖÆ·½Ê½£¬0-Òì²½µ÷ÖÆ£¬1-Í¬²½µ÷ÖÆ
+        GEL_WatchAdd("*(int*) deadCompMode			    ");//       	;A5.02 ËÀÇø²¹³¥Ä£Ê½Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) softPwmDepth			    ");//       	;A5.03 Ëæ»úPWMÉî¶È
+        GEL_WatchAdd("*(int*) curLimitEnable			  ");//       	;A5.04 ¿ìËÙÏŞÁ÷Ê¹ÄÜ
+        GEL_WatchAdd("*(int*) curSampleComp			  ");//         	;A5.05 µçÁ÷¼ì²â²¹³¥
+        GEL_WatchAdd("*(int*) uvVoltage			      ");//         	;A5.06 Ç·Ñ¹µãÉèÖÃ
+        GEL_WatchAdd("*(int*) svcOptMode			      ");//       	;A5.07 SVCÓÅ»¯Ä£Ê½Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) deadTimeAdj			    ");//         	;A5.08 ËÀÇøÊ±¼äµ÷Õû
+        }
+//********************A6******************************************
+//;A6_RAM:     ;0x9309 -- 0x9326 ¹²30
+//****************************************************************
+hotmenu A6_RAM_Regs()
+{  
+
+        GEL_WatchAdd("*(int*) aiCurve4MinIn			  ");//          ;A6.00 AIÇúÏß4×îĞ¡ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve4MinInSet			");//        ;A6.01 AIÇúÏß4×îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve4Point1In			");//        ;A6.02 AIÇúÏß4¹Õµã1ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve4Point1InSet	");//		      	;A6.03 AIÇúÏß4¹Õµã1ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve4Point2In			");//        ;A6.04 AIÇúÏß4¹Õµã2ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve4Point2InSet	");//		      	;A6.05 AIÇúÏß4¹Õµã2ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve4MaxIn			  ");//          ;A6.06 AIÇúÏß4×î´óÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve4MaxInSet			");//        ;A6.07 AIÇúÏß4×î´óÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve5MinIn			  ");//          ;A6.08 AIÇúÏß5×îĞ¡ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve5MinInSet			");//        ;A6.09 AIÇúÏß5×îĞ¡ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve5Point1In			");//        ;A6.10 AIÇúÏß5¹Õµã1ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve5Point1InSet	");//		      	;A6.11 AIÇúÏß5¹Õµã1ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve5Point2In			");//        ;A6.12 AIÇúÏß5¹Õµã2ÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve5Point2InSet	");//		      	;A6.13 AIÇúÏß5¹Õµã2ÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) aiCurve5MaxIn			  ");//          ;A6.14 AIÇúÏß5×î´óÊäÈë
+        GEL_WatchAdd("*(int*) aiCurve5MaxInSet			");//        ;A6.15 AIÇúÏß5×î´óÊäÈë¶ÔÓ¦Éè¶¨
+        GEL_WatchAdd("*(int*) rsvd1A6			        ");//          	;A6.16 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd2A6			        ");//          	;A6.17 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd3A6			        ");//          	;A6.18 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd4A6			        ");//          	;A6.19 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd5A6			        ");//          	;A6.20 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd6A6			        ");//          	;A6.21 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd7A6			        ");//          	;A6.22 ±£Áô
+        GEL_WatchAdd("*(int*) rsvd8A6			        ");//          	;A6.23 ±£Áô
+        GEL_WatchAdd("*(int*) ai1JumpPoint			    ");//        ;A6.24 AI1ÌøÔ¾µã
+        GEL_WatchAdd("*(int*) ai1JumpArrange			  ");//        	;A6.25 AI1ÌøÔ¾·ù¶È
+        GEL_WatchAdd("*(int*) ai2JumpPoint			    ");//        ;A6.26 AI2ÌøÔ¾µã
+        GEL_WatchAdd("*(int*) ai2JumpArrange			  ");//        	;A6.27 AI2ÌøÔ¾·ù¶È
+        GEL_WatchAdd("*(int*) ai3JumpPoint			    ");//        ;A6.28 AI3ÌøÔ¾µã
+        GEL_WatchAdd("*(int*) ai3JumpArrange			  ");//        	;A6.29 AI3ÌøÔ¾·ù¶È
+        
+}        
+//************************A7******************************************
+//;//;A7_RAM:         ;ÓÃ»§¿É±à³Ì¿¨²ÎÊı    0x9327 -- 0x9330 ¹²10
+//********************************************************************
+hotmenu A7_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) userProgrammableSel			 "  )   	;//;A7.00 ÓÃ»§¿É±à³Ì¹¦ÄÜÑ¡Ôñ
+        GEL_WatchAdd("*(int*) boardCtrlMode			       "  )   ;//;A7.01 ¿ØÖÆ°å¿ØÖÆÄ£Ê½Ñ¡Ôñ
+        GEL_WatchAdd("*(int*) programmableCardExtAi3			" )	;//;A7.02 ¿É±à³Ì¿¨À©Õ¹AI3¶Ë×Ó¹¦ÄÜ
+        GEL_WatchAdd("*(int*) fmpOutput			           "  )   ;//;A7.03 FMPÊä³ö
+        GEL_WatchAdd("*(int*) ao1Output			           "  )   ;//;A7.04 AO1Êä³ö
+        GEL_WatchAdd("*(int*) switchOutput		           "  ) 	;//;A7.05 ¿ª¹ØÁ¿Êä³ö
+        GEL_WatchAdd("*(int*) programmableCardFrqSet			" ) 	;//;A7.06 ¿É±à³Ì¿¨ÆµÂÊ¸ø¶¨
+        GEL_WatchAdd("*(int*) programmableCardTorqueSet	"	)	;//;A7.07 ¿É±à³Ì¿¨ª¾Ø¸ø¶¨
+        GEL_WatchAdd("*(int*) programmableCardCmdSet			" ) 	;//;A7.08 ¿É±à³Ì¿¨ÃüÁî¸ø¶¨
+        GEL_WatchAdd("*(int*) programmableCardErrSet			" ) 	;//;A7.09 ¿É±à³Ì¿¨¹ÊÕÏ¸ø¶¨
+}                                                
+//**************************A8*******************************
+//;A8_RAM:        ;0x9333 -- 0x9339 ¹²7¸ö
+//***********************************************************         	
+//;;A9_RAM:        ;0x933a -- 0x9348 ¹²15
+//;;AA_RAM:
+//;;AB_RAM:
+//;;AC_RAM:      ;AIAOĞ£Õı²ÎÊı×é   0x935a -- 0x936d ¹²20
+hotmenu AC_RAM_Regs()
+{  
+        GEL_WatchAdd("*(int*) ai1TestVol1			  ");//             ;AC.00 AI1Êµ²âµçÑ¹1
+        GEL_WatchAdd("*(int*) ai1DispVol1			  ");//             ;AC.01 AI1ÏÔÊ¾µçÑ¹1
+        GEL_WatchAdd("*(int*) ai1TestVol2			  ");//             ;AC.02 AI1µ²âµçÑ¹2
+        GEL_WatchAdd("*(int*) ai1DispVol2			  ");//             ;AC.03 AI1ÏÔÊ¾µç¹2
+        GEL_WatchAdd("*(int*) ai2TestVol1			  ");//             ;AC.04 AI2Êµ²âµçÑ¹1
+        GEL_WatchAdd("*(int*) ai2DispVol1			  ");//             ;AC.05 AI2ÏÔÊ¾µçÑ¹1
+        GEL_WatchAdd("*(int*) ai2TestVol2			  ");//             ;AC.06 AI2Êµ²âµçÑ¹2
+        GEL_WatchAdd("*(int*) ai2DispVol2			  ");//             ;AC.07 AI2ÏÔÊ¾µçÑ¹2
+        GEL_WatchAdd("*(int*) ai3TestVol1			  ");//             ;AC.08 AI3Êµ²âµçÑ¹1
+        GEL_WatchAdd("*(int*) ai3DispVol1			  ");//             ;AC.09 AI3ÏÔÊ¾µçÑ¹1
+        GEL_WatchAdd("*(int*) ai3TestVol2			  ");//             ;AC.10 AI3Êµ²âµçÑ¹2
+        GEL_WatchAdd("*(int*) ai3DispVol2			  ");//             ;AC.11 AI3ÏÔÊ¾µçÑ¹2
+        GEL_WatchAdd("*(int*) ao1TargetVol1		  ");//             ;AC.12 AO1Ä¿±êµçÑ¹1
+        GEL_WatchAdd("*(int*) ao1TestVol11		    ");//           ;AC.13 AO1Êµ²âµçÑ¹1
+        GEL_WatchAdd("*(int*) ao1TargetVol2		  ");//             ;AC.14 AO1Ä¿±êµçÑ¹2
+        GEL_WatchAdd("*(int*) ao1TestVol12		    ");//           ;AC.15 AO1Êµ²âµçÑ¹2
+        GEL_WatchAdd("*(int*) ao2TargetVol1		  ");//             ;AC.16 AO2Ä¿±êµçÑ¹1
+        GEL_WatchAdd("*(int*) ao2TestVol11		    ");//           ;AC.17 AO2Êµ²âµçÑ¹1
+        GEL_WatchAdd("*(int*) ao2TargetVol2		  ");//             ;AC.18 AO2Ä¿±êµçÑ¹2
+        GEL_WatchAdd("*(int*) ao2TestVol12		    ");//           ;AC.19 AO2Êµ²âµçÑ¹2
+        
+        }
+//***************************************************************
+//U0_RAM:      ;UOĞ£Õı²ÎÊı×é   0x93FF -- 0x9444     ¹²62
+//***************************************************************	
+hotmenu U0_RAM_Regs()
+{  
+
+        GEL_WatchAdd("*(int*) U0_00      ");//  				;  0, ÔËĞĞÆµÂÊ
+        GEL_WatchAdd("*(int*) U0_01			");//               ;  1, Éè¶¨ÆµÂÊ
+        GEL_WatchAdd("*(int*) U0_02			");//             ;  2, Ä¸Ïßµç¹
+        GEL_WatchAdd("*(int*) U0_03		  ");//       		;  3, Êä³öµçÑ¹
+        GEL_WatchAdd("*(int*) U0_04			");//          	;  4, Êä³öµçÁ÷
+        GEL_WatchAdd("*(int*) U0_05		  ");//      		;  5, Êä³ö¹¦ÂÊ
+        GEL_WatchAdd("*(int*) U0_06		  ");//    			;  6, Êä³ö×ª¾Ø
+        GEL_WatchAdd("*(int*) U0_07			");//        	;  7, DIÊäÈë×´Ì¬
+        GEL_WatchAdd("*(int*) U0_08		  ");//    			;  8, DOÊä³ö×´Ì¬
+        GEL_WatchAdd("*(int*) U0_09	    ");// 				;  9, AI1µçÑ¹
+        GEL_WatchAdd("*(int*) U0_10			");//       	; 10, AI2µçÑ¹
+        GEL_WatchAdd("*(int*) U0_11			");//       	; 11, AI3µçÑ¹
+        GEL_WatchAdd("*(int*) U0_12      ");//              	; 12, ¼ÆÊıÖµ
+        GEL_WatchAdd("*(int*) U0_13			");//          	; 13, ³¤¶ÈÖµ
+        GEL_WatchAdd("*(int*) U0_14      ");//               	; 14, ¸ºÔØËÙ¶ÈÏÔÊ¾
+        GEL_WatchAdd("*(int*) U0_15      ");//           		; 15, PIDÉè¶¨
+        GEL_WatchAdd("*(int*) U0_16      ");//         		; 16, PID·´À¡
+        GEL_WatchAdd("*(int*) U0_17      ");//               	; 17, PLC½×¶Î
+        GEL_WatchAdd("*(int*) U0_18      ");//              	; 18, PULSEÊäÈëÂö³åÆµÂÊ£¨kHZ£©
+        GEL_WatchAdd("*(int*) U0_19      ");//           		; 19, ·´À¡ËÙ¶È
+        GEL_WatchAdd("*(int*) U0_20      ");//         		; 20, Ê£ÓàÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) U0_21      ");//         		; 21, AI1Ğ£ÑéÇ°µçÑ¹
+        GEL_WatchAdd("*(int*) U0_22      ");//         		; 22, AI2Ğ£ÑéÇ°µçÑ¹
+        GEL_WatchAdd("*(int*) U0_23      ");//      			; 23, AI3Ğ£ÑéÇ°µçÑ¹
+        GEL_WatchAdd("*(int*) U0_24      ");//       			; 24, ÏßËÙ¶È
+        GEL_WatchAdd("*(int*) U0_25      ");//            	; 25, µ±Ç°ÉÏµçÊ±¼ä
+        GEL_WatchAdd("*(int*) U0_26      ");//           		; 26, µ±Ç°ÔËĞĞÊ±¼ä
+        GEL_WatchAdd("*(int*) U0_27      ");//          		; 27, PULSEÊäÈëÂö³åÆµÂÊ
+        GEL_WatchAdd("*(int*) U0_28      ");//       			; 28, Í¨Ñ¶Éè¶¨Öµ
+        GEL_WatchAdd("*(int*) U0_29      ");//            	; 29, ±àÂëÆ÷·´À¡ËÙ¶È
+        GEL_WatchAdd("*(int*) U0_30      ");//         		; 30, Ö÷ÆµÂÊXÏÔÊ¾
+        GEL_WatchAdd("*(int*) U0_31      ");//           		; 31, ¸¨ÖúÆµÂÊYÏÔÊ¾
+        GEL_WatchAdd("*(int*) U0_32      ");//          		; 32, ²é¿´ÈÎÒâÄÚ´æµØÖ·Öµ
+        GEL_WatchAdd("*(int*) U0_33      ");//          		; 33, Í¬²½»ú×ª×ÓÎ»ÖÃ
+        GEL_WatchAdd("*(int*) U0_34      ");//             	; 34, µç»úÎÂ¶ÈÖµ
+        GEL_WatchAdd("*(int*) U0_35      ");//            	; 35, Ä¿±ê×ª¾İ£¨%£©
+        GEL_WatchAdd("*(int*) U0_36      ");//            	; 36, Ğı±äÎ»ÖÃ
+        GEL_WatchAdd("*(int*) U0_37      ");//          		; 37, ¹¦ÂÊÒòÊı½Ç¶È
+        GEL_WatchAdd("*(int*) U0_38      ");//            	; 38, ABZÎ»ÖÃ
+        GEL_WatchAdd("*(int*) U0_39      ");//         		; 39, VF·ÖÀëÄ¿±êµçÑ¹
+        GEL_WatchAdd("*(int*) U0_40      ");//            	; 40, VF·ÖÀëÊä³öµçÑ¹
+        GEL_WatchAdd("*(int*) U0_41      ");//             	; 41, DIÊäÈë×´Ì¬Ö±¹ÛÏÔÊ¾
+        GEL_WatchAdd("*(int*) U0_42      ");//             	; 42, DOÊä³ö×´Ì¬Ö±¹ÛÏÔÊ¾
+        GEL_WatchAdd("*(int*) U0_43      ");//            	; 43, DI¹¦ÄÜ×´Ì¬Ö±¹ÛÏÔÊ¾1(¹¦ÄÜ01£­40)
+        GEL_WatchAdd("*(int*) U0_44      ");//          		; 44, DI¹¦ÄÜ×´Ì¬Ö±¹ÛÏÔÊ¾2(¹¦ÄÜ41£­80)
+        GEL_WatchAdd("*(int*) U0_45      ");//             	; 45, 
+        GEL_WatchAdd("*(int*) U0_46      ");//             ; 46, 
+        GEL_WatchAdd("*(int*) U0_47      ");//         		; 47, 
+        GEL_WatchAdd("*(int*) U0_48      ");//           		; 48, 
+        GEL_WatchAdd("*(int*) U0_49      ");//           		; 49, 
+        GEL_WatchAdd("*(int*) U0_50      ");//     			; 50, 
+        GEL_WatchAdd("*(int*) U0_51      ");//        		; 51,
+        GEL_WatchAdd("*(int*) U0_52      ");//            	; 52,
+        GEL_WatchAdd("*(int*) U0_53      ");//           		; 53,
+        GEL_WatchAdd("*(int*) U0_54      ");//      			; 54,
+        GEL_WatchAdd("*(int*) U0_55      ");//            	; 55,
+        GEL_WatchAdd("*(int*) U0_56      ");//    			; 56,
+        GEL_WatchAdd("*(int*) U0_57      ");//           		; 57,
+        GEL_WatchAdd("*(int*) U0_58      ");//         		; 58,
+        GEL_WatchAdd("*(int*) U0_59      ");//         		; 59,Éè¶¨ÆµÂÊ%
+        GEL_WatchAdd("*(int*) U0_60      ");//    			; 60,ÔËĞĞÆµÂÊ%
+        GEL_WatchAdd("*(int*) U0_61      ");//           		; 61,±äÆµÆ÷×´Ì¬
+        GEL_WatchAdd("*(int*) U0_62      ");//            	; 62,
+        GEL_WatchAdd("*(int*) U0_63      ");//          		; 63,
+        GEL_WatchAdd("*(int*) U0_64      ");//           	; 64,
+        GEL_WatchAdd("*(int*) U0_65      ");//            	; 65,
+        GEL_WatchAdd("*(int*) U0_66      ");//             ; 66,
+        GEL_WatchAdd("*(int*) U0_67      ");//             ; 67,
+        GEL_WatchAdd("*(int*) U0_68      ");//         		; 68,
+}
+
+
+//***************************************************************
+//U0_RAM:      ;UOĞ£Õı²ÎÊı×é   0x93FF -- 0x9444     ¹²62
+//***************************************************************	
+hotmenu Watch1_RAM_Regs()
+{  
+
+        GEL_WatchAdd("dspMainCmd2P:*0x8440   ");//  		
+        GEL_WatchAdd("frqAimPuP:*0x84AF      ");//        
+        GEL_WatchAdd("maxFrqP:*0x844D        ");//        
+        GEL_WatchAdd("carrierFrqP:*0x844E    ");// 	
+        GEL_WatchAdd("Fun_ratingPowerP:*0x8462  ");//       
+}

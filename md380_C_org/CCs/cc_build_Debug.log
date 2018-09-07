@@ -1,0 +1,162 @@
+-----------------------------  md380.pjt - Debug  -----------------------------
+[DSP2803x_CpuTimers.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "DSP2803x_CpuTimers.c"
+
+[DSP2803x_GlobalVariableDefs.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "DSP2803x_GlobalVariableDefs.c"
+
+[DSP2803x_usDelay.asm] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "DSP2803x_usDelay.asm"
+
+[f_canlink.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_canlink.c"
+
+[f_comm.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_comm.c"
+
+[f_comm_DP.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_comm_DP.c"
+
+[f_common.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_common.c"
+
+[f_debug.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_debug.c"
+
+[f_dspcan.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_dspcan.c"
+
+[f_eeprom.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_eeprom.c"
+
+[f_error.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_error.c"
+
+[f_fcDeal.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_fcDeal.c"
+
+[f_frqSrc.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_frqSrc.c"
+
+[f_frqSrc_pid.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_frqSrc_pid.c"
+
+[f_funcCode.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_funcCode.c"
+
+[f_interface.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_interface.c"
+
+[f_invPara.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_invPara.c"
+
+[f_io.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_io.c"
+"f_io.c", line 2645: warning: variable "out" was set but never used
+
+[f_main.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_main.c"
+
+[f_menu.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_menu.c"
+
+[f_modbus.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_modbus.c"
+
+[f_motorFc.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_motorFc.c"
+
+[f_osc.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_osc.c"
+
+[f_p2p.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_p2p.c"
+
+[f_plc.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_plc.c"
+
+[f_profibus.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_profibus.c"
+"f_profibus.c", line 364: warning: variable "pzdDataSaveCmd" was set but never used
+
+[f_runSrc.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_runSrc.c"
+
+[f_runSrc_accDecFrq.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_runSrc_accDecFrq.c"
+
+[f_torqueCtrl.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_torqueCtrl.c"
+
+[f_ui.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_ui.c"
+
+[f_vf.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "f_vf.c"
+
+[main.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "main.c"
+
+[MotorCarrier.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorCarrier.c"
+
+[MotorConstant.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorConstant.c"
+
+[MotorCurrentTransform.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorCurrentTransform.c"
+
+[MotorDataExchange.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorDataExchange.c"
+
+[MotorDebug.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorDebug.c"
+
+[MotorEncoder.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorEncoder.c"
+"MotorEncoder.c", line 856: warning: variable "mUlong" was declared but never referenced
+
+[MotorImParEst.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorImParEst.c"
+"MotorImParEst.c", line 594: warning: variable "m_CurrMultiple" was declared but never referenced
+
+[MotorInfoCollect.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorInfoCollect.c"
+
+[MotorInvProtect.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorInvProtect.c"
+
+[MotorMain.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorMain.c"
+"MotorMain.c", line 155: warning: variable "m20HzPu" was set but never used
+
+[MotorParChange.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorParChange.c"
+"MotorParChange.c", line 12: warning: variable "m_Long" was declared but never referenced
+"MotorParChange.c", line 496: warning: variable "temp" was declared but never referenced
+
+[MotorParEst.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorParEst.c"
+
+[MotorPmsmMain.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorPmsmMain.c"
+"MotorPmsmMain.c", line 460: warning: variable "Nf" was declared but never referenced
+
+[MotorPmsmParEst.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorPmsmParEst.c"
+"MotorPmsmParEst.c", line 848: warning: variable "m_Dir1" was set but never used
+"MotorPmsmParEst.c", line 848: warning: variable "m_Dir3" was set but never used
+
+[MotorPublicCal.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorPublicCal.c"
+
+[MotorPWM.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorPWM.c"
+"MotorPWM.c", line 363: warning: variable "m_Max" was declared but never referenced
+"MotorPWM.c", line 363: warning: variable "m_Min" was declared but never referenced
+"MotorPWM.c", line 363: warning: variable "m_Deta" was declared but never referenced
+
+[MotorSpeedCheck.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorSpeedCheck.c"
+
+[MotorSVC.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorSVC.c"
+"MotorSVC.c", line 455: warning: variable "m_Speed" is used before its value is set
+
+[MotorVar.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorVar.c"
+
+[MotorVCMain.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorVCMain.c"
+"MotorVCMain.c", line 114: warning: variable "tempU" was declared but never referenced
+"MotorVCMain.c", line 115: warning: variable "m_TempVar" was declared but never referenced
+"MotorVCMain.c", line 116: warning: variable "m_UData2" was declared but never referenced
+"MotorVCMain.c", line 116: warning: variable "m_UData3" was declared but never referenced
+"MotorVCMain.c", line 508: warning: variable "m_WsOut" was declared but never referenced
+"MotorVCMain.c", line 509: warning: variable "m_Angle" was declared but never referenced
+"MotorVCMain.c", line 509: warning: variable "m_Sin" was declared but never referenced
+"MotorVCMain.c", line 509: warning: variable "m_Cos" was declared but never referenced
+"MotorVCMain.c", line 530: warning: variable "m_UData" was declared but never referenced
+"MotorVCMain.c", line 532: warning: variable "m_WsOut" was declared but never referenced
+"MotorVCMain.c", line 533: warning: variable "m_Angle" was declared but never referenced
+"MotorVCMain.c", line 533: warning: variable "m_Sin" was declared but never referenced
+"MotorVCMain.c", line 533: warning: variable "m_Cos" was declared but never referenced
+"MotorVCMain.c", line 685: warning: variable "m_Data" was declared but never referenced
+"MotorVCMain.c", line 687: warning: variable "m_DriveState" was declared but never referenced
+"MotorVCMain.c", line 689: warning: variable "tempL" was declared but never referenced
+"MotorVCMain.c", line 945: warning: variable "m_MaxVolt" was declared but never referenced
+"MotorVCMain.c", line 1098: warning: variable "maxVolt2" was set but never used
+"MotorVCMain.c", line 1099: warning: variable "m_DriveState" was declared but never referenced
+"MotorVCMain.c", line 1101: warning: variable "tempL" was declared but never referenced
+
+[MotorVF.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "MotorVF.c"
+"MotorVF.c", line 1024: warning: variable "temp" was declared but never referenced
+"MotorVF.c", line 1066: warning: variable "gain" was declared but never referenced
+"MotorVF.c", line 1144: warning: variable "tempL" was declared but never referenced
+
+[ZeroPosCtl.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "ZeroPosCtl.c"
+
+[ASMSubPrg.asm] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "ASMSubPrg.asm"
+
+[SubPrg.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "SubPrg.c"
+
+[DSP2803x_CodeStartBranch.asm] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "DSP2803x_CodeStartBranch.asm"
+
+[DSP2803x_CSMPasswords.asm] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "DSP2803x_CSMPasswords.asm"
+
+[mainInit_2803x.c] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -q -o2 -i"E:/hc-md380/md380_C_org/CCs/../public/28035_header" -i"E:/hc-md380/md380_C_org/CCs/../public/motor_header" -i"E:/hc-md380/md380_C_org/CCs/../public/function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28 -@"../CCs/Debug.lkf" "mainInit_2803x.c"
+
+[Linking...] "C:\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -@"Debug.lkf"
+<Linking>
+>> warning: entry point other than _c_int00 specified
+
+Build Complete,
+  0 Errors, 38 Warnings, 0 Remarks.

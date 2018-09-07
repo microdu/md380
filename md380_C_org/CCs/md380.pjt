@@ -1,0 +1,107 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="J:\XDS\md380_C_org\CCs\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\function\DSP2803x_CpuTimers.c"
+Source="..\function\DSP2803x_GlobalVariableDefs.c"
+Source="..\function\DSP2803x_usDelay.asm"
+Source="..\function\f_canlink.c"
+Source="..\function\f_comm.c"
+Source="..\function\f_comm_DP.c"
+Source="..\function\f_common.c"
+Source="..\function\f_debug.c"
+Source="..\function\f_dspcan.c"
+Source="..\function\f_eeprom.c"
+Source="..\function\f_error.c"
+Source="..\function\f_fcDeal.c"
+Source="..\function\f_frqSrc.c"
+Source="..\function\f_frqSrc_pid.c"
+Source="..\function\f_funcCode.c"
+Source="..\function\f_interface.c"
+Source="..\function\f_invPara.c"
+Source="..\function\f_io.c"
+Source="..\function\f_main.c"
+Source="..\function\f_menu.c"
+Source="..\function\f_modbus.c"
+Source="..\function\f_motorFc.c"
+Source="..\function\f_osc.c"
+Source="..\function\f_p2p.c"
+Source="..\function\f_plc.c"
+Source="..\function\f_profibus.c"
+Source="..\function\f_runSrc.c"
+Source="..\function\f_runSrc_accDecFrq.c"
+Source="..\function\f_torqueCtrl.c"
+Source="..\function\f_ui.c"
+Source="..\function\f_vf.c"
+Source="..\function\main.c"
+Source="..\motor\MotorCarrier.c"
+Source="..\motor\MotorConstant.c"
+Source="..\motor\MotorCurrentTransform.c"
+Source="..\motor\MotorDataExchange.c"
+Source="..\motor\MotorDebug.c"
+Source="..\motor\MotorEncoder.c"
+Source="..\motor\MotorImParEst.c"
+Source="..\motor\MotorInfoCollect.c"
+Source="..\motor\MotorInvProtect.c"
+Source="..\motor\MotorMain.c"
+Source="..\motor\MotorParChange.c"
+Source="..\motor\MotorParEst.c"
+Source="..\motor\MotorPmsmMain.c"
+Source="..\motor\MotorPmsmParEst.c"
+Source="..\motor\MotorPublicCal.c"
+Source="..\motor\MotorPWM.c"
+Source="..\motor\MotorSpeedCheck.c"
+Source="..\motor\MotorSVC.c"
+Source="..\motor\MotorVar.c"
+Source="..\motor\MotorVCMain.c"
+Source="..\motor\MotorVF.c"
+Source="..\motor\ZeroPosCtl.c"
+Source="..\subprogram\ASMSubPrg.asm"
+Source="..\subprogram\SubPrg.c"
+Source="..\system\DSP2803x_CodeStartBranch.asm"
+Source="..\system\DSP2803x_CSMPasswords.asm"
+Source="..\system\mainInit_2803x.c"
+Source="..\Version Control.txt"
+Source="..\public\common\DSP28035Peripheral.cmd"
+Source="..\public\common\F28035.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -o2 -i"$(Proj_dir)\..\public\28035_header" -i"$(Proj_dir)\..\public\motor_header" -i"$(Proj_dir)\..\public\function_header" -d"_DEBUG" -d"DSP2803X" -d"LARGE_MODEL" -ml -mt -v28
+
+["Compiler" Settings: "Release"]
+Options=-pdsw225 -o3 -fr"$(Proj_dir)\Release" -i"$(Proj_dir)\..\public\28035_header" -i"$(Proj_dir)\..\public\motor_header" -i"$(Proj_dir)\..\public\function_header" -d"DSP2803X" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -ecode_start -m".\Debug\md380_C.map" -o".\Debug\md380_C.out" -stack0x400 -w -x -l"rts2800_ml.lib"
+
+["Linker" Settings: "Release"]
+Options=-c -ecode_start -m".\Release\MD380_Release.map" -o".\Release\MD380_Release.out" -stack0x400 -w -x -l"rts2800_ml.lib"
+
+["..\Version Control.txt" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\Version Control.txt" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\public\common\DSP28035Peripheral.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\public\common\DSP28035Peripheral.cmd" Settings: "Release"]
+LinkOrder=1
+
+["..\public\common\F28035.cmd" Settings: "Debug"]
+LinkOrder=2
+
+["..\public\common\F28035.cmd" Settings: "Release"]
+LinkOrder=1
+
